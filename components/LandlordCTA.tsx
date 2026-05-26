@@ -8,16 +8,17 @@ export default function LandlordCTA() {
         <div className="grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-14 items-center">
           <div>
             <p className="text-[#c8f535] text-[11px] font-extrabold uppercase tracking-[0.16em] mb-5">
-              For landlords
+              Visit ZIM.ca
             </p>
             <h2
               className="font-heading font-extrabold text-white leading-[0.9] mb-6"
               style={{ fontSize: "clamp(3rem, 6vw, 5.1rem)" }}
             >
-              List with ZIM.
+              Book a tour.
             </h2>
             <p className="text-white/62 text-[1.02rem] leading-[1.65] mb-9 max-w-[440px]">
-              Reach thousands of students looking for their next home.
+              See the suites, common areas, and study-friendly spaces before
+              you choose your room.
             </p>
 
             <div className="flex items-center gap-5 flex-wrap">
@@ -25,7 +26,7 @@ export default function LandlordCTA() {
                 href="#"
                 className="inline-flex items-center gap-2 px-6 py-[13px] bg-[#c8f535] text-[#07111b] font-extrabold text-[13.5px] rounded-[10px] hover:bg-[#d6fa57] transition-colors"
               >
-                List Your Property
+                Schedule a Tour
                 <svg
                   className="w-4 h-4"
                   fill="none"
@@ -44,25 +45,25 @@ export default function LandlordCTA() {
                 href="#"
                 className="text-white/52 hover:text-white text-[13.5px] font-bold transition-colors"
               >
-                Learn more -&gt;
+                Ask a question -&gt;
               </Link>
             </div>
 
             <div className="mt-10 grid grid-cols-2 gap-5 max-w-[430px]">
               <div className="border-t border-white/[0.12] pt-4">
                 <p className="text-white font-extrabold text-[1.45rem] leading-none">
-                  3,200+
+                  1 place
                 </p>
                 <p className="text-white/42 text-[12px] mt-2">
-                  student inquiries last year
+                  focused student residence
                 </p>
               </div>
               <div className="border-t border-white/[0.12] pt-4">
                 <p className="text-white font-extrabold text-[1.45rem] leading-none">
-                  24 hr
+                  3 plans
                 </p>
                 <p className="text-white/42 text-[12px] mt-2">
-                  typical listing review
+                  private, shared, and studio options
                 </p>
               </div>
             </div>
@@ -73,7 +74,7 @@ export default function LandlordCTA() {
             <div className="relative aspect-[16/10] rounded-[8px] overflow-hidden border border-white/[0.1] shadow-[0_28px_80px_rgba(0,0,0,0.36)]">
               <Image
                 src="/images/unit-dining.jpg"
-                alt="Clean rental dining and study area"
+                alt="Clean shared dining and study area at ZIM.ca"
                 fill
                 className="object-cover"
               />

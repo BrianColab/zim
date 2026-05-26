@@ -35,7 +35,7 @@ export default function Hero() {
               </span>
             </h1>
             <p className="text-white/72 text-[1.02rem] sm:text-[1.16rem] leading-[1.55] max-w-[380px] font-medium">
-              Modern student rentals near campus.
+              Modern student housing near campus.
               <br />
               Built for focus. Made for life.
             </p>

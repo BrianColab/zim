@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-const navLinks = ["Find a Place", "Why ZIM", "Resources", "About"];
+const navLinks = ["Suites", "Amenities", "Resources", "Location"];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -49,7 +49,7 @@ export default function Header() {
               href="#"
               className="hidden md:inline-flex items-center px-[18px] py-[9px] bg-[#c8f535] text-[#07111b] text-[13px] font-extrabold rounded-[10px] hover:bg-[#d6fa57] transition-colors"
             >
-              List Your Property
+              Book a Tour
             </Link>
             <button
               onClick={() => setOpen(!open)}
@@ -86,7 +86,7 @@ export default function Header() {
               href="#"
               className="mt-3 py-2.5 bg-[#c8f535] text-[#07111b] text-sm font-extrabold rounded-[10px] text-center"
             >
-              List Your Property
+              Book a Tour
             </Link>
           </div>
         )}

@@ -12,7 +12,7 @@ export default function StudentResources() {
               Student resources
             </p>
             <h2 className="font-heading font-extrabold text-zinc-950 text-[1.7rem] md:text-[2rem]">
-              Plan the move with confidence
+              Settle in with confidence
             </h2>
           </div>
           <Link

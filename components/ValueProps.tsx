@@ -1,7 +1,7 @@
 const values = [
   {
     title: "Verified & Trusted",
-    desc: "Every listing is verified for quality and safety.",
+    desc: "A professionally managed residence with clear standards.",
     icon: (
       <svg
         className="w-[22px] h-[22px]"
@@ -39,7 +39,7 @@ const values = [
   },
   {
     title: "Fair Prices",
-    desc: "Transparent listings. No hidden fees. Ever.",
+    desc: "Straightforward monthly pricing and clear lease terms.",
     icon: (
       <svg
         className="w-[22px] h-[22px]"

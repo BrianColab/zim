@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const navLinks = ["Find a Place", "Why ZIM", "Resources", "About"];
+const navLinks = ["Suites", "Amenities", "Resources", "Location"];
 
 export default function Footer() {
   return (
@@ -20,7 +20,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-white/25 text-[12px]">
-              © 2026 ZIM.ca. All rights reserved.
+              (c) 2026 ZIM.ca. All rights reserved.
             </p>
           </div>
 
