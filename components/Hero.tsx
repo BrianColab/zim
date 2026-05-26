@@ -11,11 +11,11 @@ export default function Hero() {
           fill
           priority
           quality={90}
-          className="object-cover object-center"
+          className="object-cover object-[62%_42%]"
         />
-        <div className="absolute inset-0 bg-[#07111b]/78" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#06101a]/95 via-[#07111b]/78 to-[#07111b]/38" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#06101a]/84 via-transparent to-[#06101a]" />
+        <div className="absolute inset-0 bg-[#07111b]/34" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#06101a]/92 via-[#07111b]/54 to-[#07111b]/10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#06101a]/58 via-[#06101a]/8 to-[#06101a]/82" />
       </div>
 
       <div className="relative flex-1 flex flex-col justify-end">
