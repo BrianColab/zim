@@ -19,38 +19,35 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0c0d10]/95 backdrop-blur-md border-b border-white/[0.06]"
+          ? "bg-[#07111b]/86 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_10px_40px_rgba(0,0,0,0.18)]"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-[62px]">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-[72px]">
           <Link
             href="/"
-            className="font-heading text-white font-bold text-[17px] tracking-tight"
+            className="font-heading text-white font-extrabold text-[20px]"
           >
             zim.ca
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-7">
+          <nav className="hidden md:flex items-center gap-9">
             {navLinks.map((item) => (
               <Link
                 key={item}
                 href="#"
-                className="text-white/60 hover:text-white text-[13.5px] font-medium transition-colors duration-150"
+                className="text-white/68 hover:text-white text-[13px] font-semibold transition-colors duration-150"
               >
                 {item}
               </Link>
             ))}
           </nav>
 
-          {/* Right side */}
           <div className="flex items-center gap-3">
             <Link
               href="#"
-              className="hidden md:inline-flex items-center px-[14px] py-[7px] bg-[#c8f535] text-[#0c0d10] text-[13px] font-bold rounded-lg hover:bg-[#d5f858] transition-colors"
+              className="hidden md:inline-flex items-center px-[18px] py-[9px] bg-[#c8f535] text-[#07111b] text-[13px] font-extrabold rounded-[10px] hover:bg-[#d6fa57] transition-colors"
             >
               List Your Property
             </Link>
@@ -74,7 +71,7 @@ export default function Header() {
 
         {/* Mobile drawer */}
         {open && (
-          <div className="md:hidden bg-[#0c0d10] py-4 border-t border-white/[0.06] flex flex-col gap-1">
+          <div className="md:hidden bg-[#07111b]/95 backdrop-blur-xl py-4 border-t border-white/[0.08] flex flex-col gap-1">
             {navLinks.map((item) => (
               <Link
                 key={item}
@@ -87,7 +84,7 @@ export default function Header() {
             ))}
             <Link
               href="#"
-              className="mt-3 py-2.5 bg-[#c8f535] text-[#0c0d10] text-sm font-bold rounded-lg text-center"
+              className="mt-3 py-2.5 bg-[#c8f535] text-[#07111b] text-sm font-extrabold rounded-[10px] text-center"
             >
               List Your Property
             </Link>

@@ -79,22 +79,22 @@ const values = [
 
 export default function ValueProps() {
   return (
-    <section className="bg-[#111318] border-y border-white/[0.05] py-14">
+    <section className="bg-[#07111b] border-y border-white/[0.07] py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
           {values.map((item, i) => (
             <div
               key={i}
-              className={`flex flex-col gap-3 ${
-                i > 0 ? "lg:border-l lg:border-white/[0.07] lg:pl-10" : ""
+              className={`flex items-start gap-4 ${
+                i > 0 ? "lg:border-l lg:border-white/[0.08] lg:pl-8" : ""
               } ${i < values.length - 1 ? "lg:pr-10" : ""}`}
             >
-              <div className="text-[#c8f535]">{item.icon}</div>
+              <div className="text-[#c8f535] shrink-0 mt-0.5">{item.icon}</div>
               <div>
-                <h3 className="text-white text-[14px] font-semibold mb-[5px]">
+                <h3 className="text-white text-[14px] font-extrabold mb-[5px]">
                   {item.title}
                 </h3>
-                <p className="text-white/35 text-[12.5px] leading-[1.6]">
+                <p className="text-white/48 text-[12.5px] leading-[1.55] max-w-[210px]">
                   {item.desc}
                 </p>
               </div>

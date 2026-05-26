@@ -4,24 +4,29 @@ import { properties } from "@/data/properties";
 
 export default function FeaturedHomes() {
   return (
-    <section className="bg-[#f4f3ee] pt-14 pb-20">
+    <section className="bg-[#f5f1e8] pt-16 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-baseline justify-between mb-8">
-          <h2 className="font-heading font-bold text-zinc-900 text-[1.6rem] md:text-[1.85rem]">
-            Featured Homes Near Campus
-          </h2>
+        <div className="flex items-end justify-between mb-8">
+          <div>
+            <p className="text-[11px] font-extrabold uppercase tracking-[0.15em] text-[#60710f] mb-3">
+              Featured rentals
+            </p>
+            <h2 className="font-heading font-extrabold text-zinc-950 text-[1.7rem] md:text-[2rem] leading-tight max-w-[13ch] sm:max-w-none">
+              Featured Homes Near Campus
+            </h2>
+          </div>
           <Link
             href="#"
-            className="hidden sm:flex items-center gap-1 text-[13px] font-medium text-zinc-400 hover:text-zinc-700 transition-colors"
+            className="hidden sm:flex items-center gap-1 text-[13px] font-bold text-zinc-500 hover:text-zinc-800 transition-colors"
           >
             View all homes
             <span aria-hidden className="text-[15px]">
-              →
+              -&gt;
             </span>
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {properties.map((property) => (
             <PropertyCard key={property.id} property={property} />
           ))}

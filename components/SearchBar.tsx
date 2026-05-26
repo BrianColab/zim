@@ -16,25 +16,24 @@ const schools = [
 const budgets = [
   "Any budget",
   "Under $700",
-  "$700 – $900",
-  "$900 – $1,100",
+  "$700 - $900",
+  "$900 - $1,100",
   "$1,100+",
 ];
 
 const bedOptions = ["Any", "1", "2", "3", "4+"];
 
 const popularCities = [
+  "University of Ottawa",
+  "Carleton",
   "Waterloo",
-  "Toronto",
   "Western",
   "McMaster",
-  "Queen's",
-  "Ottawa",
 ];
 
 function FieldLabel({ children }: { children: React.ReactNode }) {
   return (
-    <span className="block text-[10px] font-bold uppercase tracking-[0.13em] text-white/30 mb-[5px]">
+    <span className="block text-[10px] font-extrabold uppercase tracking-[0.14em] text-white/38 mb-[7px]">
       {children}
     </span>
   );
@@ -46,17 +45,15 @@ export default function SearchBar() {
   const [beds, setBeds] = useState(bedOptions[0]);
 
   return (
-    <div className="mt-8">
-      {/* Panel */}
-      <div className="bg-[#0f1117] border border-white/[0.08] rounded-t-2xl overflow-hidden">
-        <div className="flex flex-col md:flex-row">
-          {/* School */}
-          <div className="flex-1 px-5 py-[18px] border-b md:border-b-0 md:border-r border-white/[0.07]">
+    <div className="mt-8 w-[calc(100vw-2rem)] max-w-6xl sm:w-full">
+      <div className="bg-[#09131f]/96 border border-white/[0.12] rounded-t-[14px] overflow-hidden shadow-[0_28px_80px_rgba(0,0,0,0.42)]">
+        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,0.7fr)_auto]">
+          <div className="min-w-0 px-5 py-[18px] border-b md:border-b-0 md:border-r border-white/[0.09]">
             <FieldLabel>School</FieldLabel>
             <select
               value={school}
               onChange={(e) => setSchool(e.target.value)}
-              className="w-full bg-transparent text-white text-[13.5px] font-medium outline-none cursor-pointer appearance-none"
+              className="w-full min-w-0 bg-transparent text-white text-[14px] font-semibold outline-none cursor-pointer appearance-none"
             >
               {schools.map((s) => (
                 <option key={s} value={s} className="bg-[#0f1117] text-white">
@@ -66,23 +63,21 @@ export default function SearchBar() {
             </select>
           </div>
 
-          {/* Move-in */}
-          <div className="flex-1 px-5 py-[18px] border-b md:border-b-0 md:border-r border-white/[0.07]">
+          <div className="min-w-0 px-5 py-[18px] border-b md:border-b-0 md:border-r border-white/[0.09]">
             <FieldLabel>Move-in</FieldLabel>
             <input
               type="text"
-              placeholder="Select date"
-              className="w-full bg-transparent text-white text-[13.5px] font-medium outline-none placeholder-white/30"
+              placeholder="September 2026"
+              className="w-full min-w-0 bg-transparent text-white text-[14px] font-semibold outline-none placeholder-white/45"
             />
           </div>
 
-          {/* Budget */}
-          <div className="flex-1 px-5 py-[18px] border-b md:border-b-0 md:border-r border-white/[0.07]">
+          <div className="min-w-0 px-5 py-[18px] border-b md:border-b-0 md:border-r border-white/[0.09]">
             <FieldLabel>Budget</FieldLabel>
             <select
               value={budget}
               onChange={(e) => setBudget(e.target.value)}
-              className="w-full bg-transparent text-white text-[13.5px] font-medium outline-none cursor-pointer appearance-none"
+              className="w-full min-w-0 bg-transparent text-white text-[14px] font-semibold outline-none cursor-pointer appearance-none"
             >
               {budgets.map((b) => (
                 <option key={b} value={b} className="bg-[#0f1117] text-white">
@@ -92,38 +87,37 @@ export default function SearchBar() {
             </select>
           </div>
 
-          {/* Beds + Search */}
-          <div className="flex items-center gap-5 px-5 py-[18px]">
-            <div className="md:w-16">
-              <FieldLabel>Beds</FieldLabel>
-              <select
-                value={beds}
-                onChange={(e) => setBeds(e.target.value)}
-                className="w-full bg-transparent text-white text-[13.5px] font-medium outline-none cursor-pointer appearance-none"
-              >
-                {bedOptions.map((b) => (
-                  <option key={b} value={b} className="bg-[#0f1117] text-white">
-                    {b}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <button className="flex-shrink-0 px-6 py-[11px] bg-[#c8f535] text-[#0c0d10] text-[13px] font-bold rounded-xl hover:bg-[#d5f858] transition-colors whitespace-nowrap">
+          <div className="min-w-0 px-5 py-[18px] border-b md:border-b-0 md:border-r border-white/[0.09]">
+            <FieldLabel>Beds</FieldLabel>
+            <select
+              value={beds}
+              onChange={(e) => setBeds(e.target.value)}
+              className="w-full min-w-0 bg-transparent text-white text-[14px] font-semibold outline-none cursor-pointer appearance-none"
+            >
+              {bedOptions.map((b) => (
+                <option key={b} value={b} className="bg-[#0f1117] text-white">
+                  {b}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="min-w-0 flex items-center px-4 py-4">
+            <button className="w-full md:w-auto px-8 py-[14px] bg-[#c8f535] text-[#07111b] text-[13px] font-extrabold rounded-[10px] hover:bg-[#d6fa57] transition-colors whitespace-nowrap">
               Search
             </button>
           </div>
         </div>
       </div>
 
-      {/* Popular tags */}
-      <div className="bg-[#0d0e14] border-x border-b border-white/[0.07] rounded-b-2xl px-5 py-[10px] flex items-center gap-1 flex-wrap">
-        <span className="text-white/25 text-[11px] font-semibold mr-2">
+      <div className="bg-[#07111b]/98 border-x border-b border-white/[0.1] rounded-b-[14px] px-5 py-[11px] flex items-center gap-1.5 flex-wrap">
+        <span className="text-white/35 text-[11px] font-bold mr-2">
           Popular:
         </span>
         {popularCities.map((city) => (
           <button
             key={city}
-            className="text-[11.5px] text-white/40 hover:text-white/80 transition-colors px-2 py-1 rounded-md hover:bg-white/[0.05]"
+            className="text-[11.5px] text-white/56 hover:text-white transition-colors px-2.5 py-1 rounded-[7px] hover:bg-white/[0.06]"
           >
             {city}
           </button>

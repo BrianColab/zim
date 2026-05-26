@@ -3,29 +3,27 @@ import Image from "next/image";
 
 export default function LandlordCTA() {
   return (
-    <section className="bg-[#0c0d10] py-24">
+    <section className="bg-[#07111b] py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          {/* Text side */}
+        <div className="grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-14 items-center">
           <div>
-            <p className="text-[#c8f535] text-[11px] font-bold uppercase tracking-[0.15em] mb-5">
-              For Landlords
+            <p className="text-[#c8f535] text-[11px] font-extrabold uppercase tracking-[0.16em] mb-5">
+              For landlords
             </p>
             <h2
-              className="font-heading font-extrabold text-white leading-[0.88] tracking-tight mb-6"
-              style={{ fontSize: "clamp(2.8rem, 6vw, 4.5rem)" }}
+              className="font-heading font-extrabold text-white leading-[0.9] mb-6"
+              style={{ fontSize: "clamp(3rem, 6vw, 5.1rem)" }}
             >
               List with ZIM.
             </h2>
-            <p className="text-white/45 text-[1rem] leading-[1.7] mb-9 max-w-[400px]">
-              Reach thousands of students actively looking for their next home.
-              Fast setup, honest pricing, and real results.
+            <p className="text-white/62 text-[1.02rem] leading-[1.65] mb-9 max-w-[440px]">
+              Reach thousands of students looking for their next home.
             </p>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-5 flex-wrap">
               <Link
                 href="#"
-                className="inline-flex items-center gap-2 px-6 py-[13px] bg-[#c8f535] text-[#0c0d10] font-bold text-[13.5px] rounded-xl hover:bg-[#d5f858] transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-[13px] bg-[#c8f535] text-[#07111b] font-extrabold text-[13.5px] rounded-[10px] hover:bg-[#d6fa57] transition-colors"
               >
                 List Your Property
                 <svg
@@ -44,37 +42,42 @@ export default function LandlordCTA() {
               </Link>
               <Link
                 href="#"
-                className="text-white/40 hover:text-white/70 text-[13.5px] font-medium transition-colors"
+                className="text-white/52 hover:text-white text-[13.5px] font-bold transition-colors"
               >
-                Learn more →
+                Learn more -&gt;
               </Link>
             </div>
 
-            {/* Social proof */}
-            <p className="mt-8 text-white/20 text-[12px]">
-              Trusted by landlords across Ottawa, Waterloo, Toronto & more
-            </p>
+            <div className="mt-10 grid grid-cols-2 gap-5 max-w-[430px]">
+              <div className="border-t border-white/[0.12] pt-4">
+                <p className="text-white font-extrabold text-[1.45rem] leading-none">
+                  3,200+
+                </p>
+                <p className="text-white/42 text-[12px] mt-2">
+                  student inquiries last year
+                </p>
+              </div>
+              <div className="border-t border-white/[0.12] pt-4">
+                <p className="text-white font-extrabold text-[1.45rem] leading-none">
+                  24 hr
+                </p>
+                <p className="text-white/42 text-[12px] mt-2">
+                  typical listing review
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Image side */}
           <div className="relative">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+            <div className="absolute -right-10 -top-8 h-32 w-32 border-t-4 border-r-4 border-[#c8f535]" />
+            <div className="relative aspect-[16/10] rounded-[8px] overflow-hidden border border-white/[0.1] shadow-[0_28px_80px_rgba(0,0,0,0.36)]">
               <Image
-                src="/images/unit-bedroom.jpg"
-                alt="Premium student room"
+                src="/images/unit-dining.jpg"
+                alt="Clean rental dining and study area"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
-            </div>
-            {/* Floating stat card */}
-            <div className="absolute -bottom-4 -left-4 bg-[#111318] border border-white/[0.08] rounded-2xl px-5 py-4 shadow-xl">
-              <p className="text-[#c8f535] text-[1.6rem] font-bold font-heading leading-none mb-1">
-                3,200+
-              </p>
-              <p className="text-white/40 text-[12px] font-medium">
-                students placed last year
-              </p>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#07111b]/52 via-transparent to-transparent" />
             </div>
           </div>
         </div>

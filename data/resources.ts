@@ -8,20 +8,20 @@ export interface Resource {
 export const resources: Resource[] = [
   {
     id: 1,
-    image: "/images/gallery/photo-1.jpg",
-    title: "Moving Checklist: Don't Forget These Essentials",
-    category: "Student Life",
+    image: "/images/gallery/photo-6.jpg",
+    title: "A practical move-in plan for your first month",
+    category: "Move-in planning",
   },
   {
     id: 2,
-    image: "/images/gallery/photo-2.jpg",
-    title: "Best Neighbourhoods for Students in Waterloo",
+    image: "/images/gallery/photo-3.jpg",
+    title: "How to choose a neighbourhood near campus",
     category: "Neighbourhoods",
   },
   {
     id: 3,
-    image: "/images/gallery/photo-4.jpg",
-    title: "How to Talk to Your Future Roommates",
-    category: "Roommates",
+    image: "/images/gallery/photo-9.jpg",
+    title: "Roommate, budget, and study-space questions to ask",
+    category: "Student living",
   },
 ];
