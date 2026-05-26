@@ -6,12 +6,12 @@ export default function Hero() {
     <section className="relative min-h-[760px] lg:min-h-[860px] flex flex-col overflow-hidden bg-[#07111b]">
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-student-housing.jpg"
-          alt="Modern residential building near campus"
+          src="/images/main.png"
+          alt="Students arriving at ZIM.ca"
           fill
           priority
           quality={90}
-          className="object-cover object-[62%_42%]"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-[#07111b]/78" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#06101a]/95 via-[#07111b]/78 to-[#07111b]/38" />
