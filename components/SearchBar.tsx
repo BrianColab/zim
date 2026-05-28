@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 const moveIns = ["September 2026", "January 2027", "May 2027"];
-const suiteTypes = ["Any suite", "Private room", "Shared suite", "Studio"];
+const suiteTypes = ["Any room", "Private room", "Shared room (2 people only)"];
 const leaseOptions = ["12 months", "8 months", "Flexible"];
 
 function FieldLabel({ children }: { children: React.ReactNode }) {
@@ -39,7 +39,7 @@ export default function SearchBar() {
           </div>
 
           <div className="min-w-0 px-5 py-[18px] border-b md:border-b-0 md:border-r border-white/[0.09]">
-            <FieldLabel>Suite type</FieldLabel>
+            <FieldLabel>Room type</FieldLabel>
             <select
               value={suiteType}
               onChange={(e) => setSuiteType(e.target.value)}
@@ -86,7 +86,7 @@ export default function SearchBar() {
         </span>
         <span className="hidden sm:inline text-white/16">/</span>
         <span className="text-[11.5px] text-white/56">
-          Private bedrooms, shared kitchens, quiet study-friendly living.
+          Private rooms plus limited shared rooms for two students only.
         </span>
       </div>
     </div>

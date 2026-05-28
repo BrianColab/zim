@@ -58,10 +58,10 @@ export default function LandlordCTA() {
               </div>
               <div className="border-t border-white/[0.12] pt-4">
                 <p className="text-white font-extrabold text-[1.45rem] leading-none">
-                  3 plans
+                  2 plans
                 </p>
                 <p className="text-white/42 text-[12px] mt-2">
-                  private, shared, and studio options
+                  private rooms and limited shared rooms
                 </p>
               </div>
             </div>
