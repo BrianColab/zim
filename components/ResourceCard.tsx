@@ -19,6 +19,9 @@ export default function ResourceCard({ resource }: { resource: Resource }) {
         <h3 className="mt-2 text-zinc-950 font-extrabold text-[16px] leading-snug">
           {resource.title}
         </h3>
+        <p className="mt-2 text-[12.5px] leading-[1.55] text-zinc-500">
+          {resource.description}
+        </p>
       </div>
     </article>
   );

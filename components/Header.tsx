@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import ContactTrigger from "./ContactTrigger";
 
 const navLinks = ["Suites", "Amenities", "Resources", "Location"];
 
@@ -45,12 +46,11 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link
-              href="#"
+            <ContactTrigger
               className="hidden md:inline-flex items-center px-[18px] py-[9px] bg-[#c8f535] text-[#07111b] text-[13px] font-extrabold rounded-[10px] hover:bg-[#d6fa57] transition-colors"
             >
               Book a Tour
-            </Link>
+            </ContactTrigger>
             <button
               onClick={() => setOpen(!open)}
               className="md:hidden p-2 text-white/60 hover:text-white transition-colors"
@@ -82,12 +82,11 @@ export default function Header() {
                 {item}
               </Link>
             ))}
-            <Link
-              href="#"
+            <ContactTrigger
               className="mt-3 py-2.5 bg-[#c8f535] text-[#07111b] text-sm font-extrabold rounded-[10px] text-center"
             >
               Book a Tour
-            </Link>
+            </ContactTrigger>
           </div>
         )}
       </div>

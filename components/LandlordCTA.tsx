@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import ContactTrigger from "./ContactTrigger";
 
 export default function LandlordCTA() {
   return (
@@ -22,8 +22,7 @@ export default function LandlordCTA() {
             </p>
 
             <div className="flex items-center gap-5 flex-wrap">
-              <Link
-                href="#"
+              <ContactTrigger
                 className="inline-flex items-center gap-2 px-6 py-[13px] bg-[#c8f535] text-[#07111b] font-extrabold text-[13.5px] rounded-[10px] hover:bg-[#d6fa57] transition-colors"
               >
                 Schedule a Tour
@@ -40,13 +39,12 @@ export default function LandlordCTA() {
                     d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
                   />
                 </svg>
-              </Link>
-              <Link
-                href="#"
+              </ContactTrigger>
+              <ContactTrigger
                 className="text-white/52 hover:text-white text-[13.5px] font-bold transition-colors"
               >
                 Ask a question -&gt;
-              </Link>
+              </ContactTrigger>
             </div>
 
             <div className="mt-10 grid grid-cols-2 gap-5 max-w-[430px]">

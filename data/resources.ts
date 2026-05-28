@@ -3,25 +3,29 @@ export interface Resource {
   image: string;
   title: string;
   category: string;
+  description: string;
 }
 
 export const resources: Resource[] = [
   {
     id: 1,
     image: "/images/gallery/photo-6.jpg",
-    title: "What to prepare before move-in day at ZIM.ca",
-    category: "Move-in planning",
+    title: "Move-In Guide",
+    category: "Before arrival",
+    description: "What to bring, key pickup, setup basics, and first-day notes.",
   },
   {
     id: 2,
     image: "/images/gallery/photo-3.jpg",
-    title: "How to set up a quiet, study-friendly room",
-    category: "Study spaces",
+    title: "Shared Living Guide",
+    category: "At ZIM.ca",
+    description: "Quiet hours, shared spaces, guests, cleaning, and maintenance.",
   },
   {
     id: 3,
-    image: "/images/gallery/photo-9.jpg",
-    title: "Shared suite basics: routines, respect, and comfort",
-    category: "Student living",
+    image: "/images/gallery/photo-12.jpg",
+    title: "Neighbourhood Guide",
+    category: "Nearby",
+    description: "Campus routes, transit, groceries, cafes, and study spots.",
   },
 ];

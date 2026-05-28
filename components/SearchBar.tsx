@@ -69,7 +69,11 @@ export default function SearchBar() {
           </div>
 
           <div className="min-w-0 flex items-center px-4 py-4">
-            <button className="w-full md:w-auto px-8 py-[14px] bg-[#c8f535] text-[#07111b] text-[13px] font-extrabold rounded-[10px] hover:bg-[#d6fa57] transition-colors whitespace-nowrap">
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new Event("zim:open-contact"))}
+              className="w-full md:w-auto px-8 py-[14px] bg-[#c8f535] text-[#07111b] text-[13px] font-extrabold rounded-[10px] hover:bg-[#d6fa57] transition-colors whitespace-nowrap"
+            >
               Check Availability
             </button>
           </div>
