@@ -88,10 +88,10 @@ export default function ImportantNotes() {
                     <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-[8px] bg-[#c8f535] text-[#07111b]">
                       <Icon type={note.icon} />
                     </div>
-                    <h3 className="text-[14px] font-extrabold text-white">
+                    <h3 className="text-[18px] font-extrabold leading-tight text-white">
                       {note.title}
                     </h3>
-                    <p className="mt-2 text-[12.5px] leading-relaxed text-white/52">
+                    <p className="mt-3 text-[12.5px] leading-relaxed text-white/52">
                       {note.desc}
                     </p>
                   </div>
