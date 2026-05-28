@@ -7,6 +7,7 @@ const suiteTypes = [
   "Unit A private room",
   "Unit A double occupancy",
   "Unit B single occupancy",
+  "Unit B double occupancy",
 ];
 const leaseOptions = ["12 months", "8 months", "Flexible"];
 

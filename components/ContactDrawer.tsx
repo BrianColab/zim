@@ -117,6 +117,7 @@ export default function ContactDrawer() {
                     <option>Unit A private room</option>
                     <option>Unit A double occupancy</option>
                     <option>Unit B single occupancy</option>
+                    <option>Unit B double occupancy</option>
                     <option>General question</option>
                   </select>
                 </label>
