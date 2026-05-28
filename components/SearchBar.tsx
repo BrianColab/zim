@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-const moveIns = ["September 2026", "January 2027", "May 2027"];
 const suiteTypes = ["Any room", "Private room", "Shared room (2 people only)"];
 const leaseOptions = ["12 months", "8 months", "Flexible"];
 
@@ -15,7 +14,7 @@ function FieldLabel({ children }: { children: React.ReactNode }) {
 }
 
 export default function SearchBar() {
-  const [moveIn, setMoveIn] = useState(moveIns[0]);
+  const [moveIn, setMoveIn] = useState("2026-09-01");
   const [suiteType, setSuiteType] = useState(suiteTypes[0]);
   const [lease, setLease] = useState(leaseOptions[0]);
 
@@ -25,17 +24,13 @@ export default function SearchBar() {
         <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(0,0.9fr)_auto]">
           <div className="min-w-0 px-5 py-[18px] border-b md:border-b-0 md:border-r border-white/[0.09]">
             <FieldLabel>Move-in</FieldLabel>
-            <select
+            <input
+              type="date"
               value={moveIn}
               onChange={(e) => setMoveIn(e.target.value)}
-              className="w-full min-w-0 bg-transparent text-white text-[14px] font-semibold outline-none cursor-pointer appearance-none"
-            >
-              {moveIns.map((option) => (
-                <option key={option} value={option} className="bg-[#0f1117] text-white">
-                  {option}
-                </option>
-              ))}
-            </select>
+              min="2026-05-28"
+              className="w-full min-w-0 bg-transparent text-white text-[14px] font-semibold outline-none cursor-pointer [color-scheme:dark]"
+            />
           </div>
 
           <div className="min-w-0 px-5 py-[18px] border-b md:border-b-0 md:border-r border-white/[0.09]">
