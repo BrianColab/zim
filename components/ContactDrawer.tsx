@@ -2,11 +2,55 @@
 
 import { useEffect, useState } from "react";
 
+type ContactPayload = {
+  roomType?: string;
+  moveIn?: string;
+  lease?: string;
+};
+
+const interestOptions = [
+  "Book a tour",
+  "Availability",
+  "Unit A private room",
+  "Unit A double occupancy",
+  "Unit B single occupancy",
+  "Unit B double occupancy",
+  "General question",
+];
+
 export default function ContactDrawer() {
   const [open, setOpen] = useState(false);
+  const [interest, setInterest] = useState(interestOptions[0]);
+  const [moveIn, setMoveIn] = useState("2026-09-01");
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
-    const openDrawer = () => setOpen(true);
+    const openDrawer = (event: Event) => {
+      const payload = (event as CustomEvent<ContactPayload>).detail;
+
+      if (payload?.roomType && payload.roomType !== "Any room") {
+        setInterest(payload.roomType);
+      }
+
+      if (payload?.moveIn) {
+        setMoveIn(payload.moveIn);
+      }
+
+      if (payload?.roomType || payload?.moveIn || payload?.lease) {
+        setMessage(
+          [
+            payload?.roomType ? `Room type: ${payload.roomType}` : "",
+            payload?.moveIn ? `Move-in date: ${payload.moveIn}` : "",
+            payload?.lease ? `Lease preference: ${payload.lease}` : "",
+          ]
+            .filter(Boolean)
+            .join("\n"),
+        );
+      }
+
+      setOpen(true);
+    };
+
     window.addEventListener("zim:open-contact", openDrawer);
     return () => window.removeEventListener("zim:open-contact", openDrawer);
   }, []);
@@ -111,14 +155,14 @@ export default function ContactDrawer() {
                   <span className="text-[12px] font-bold text-zinc-700">
                     Interest
                   </span>
-                  <select className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]">
-                    <option>Book a tour</option>
-                    <option>Availability</option>
-                    <option>Unit A private room</option>
-                    <option>Unit A double occupancy</option>
-                    <option>Unit B single occupancy</option>
-                    <option>Unit B double occupancy</option>
-                    <option>General question</option>
+                  <select
+                    value={interest}
+                    onChange={(e) => setInterest(e.target.value)}
+                    className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]"
+                  >
+                    {interestOptions.map((option) => (
+                      <option key={option}>{option}</option>
+                    ))}
                   </select>
                 </label>
 
@@ -126,12 +170,13 @@ export default function ContactDrawer() {
                   <span className="text-[12px] font-bold text-zinc-700">
                     Move-in
                   </span>
-                  <select className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]">
-                    <option>September 2026</option>
-                    <option>January 2027</option>
-                    <option>May 2027</option>
-                    <option>Not sure yet</option>
-                  </select>
+                  <input
+                    type="date"
+                    value={moveIn}
+                    onChange={(e) => setMoveIn(e.target.value)}
+                    min="2026-05-28"
+                    className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]"
+                  />
                 </label>
               </div>
 
@@ -140,6 +185,8 @@ export default function ContactDrawer() {
                   Message
                 </span>
                 <textarea
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   className="min-h-32 resize-none rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[14px] font-medium leading-relaxed text-zinc-950 outline-none transition focus:border-[#8ca80d]"
                   placeholder="Tell us what you are looking for."
                 />
