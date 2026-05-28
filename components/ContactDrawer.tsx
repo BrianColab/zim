@@ -116,7 +116,7 @@ export default function ContactDrawer() {
                     <option>Availability</option>
                     <option>Unit A - exclusive female occupancy</option>
                     <option>Unit B - co-ed single occupancy</option>
-                    <option>Unit B - co-ed double occupancy</option>
+                    <option>Unit B - limited double occupancy</option>
                     <option>General question</option>
                   </select>
                 </label>

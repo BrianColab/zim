@@ -33,17 +33,17 @@ export const properties: Property[] = [
     id: 2,
     image: "/images/gallery/photo-5.jpg",
     address: "Unit B - 1658-1660 Baseline Road",
-    priceLabel: "$850 single / $1000 double",
+    priceLabel: "$850 single / $1000 limited double",
     occupancy: "Co-ed unit",
     baths: "5 bedrooms / 2 bathrooms",
-    availability: "Limited shared rooms",
+    availability: "Limited double occupancy",
     title: "Unit B Room",
     description:
-      "All-inclusive furnished room in the semi-basement, with single or double bed options.",
+      "All-inclusive furnished room in the semi-basement, with single occupancy or limited double occupancy options.",
     details: [
       "Single occupancy: $850 per month",
-      "Double occupancy: $1000 per month",
-      "Shared rooms are limited to 2 people only",
+      "Limited double occupancy: $1000 per month",
+      "Double occupancy rooms are capped at 2 people only",
     ],
   },
 ];

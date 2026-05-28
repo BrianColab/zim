@@ -39,7 +39,7 @@ const values = [
   },
   {
     title: "Fair Prices",
-    desc: "$900 private, or $850 single / $1000 double in Unit B.",
+    desc: "$900 private, $850 single, or limited $1000 double occupancy.",
     icon: (
       <svg
         className="w-[22px] h-[22px]"
