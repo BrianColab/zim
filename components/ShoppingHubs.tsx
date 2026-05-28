@@ -3,10 +3,65 @@
 import { useMemo, useState } from "react";
 import { shoppingHubs, zimAddress, type ShoppingHub } from "@/data/shoppingHubs";
 
+const brandLogos: Record<string, { domain: string; color: string }> = {
+  Loblaws: { domain: "loblaws.ca", color: "#e1251b" },
+  "Home Depot": { domain: "homedepot.ca", color: "#f96302" },
+  LCBO: { domain: "lcbo.com", color: "#7a003c" },
+  Rexall: { domain: "rexall.ca", color: "#0072ce" },
+  BMO: { domain: "bmo.com", color: "#ed1b2f" },
+  "Walmart Supercentre": { domain: "walmart.ca", color: "#0071ce" },
+  "McDonald's": { domain: "mcdonalds.com", color: "#ffbc0d" },
+  "Sport Chek": { domain: "sportchek.ca", color: "#e31b23" },
+  Shoppers: { domain: "shoppersdrugmart.ca", color: "#e31937" },
+  Dollarama: { domain: "dollarama.com", color: "#0b7f3a" },
+  FreshCo: { domain: "freshco.com", color: "#69be28" },
+  Movati: { domain: "movatiathletic.com", color: "#6a2c91" },
+  PetSmart: { domain: "petsmart.ca", color: "#005baa" },
+  Staples: { domain: "staples.ca", color: "#cc0000" },
+  TD: { domain: "td.com", color: "#008a00" },
+  Metro: { domain: "metro.ca", color: "#e1251b" },
+  "Toys R Us": { domain: "toysrus.ca", color: "#005baa" },
+  "Canadian Tire": { domain: "canadiantire.ca", color: "#ed1b2f" },
+};
+
 function directionsUrl(destination: string) {
   const origin = encodeURIComponent(zimAddress);
   const dest = encodeURIComponent(`${destination}, Ottawa, ON`);
   return `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}`;
+}
+
+function logoUrl(domain: string) {
+  return `https://www.google.com/s2/favicons?sz=64&domain_url=${domain}`;
+}
+
+function LogoPill({ tag }: { tag: string }) {
+  const logo = brandLogos[tag];
+
+  if (!logo) {
+    return (
+      <span className="inline-flex items-center gap-2 rounded-full border border-[#c8d3e1] bg-[#f8fafc] px-2.5 py-1.5 text-[11px] font-extrabold text-slate-700">
+        <span className="h-2 w-2 rounded-full bg-[#c8f535]" />
+        {tag}
+      </span>
+    );
+  }
+
+  return (
+    <span className="inline-flex items-center gap-2 rounded-full border border-black/[0.08] bg-white px-2.5 py-1.5 text-[11px] font-extrabold text-slate-800 shadow-[0_1px_2px_rgba(8,18,28,0.05)]">
+      <span
+        className="flex h-6 w-6 items-center justify-center rounded-full"
+        style={{ backgroundColor: `${logo.color}1f` }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={logoUrl(logo.domain)}
+          alt=""
+          className="h-4 w-4 rounded-[3px] object-contain"
+        />
+      </span>
+      {tag}
+    </span>
+  );
 }
 
 function HubCard({
@@ -33,12 +88,7 @@ function HubCard({
 
         <div className="mt-5 flex flex-wrap gap-2">
           {hub.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full border border-[#c8d3e1] bg-[#f8fafc] px-2.5 py-1 text-[11px] font-extrabold text-slate-700"
-            >
-              {tag}
-            </span>
+            <LogoPill key={tag} tag={tag} />
           ))}
         </div>
 
@@ -182,6 +232,12 @@ function MapDrawer({
                 Distances are approximate and intended for student orientation.
                 Use live maps for current traffic, transit, and store hours.
               </p>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {hub.tags.map((tag) => (
+                  <LogoPill key={tag} tag={tag} />
+                ))}
+              </div>
 
               <a
                 href={mapUrl}
