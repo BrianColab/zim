@@ -20,9 +20,17 @@ const interestOptions = [
 
 export default function ContactDrawer() {
   const [open, setOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [interest, setInterest] = useState(interestOptions[0]);
   const [moveIn, setMoveIn] = useState("2026-09-01");
   const [message, setMessage] = useState("");
+  const [company, setCompany] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle",
+  );
+  const [statusMessage, setStatusMessage] = useState("");
 
   useEffect(() => {
     const openDrawer = (event: Event) => {
@@ -61,6 +69,48 @@ export default function ContactDrawer() {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setStatus("sending");
+    setStatusMessage("");
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        interest,
+        moveIn,
+        message,
+        company,
+      }),
+    });
+
+    const result = (await response.json().catch(() => ({}))) as {
+      error?: string;
+    };
+
+    if (!response.ok) {
+      setStatus("error");
+      setStatusMessage(
+        result.error ??
+          "The message could not be sent. Please email bpallister@gmail.com directly.",
+      );
+      return;
+    }
+
+    setStatus("sent");
+    setStatusMessage("Thanks. Your message was sent to ZIM.ca.");
+    setName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+  }
 
   return (
     <div
@@ -115,14 +165,31 @@ export default function ContactDrawer() {
             </button>
           </div>
 
-          <form className="flex-1 overflow-y-auto px-6 py-6">
+          <form
+            className="flex-1 overflow-y-auto px-6 py-6"
+            onSubmit={handleSubmit}
+          >
             <div className="grid gap-4">
+              <label className="hidden">
+                Company
+                <input
+                  type="text"
+                  value={company}
+                  onChange={(e) => setCompany(e.target.value)}
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </label>
+
               <label className="grid gap-2">
                 <span className="text-[12px] font-bold text-zinc-700">
                   Name
                 </span>
                 <input
                   type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
                   className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]"
                   placeholder="Your name"
                 />
@@ -134,6 +201,9 @@ export default function ContactDrawer() {
                 </span>
                 <input
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                   className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]"
                   placeholder="you@example.com"
                 />
@@ -145,6 +215,8 @@ export default function ContactDrawer() {
                 </span>
                 <input
                   type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]"
                   placeholder="Optional"
                 />
@@ -187,6 +259,7 @@ export default function ContactDrawer() {
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
+                  required
                   className="min-h-32 resize-none rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[14px] font-medium leading-relaxed text-zinc-950 outline-none transition focus:border-[#8ca80d]"
                   placeholder="Tell us what you are looking for."
                 />
@@ -194,15 +267,28 @@ export default function ContactDrawer() {
             </div>
 
             <button
-              type="button"
-              className="mt-6 w-full rounded-[10px] bg-[#c8f535] px-5 py-4 text-[13.5px] font-extrabold text-[#07111b] transition hover:bg-[#d6fa57]"
+              type="submit"
+              disabled={status === "sending"}
+              className="mt-6 w-full rounded-[10px] bg-[#c8f535] px-5 py-4 text-[13.5px] font-extrabold text-[#07111b] transition hover:bg-[#d6fa57] disabled:cursor-not-allowed disabled:opacity-60"
             >
-              Send Message
+              {status === "sending" ? "Sending..." : "Send Message"}
             </button>
 
+            {statusMessage ? (
+              <p
+                className={`mt-4 rounded-[8px] px-4 py-3 text-[12.5px] font-semibold leading-relaxed ${
+                  status === "sent"
+                    ? "bg-[#c8f535]/20 text-[#324000]"
+                    : "bg-red-50 text-red-700"
+                }`}
+              >
+                {statusMessage}
+              </p>
+            ) : null}
+
             <p className="mt-4 text-[12px] leading-relaxed text-zinc-500">
-              For now, inquiries should go to info@homyspot.com with the
-              property address and a brief introduction.
+              Inquiries are delivered to bpallister@gmail.com. Include the
+              property address and a brief introduction for the fastest reply.
             </p>
           </form>
         </div>
