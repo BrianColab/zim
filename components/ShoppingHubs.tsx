@@ -37,6 +37,21 @@ const brandStyles: Record<string, { text: string; color: string; bg: string }> =
   "The Beer Store": { text: "The Beer Store", color: "#007a3d", bg: "#e8f6ef" },
 };
 
+const brandImages: Record<string, string> = {
+  BMO: "/logos/bmo.svg",
+  "Canadian Tire": "/logos/canadian-tire.png",
+  Dollarama: "/logos/dollarama.png",
+  FreshCo: "/logos/freshco.svg",
+  "McDonald's": "/logos/mcdonalds.svg",
+  Metro: "/logos/metro.svg",
+  Subway: "/logos/subway.svg",
+  TD: "/logos/td.svg",
+  "The Beer Store": "/logos/the-beer-store.png",
+  "Tim Hortons": "/logos/tim-hortons.svg",
+  Walmart: "/logos/walmart.svg",
+  "Walmart Supercentre": "/logos/walmart.svg",
+};
+
 function directionsUrl(destination: string) {
   const origin = encodeURIComponent(zimAddress);
   const dest = encodeURIComponent(`${destination}, Ottawa, ON`);
@@ -45,12 +60,32 @@ function directionsUrl(destination: string) {
 
 function BrandMark({ name, compact = false }: { name: string; compact?: boolean }) {
   const brand = brandStyles[name];
+  const imageSrc = brandImages[name];
 
   if (!brand) {
     return (
       <span className="inline-flex items-center gap-2 rounded-full border border-[#c8d3e1] bg-[#f8fafc] px-2.5 py-1.5 text-[11px] font-extrabold text-slate-700">
         <span className="h-2 w-2 rounded-full bg-[#c8f535]" />
         {name}
+      </span>
+    );
+  }
+
+  if (imageSrc) {
+    return (
+      <span
+        className={`inline-flex items-center justify-center rounded-[8px] bg-white ${
+          compact ? "h-7 min-w-9 px-1.5" : "h-14 min-w-28 px-4"
+        }`}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={imageSrc}
+          alt={`${name} logo`}
+          className={`object-contain ${
+            compact ? "h-5 max-w-[76px]" : "h-10 max-w-[140px]"
+          }`}
+        />
       </span>
     );
   }
