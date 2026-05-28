@@ -72,10 +72,18 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
   }
 
   if (imageSrc) {
+    const isBeerStore = name === "The Beer Store";
+
     return (
       <span
         className={`inline-flex items-center justify-center rounded-[8px] bg-white ${
-          compact ? "h-7 min-w-9 px-1.5" : "h-14 min-w-28 px-4"
+          compact
+            ? isBeerStore
+              ? "h-8 min-w-24 px-2"
+              : "h-7 min-w-9 px-1.5"
+            : isBeerStore
+              ? "h-16 min-w-40 px-3"
+              : "h-14 min-w-28 px-4"
         }`}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -83,7 +91,13 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
           src={imageSrc}
           alt={`${name} logo`}
           className={`object-contain ${
-            compact ? "h-5 max-w-[76px]" : "h-10 max-w-[140px]"
+            compact
+              ? isBeerStore
+                ? "h-7 max-w-[116px]"
+                : "h-5 max-w-[76px]"
+              : isBeerStore
+                ? "h-14 max-w-[190px]"
+                : "h-10 max-w-[140px]"
           }`}
         />
       </span>
