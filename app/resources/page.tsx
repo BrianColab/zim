@@ -2,6 +2,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactDrawer from "@/components/ContactDrawer";
 import ContactTrigger from "@/components/ContactTrigger";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Student Housing Resources in Ottawa",
+  description:
+    "Move-in, shared living, neighbourhood, and house rule guides for ZIM.ca student rentals in Nepean, Ottawa near Algonquin College.",
+  alternates: {
+    canonical: "/resources",
+  },
+};
 
 const guides = [
   {
@@ -60,7 +70,7 @@ const guides = [
 
 const quickStats = [
   ["Address", "1658-1660 Baseline Road"],
-  ["Campus", "Near Algonquin College"],
+  ["Campus", "Algonquin minutes away"],
   ["Internet", "Unlimited gigabit"],
   ["Laundry", "In-unit washer/dryer"],
 ];
@@ -84,7 +94,7 @@ export default function ResourcesPage() {
                 <p className="mt-6 max-w-[560px] text-[1.05rem] font-medium leading-relaxed text-white/62">
                   Practical guides for living at ZIM.ca: what is included, how
                   shared living works, what is nearby, and how to ask the right
-                  questions before choosing a room.
+                  questions before choosing a room in Ottawa.
                 </p>
               </div>
 

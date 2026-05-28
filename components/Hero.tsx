@@ -35,9 +35,9 @@ export default function Hero() {
               </span>
             </h1>
             <p className="text-white/72 text-[1.02rem] sm:text-[1.16rem] leading-[1.55] max-w-[380px] font-medium">
-              Modern student housing near Algonquin campus.
+              Modern student housing in Ottawa near Algonquin campus.
               <br />
-              Built for focus. Made for life.
+              All students welcome. Built for focus. Made for life.
             </p>
           </div>
 

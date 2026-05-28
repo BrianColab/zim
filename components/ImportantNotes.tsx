@@ -74,7 +74,8 @@ export default function ImportantNotes() {
               </h2>
               <p className="mt-5 text-[13.5px] leading-relaxed text-white/55">
                 Comfortable rooms, practical essentials, and clear shared-living
-                expectations in one calm residence near Algonquin.
+                expectations in one calm Ottawa residence near Algonquin.
+                Students from every school are welcome.
               </p>
             </div>
 
