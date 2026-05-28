@@ -50,10 +50,10 @@ export default function LandlordCTA() {
             <div className="mt-10 grid grid-cols-2 gap-5 max-w-[430px]">
               <div className="border-t border-white/[0.12] pt-4">
                 <p className="text-white font-extrabold text-[1.45rem] leading-none">
-                  1 place
+                  4 units
                 </p>
                 <p className="text-white/42 text-[12px] mt-2">
-                  focused student residence
+                  segregated Baseline addresses
                 </p>
               </div>
               <div className="border-t border-white/[0.12] pt-4">

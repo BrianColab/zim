@@ -9,10 +9,10 @@ export default function FeaturedHomes() {
         <div className="flex items-end justify-between mb-8">
           <div>
             <p className="text-[11px] font-extrabold uppercase tracking-[0.15em] text-[#60710f] mb-3">
-              Suite options
+              Four segregated units
             </p>
             <h2 className="font-heading font-extrabold text-zinc-950 text-[1.7rem] md:text-[2rem] leading-tight">
-              Choose your space at ZIM.ca
+              Choose your unit at ZIM.ca
             </h2>
           </div>
           <Link
@@ -26,7 +26,7 @@ export default function FeaturedHomes() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {properties.map((property) => (
             <PropertyCard key={property.id} property={property} />
           ))}

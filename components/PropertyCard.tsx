@@ -26,6 +26,9 @@ export default function PropertyCard({ property }: { property: Property }) {
         <h3 className="text-[16px] leading-snug font-extrabold text-zinc-950 mb-2">
           {property.title}
         </h3>
+        <p className="mb-2 text-[12px] font-extrabold text-zinc-700">
+          {property.address}
+        </p>
         <p className="text-[12.5px] leading-[1.55] text-zinc-500 mb-4 min-h-[40px]">
           {property.description}
         </p>
