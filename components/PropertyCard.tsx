@@ -33,20 +33,24 @@ export default function PropertyCard({ property }: { property: Property }) {
           {property.description}
         </p>
         <div className="flex items-baseline gap-1 mb-3">
-          <span className="text-[1.35rem] font-extrabold text-zinc-950 leading-none">
-            ${property.price.toLocaleString()}
-          </span>
-          <span className="text-[12px] text-zinc-500 font-semibold">
-            / month
+          <span className="text-[1.2rem] font-extrabold text-zinc-950 leading-tight">
+            {property.priceLabel}
           </span>
         </div>
-        <div className="flex items-center justify-between border-t border-zinc-100 pt-3">
-          <p className="text-[12px] text-zinc-600 font-semibold">
-            {property.beds}
+        <div className="grid gap-2 border-t border-zinc-100 pt-3">
+          <p className="text-[12px] text-zinc-700 font-extrabold">
+            {property.occupancy}
           </p>
           <p className="text-[12px] text-zinc-500 font-medium">
             {property.baths}
           </p>
+          <ul className="grid gap-1 pt-1">
+            {property.details.map((detail) => (
+              <li key={detail} className="text-[11.5px] leading-relaxed text-zinc-500">
+                {detail}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </article>

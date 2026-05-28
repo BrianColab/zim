@@ -114,7 +114,9 @@ export default function ContactDrawer() {
                   <select className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]">
                     <option>Book a tour</option>
                     <option>Availability</option>
-                    <option>Pricing</option>
+                    <option>Unit A - exclusive female occupancy</option>
+                    <option>Unit B - co-ed single occupancy</option>
+                    <option>Unit B - co-ed double occupancy</option>
                     <option>General question</option>
                   </select>
                 </label>
@@ -151,8 +153,8 @@ export default function ContactDrawer() {
             </button>
 
             <p className="mt-4 text-[12px] leading-relaxed text-zinc-500">
-              This form is ready for design review. Submission wiring can be
-              added when the backend or email destination is confirmed.
+              For now, inquiries should go to info@homyspot.com with the
+              property address and a brief introduction.
             </p>
           </form>
         </div>

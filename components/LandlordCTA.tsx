@@ -17,8 +17,8 @@ export default function LandlordCTA() {
               Book a tour.
             </h2>
             <p className="text-white/62 text-[1.02rem] leading-[1.65] mb-9 max-w-[440px]">
-              See the suites, common areas, and study-friendly spaces before
-              you choose your room.
+              See Unit A and Unit B, the furnished rooms, shared kitchens, and
+              study-friendly common areas before you choose your room.
             </p>
 
             <div className="flex items-center gap-5 flex-wrap">
@@ -50,10 +50,10 @@ export default function LandlordCTA() {
             <div className="mt-10 grid grid-cols-2 gap-5 max-w-[430px]">
               <div className="border-t border-white/[0.12] pt-4">
                 <p className="text-white font-extrabold text-[1.45rem] leading-none">
-                  4 units
+                  2 units
                 </p>
                 <p className="text-white/42 text-[12px] mt-2">
-                  segregated Baseline addresses
+                  Unit A and Unit B
                 </p>
               </div>
               <div className="border-t border-white/[0.12] pt-4">
@@ -61,7 +61,7 @@ export default function LandlordCTA() {
                   2 plans
                 </p>
                 <p className="text-white/42 text-[12px] mt-2">
-                  private rooms and limited shared rooms
+                  private, single, and double occupancy
                 </p>
               </div>
             </div>

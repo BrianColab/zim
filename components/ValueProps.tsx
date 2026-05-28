@@ -39,7 +39,7 @@ const values = [
   },
   {
     title: "Fair Prices",
-    desc: "Straightforward monthly pricing and clear lease terms.",
+    desc: "$900 private, or $850 single / $1000 double in Unit B.",
     icon: (
       <svg
         className="w-[22px] h-[22px]"
@@ -58,7 +58,7 @@ const values = [
   },
   {
     title: "Here to Help",
-    desc: "Real local support when you need it most.",
+    desc: "Parking available, bus stop nearby, and no-cost laundry.",
     icon: (
       <svg
         className="w-[22px] h-[22px]"

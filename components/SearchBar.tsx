@@ -2,7 +2,12 @@
 
 import { useState } from "react";
 
-const suiteTypes = ["Any room", "Private room", "Shared room (2 people only)"];
+const suiteTypes = [
+  "Any room",
+  "Unit A private room",
+  "Unit B single occupancy",
+  "Unit B double occupancy",
+];
 const leaseOptions = ["12 months", "8 months", "Flexible"];
 
 function FieldLabel({ children }: { children: React.ReactNode }) {
@@ -81,7 +86,7 @@ export default function SearchBar() {
         </span>
         <span className="hidden sm:inline text-white/16">/</span>
         <span className="text-[11.5px] text-white/56">
-          Private rooms plus limited shared rooms for two students only.
+          All-inclusive furnished rooms with internet and on-site laundry.
         </span>
       </div>
     </div>

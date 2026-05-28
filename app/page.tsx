@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import FeaturedHomes from "@/components/FeaturedHomes";
+import ImportantNotes from "@/components/ImportantNotes";
 import ValueProps from "@/components/ValueProps";
 import StudentResources from "@/components/StudentResources";
 import ShoppingHubs from "@/components/ShoppingHubs";
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <FeaturedHomes />
+        <ImportantNotes />
         <ValueProps />
         <StudentResources />
         <ShoppingHubs />
