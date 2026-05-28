@@ -4,7 +4,7 @@ import { properties } from "@/data/properties";
 
 export default function FeaturedHomes() {
   return (
-    <section className="bg-[#f5f1e8] pt-16 pb-20">
+    <section id="suites" className="bg-[#f5f1e8] pt-16 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between mb-8">
           <div>

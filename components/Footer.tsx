@@ -1,6 +1,11 @@
 import Link from "next/link";
 
-const navLinks = ["Suites", "Amenities", "Resources", "Location"];
+const navLinks = [
+  { label: "Suites", href: "/#suites" },
+  { label: "Amenities", href: "/#amenities" },
+  { label: "Resources", href: "/resources" },
+  { label: "Location", href: "/#location" },
+];
 
 export default function Footer() {
   return (
@@ -28,11 +33,11 @@ export default function Footer() {
           <nav className="flex flex-wrap gap-6">
             {navLinks.map((link) => (
               <Link
-                key={link}
-                href="#"
+                key={link.label}
+                href={link.href}
                 className="text-white/35 hover:text-white/75 text-[13px] transition-colors"
               >
-                {link}
+                {link.label}
               </Link>
             ))}
           </nav>

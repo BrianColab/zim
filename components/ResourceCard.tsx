@@ -1,9 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Resource } from "@/data/resources";
 
 export default function ResourceCard({ resource }: { resource: Resource }) {
   return (
-    <article className="group bg-white rounded-[8px] overflow-hidden border border-black/[0.06] shadow-[0_1px_2px_rgba(8,18,28,0.05)] hover:shadow-[0_16px_38px_rgba(8,18,28,0.12)] transition-shadow duration-300 cursor-pointer">
+    <Link
+      href={resource.href}
+      className="group block bg-white rounded-[8px] overflow-hidden border border-black/[0.06] shadow-[0_1px_2px_rgba(8,18,28,0.05)] hover:shadow-[0_16px_38px_rgba(8,18,28,0.12)] transition-shadow duration-300"
+    >
       <div className="relative aspect-[16/9] overflow-hidden bg-zinc-100">
         <Image
           src={resource.image}
@@ -23,6 +27,6 @@ export default function ResourceCard({ resource }: { resource: Resource }) {
           {resource.description}
         </p>
       </div>
-    </article>
+    </Link>
   );
 }

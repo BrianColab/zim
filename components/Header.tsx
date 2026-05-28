@@ -4,7 +4,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import ContactTrigger from "./ContactTrigger";
 
-const navLinks = ["Suites", "Amenities", "Resources", "Location"];
+const navLinks = [
+  { label: "Suites", href: "/#suites" },
+  { label: "Amenities", href: "/#amenities" },
+  { label: "Resources", href: "/resources" },
+  { label: "Location", href: "/#location" },
+];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -36,11 +41,11 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-9">
             {navLinks.map((item) => (
               <Link
-                key={item}
-                href="#"
+                key={item.label}
+                href={item.href}
                 className="text-white/68 hover:text-white text-[13px] font-semibold transition-colors duration-150"
               >
-                {item}
+                {item.label}
               </Link>
             ))}
           </nav>
@@ -74,12 +79,12 @@ export default function Header() {
           <div className="md:hidden bg-[#07111b]/95 backdrop-blur-xl py-4 border-t border-white/[0.08] flex flex-col gap-1">
             {navLinks.map((item) => (
               <Link
-                key={item}
-                href="#"
+                key={item.label}
+                href={item.href}
                 onClick={() => setOpen(false)}
                 className="py-2.5 text-white/60 hover:text-white text-sm font-medium transition-colors"
               >
-                {item}
+                {item.label}
               </Link>
             ))}
             <ContactTrigger

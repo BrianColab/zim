@@ -4,6 +4,7 @@ export interface Resource {
   title: string;
   category: string;
   description: string;
+  href: string;
 }
 
 export const resources: Resource[] = [
@@ -13,6 +14,7 @@ export const resources: Resource[] = [
     title: "Move-In Guide",
     category: "Before arrival",
     description: "What to bring, key pickup, setup basics, and first-day notes.",
+    href: "/resources#move-in",
   },
   {
     id: 2,
@@ -20,6 +22,7 @@ export const resources: Resource[] = [
     title: "Shared Living Guide",
     category: "At ZIM.ca",
     description: "Quiet hours, shared spaces, guests, cleaning, and maintenance.",
+    href: "/resources#shared-living",
   },
   {
     id: 3,
@@ -27,5 +30,6 @@ export const resources: Resource[] = [
     title: "Neighbourhood Guide",
     category: "Nearby",
     description: "Campus routes, transit, groceries, cafes, and study spots.",
+    href: "/resources#neighbourhood",
   },
 ];

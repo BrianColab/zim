@@ -60,7 +60,7 @@ function Icon({ type }: { type: string }) {
 
 export default function ImportantNotes() {
   return (
-    <section className="bg-[#f5f1e8] pb-20">
+    <section id="amenities" className="bg-[#f5f1e8] pb-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="overflow-hidden rounded-[10px] border border-white/[0.08] bg-[#07111b] shadow-[0_24px_70px_rgba(8,18,28,0.18)]">
           <div className="grid lg:grid-cols-[360px_1fr]">

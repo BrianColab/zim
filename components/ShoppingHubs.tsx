@@ -404,7 +404,7 @@ export default function ShoppingHubs() {
   const [selectedHub, setSelectedHub] = useState<ShoppingHub | null>(null);
 
   return (
-    <section className="bg-[#f5f1e8] py-20">
+    <section id="location" className="bg-[#f5f1e8] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 grid gap-6 lg:grid-cols-[1fr_360px] lg:items-end">
           <div>

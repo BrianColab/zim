@@ -16,7 +16,7 @@ export default function StudentResources() {
             </h2>
           </div>
           <Link
-            href="#"
+            href="/resources"
             className="hidden sm:flex items-center gap-1 text-[13px] font-bold text-zinc-500 hover:text-zinc-800 transition-colors"
           >
             See all resources
