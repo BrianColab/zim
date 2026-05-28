@@ -1,8 +1,10 @@
 const notes = [
-  "All-inclusive rent with internet",
+  "Hydro, water, heat, and central A/C included",
+  "Unlimited gigabit internet included",
   "Furnished rooms with bed, mattress, desk, and office chair",
-  "On-site laundry at no additional cost",
-  "Parking available for $75 per month",
+  "In-unit washer and dryer at no additional cost",
+  "Kitchen appliances and dining table included",
+  "Parking available for $80 per month",
   "Bus stop just meters away",
   "No pets due to allergies",
 ];

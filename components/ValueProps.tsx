@@ -39,7 +39,7 @@ const values = [
   },
   {
     title: "Fair Prices",
-    desc: "$900 private, $850 single, or limited $1000 double occupancy.",
+    desc: "$900 Unit A single, $1200 Unit A double, or $850 Unit B single.",
     icon: (
       <svg
         className="w-[22px] h-[22px]"
@@ -58,7 +58,7 @@ const values = [
   },
   {
     title: "Here to Help",
-    desc: "Parking available, bus stop nearby, and no-cost laundry.",
+    desc: "Hydro, internet, central A/C, and in-unit laundry included.",
     icon: (
       <svg
         className="w-[22px] h-[22px]"

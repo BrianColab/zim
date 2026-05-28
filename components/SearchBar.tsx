@@ -5,8 +5,8 @@ import { useState } from "react";
 const suiteTypes = [
   "Any room",
   "Unit A private room",
+  "Unit A double occupancy",
   "Unit B single occupancy",
-  "Unit B limited double occupancy",
 ];
 const leaseOptions = ["12 months", "8 months", "Flexible"];
 
@@ -86,7 +86,7 @@ export default function SearchBar() {
         </span>
         <span className="hidden sm:inline text-white/16">/</span>
         <span className="text-[11.5px] text-white/56">
-          All-inclusive furnished rooms with internet and on-site laundry.
+          Hydro, internet, central A/C, furniture, appliances, and laundry included.
         </span>
       </div>
     </div>

@@ -114,9 +114,9 @@ export default function ContactDrawer() {
                   <select className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]">
                     <option>Book a tour</option>
                     <option>Availability</option>
-                    <option>Unit A - exclusive female occupancy</option>
-                    <option>Unit B - co-ed single occupancy</option>
-                    <option>Unit B - limited double occupancy</option>
+                    <option>Unit A private room</option>
+                    <option>Unit A double occupancy</option>
+                    <option>Unit B single occupancy</option>
                     <option>General question</option>
                   </select>
                 </label>

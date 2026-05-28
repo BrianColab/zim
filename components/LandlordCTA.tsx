@@ -61,7 +61,7 @@ export default function LandlordCTA() {
                   2 plans
                 </p>
                 <p className="text-white/42 text-[12px] mt-2">
-                  private, single, and limited double occupancy
+                  Unit A single/double, Unit B single
                 </p>
               </div>
             </div>
