@@ -10,7 +10,39 @@ export interface ShoppingHub {
   mapLabel: string;
 }
 
+export interface NearbyStoreLogo {
+  name: string;
+  label: string;
+}
+
 export const zimAddress = "1660 Baseline Road, Ottawa, ON";
+
+export const nearbyStoreLogos: NearbyStoreLogo[] = [
+  { name: "McDonald's", label: "McDonald's" },
+  { name: "Walmart", label: "Walmart" },
+  { name: "Loblaws", label: "Loblaws" },
+  { name: "Home Depot", label: "Home Depot" },
+  { name: "LCBO", label: "LCBO" },
+  { name: "Rexall", label: "Rexall" },
+  { name: "Shoppers", label: "Shoppers Drug Mart" },
+  { name: "Dollarama", label: "Dollarama" },
+  { name: "FreshCo", label: "FreshCo" },
+  { name: "PetSmart", label: "PetSmart" },
+  { name: "Staples", label: "Staples" },
+  { name: "TD", label: "TD Bank" },
+  { name: "BMO", label: "BMO" },
+  { name: "Sport Chek", label: "Sport Chek" },
+  { name: "Metro", label: "Metro" },
+  { name: "Winners", label: "Winners" },
+  { name: "Canadian Tire", label: "Canadian Tire" },
+  { name: "Toys R Us", label: "Toys R Us" },
+  { name: "Starbucks", label: "Starbucks" },
+  { name: "Popeyes", label: "Popeyes" },
+  { name: "Tim Hortons", label: "Tim Hortons" },
+  { name: "Subway", label: "Subway" },
+  { name: "Movati", label: "Movati Athletic" },
+  { name: "The Beer Store", label: "The Beer Store" },
+];
 
 export const shoppingHubs: ShoppingHub[] = [
   {

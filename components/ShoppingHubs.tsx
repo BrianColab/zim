@@ -1,27 +1,40 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { shoppingHubs, zimAddress, type ShoppingHub } from "@/data/shoppingHubs";
+import {
+  nearbyStoreLogos,
+  shoppingHubs,
+  zimAddress,
+  type NearbyStoreLogo,
+  type ShoppingHub,
+} from "@/data/shoppingHubs";
 
-const brandLogos: Record<string, { domain: string; color: string }> = {
-  Loblaws: { domain: "loblaws.ca", color: "#e1251b" },
-  "Home Depot": { domain: "homedepot.ca", color: "#f96302" },
-  LCBO: { domain: "lcbo.com", color: "#7a003c" },
-  Rexall: { domain: "rexall.ca", color: "#0072ce" },
-  BMO: { domain: "bmo.com", color: "#ed1b2f" },
-  "Walmart Supercentre": { domain: "walmart.ca", color: "#0071ce" },
-  "McDonald's": { domain: "mcdonalds.com", color: "#ffbc0d" },
-  "Sport Chek": { domain: "sportchek.ca", color: "#e31b23" },
-  Shoppers: { domain: "shoppersdrugmart.ca", color: "#e31937" },
-  Dollarama: { domain: "dollarama.com", color: "#0b7f3a" },
-  FreshCo: { domain: "freshco.com", color: "#69be28" },
-  Movati: { domain: "movatiathletic.com", color: "#6a2c91" },
-  PetSmart: { domain: "petsmart.ca", color: "#005baa" },
-  Staples: { domain: "staples.ca", color: "#cc0000" },
-  TD: { domain: "td.com", color: "#008a00" },
-  Metro: { domain: "metro.ca", color: "#e1251b" },
-  "Toys R Us": { domain: "toysrus.ca", color: "#005baa" },
-  "Canadian Tire": { domain: "canadiantire.ca", color: "#ed1b2f" },
+const brandStyles: Record<string, { text: string; color: string; bg: string }> = {
+  Loblaws: { text: "Loblaws", color: "#111827", bg: "#f5c400" },
+  "Home Depot": { text: "THE HOME DEPOT", color: "#ffffff", bg: "#f96302" },
+  LCBO: { text: "LCBO", color: "#007a53", bg: "#e7f4ee" },
+  Rexall: { text: "Rexall", color: "#111827", bg: "#f3f4f6" },
+  BMO: { text: "BMO", color: "#ed1b2f", bg: "#fff1f2" },
+  Walmart: { text: "WALMART", color: "#1a2f9a", bg: "#fff7dc" },
+  "Walmart Supercentre": { text: "WALMART", color: "#1a2f9a", bg: "#fff7dc" },
+  "McDonald's": { text: "M", color: "#ffbc0d", bg: "#d71920" },
+  "Sport Chek": { text: "Sport Chek", color: "#e31b23", bg: "#fff1f2" },
+  Shoppers: { text: "Shoppers", color: "#111827", bg: "#fff1f2" },
+  Dollarama: { text: "Dollarama", color: "#00843d", bg: "#eaf7ee" },
+  FreshCo: { text: "FreshCo", color: "#00843d", bg: "#edf8df" },
+  Movati: { text: "Movati", color: "#111827", bg: "#f5f3ff" },
+  PetSmart: { text: "PetSmart", color: "#005baa", bg: "#edf5ff" },
+  Staples: { text: "STAPLES", color: "#cc0000", bg: "#fff1f2" },
+  TD: { text: "TD", color: "#008a00", bg: "#e8f6e8" },
+  Metro: { text: "Metro", color: "#ef3340", bg: "#fff1f2" },
+  Winners: { text: "WINNERS", color: "#111827", bg: "#f3f4f6" },
+  "Toys R Us": { text: "Toys R Us", color: "#005baa", bg: "#fff7dc" },
+  "Canadian Tire": { text: "Canadian Tire", color: "#00843d", bg: "#fff1f2" },
+  Starbucks: { text: "Siren", color: "#00754a", bg: "#e8f6ef" },
+  Popeyes: { text: "Popeyes", color: "#f15b2a", bg: "#fff2e8" },
+  "Tim Hortons": { text: "Tim Hortons", color: "#c8102e", bg: "#fff1f2" },
+  Subway: { text: "Subway", color: "#008938", bg: "#fff7dc" },
+  "The Beer Store": { text: "The Beer Store", color: "#007a3d", bg: "#e8f6ef" },
 };
 
 function directionsUrl(destination: string) {
@@ -30,37 +43,120 @@ function directionsUrl(destination: string) {
   return `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}`;
 }
 
-function logoUrl(domain: string) {
-  return `https://www.google.com/s2/favicons?sz=64&domain_url=${domain}`;
-}
+function BrandMark({ name, compact = false }: { name: string; compact?: boolean }) {
+  const brand = brandStyles[name];
 
-function LogoPill({ tag }: { tag: string }) {
-  const logo = brandLogos[tag];
-
-  if (!logo) {
+  if (!brand) {
     return (
       <span className="inline-flex items-center gap-2 rounded-full border border-[#c8d3e1] bg-[#f8fafc] px-2.5 py-1.5 text-[11px] font-extrabold text-slate-700">
         <span className="h-2 w-2 rounded-full bg-[#c8f535]" />
-        {tag}
+        {name}
+      </span>
+    );
+  }
+
+  if (name === "McDonald's") {
+    return (
+      <span
+        className={`inline-flex items-center justify-center rounded-[8px] font-black leading-none ${
+          compact ? "h-7 min-w-8 px-2 text-[18px]" : "h-12 min-w-16 px-3 text-[30px]"
+        }`}
+        style={{ color: brand.color, backgroundColor: brand.bg }}
+      >
+        M
+      </span>
+    );
+  }
+
+  if (name === "Home Depot") {
+    return (
+      <span
+        className={`inline-flex rotate-0 items-center justify-center rounded-[2px] text-center font-black leading-[0.88] ${
+          compact ? "h-7 w-7 text-[7px]" : "h-12 w-12 text-[10px]"
+        }`}
+        style={{ color: brand.color, backgroundColor: brand.bg }}
+      >
+        THE
+        <br />
+        HOME
+        <br />
+        DEPOT
+      </span>
+    );
+  }
+
+  if (name === "Canadian Tire") {
+    return (
+      <span className="inline-flex items-center gap-2">
+        <span
+          className={`flex rotate-45 items-center justify-center rounded-[4px] ${
+            compact ? "h-6 w-6" : "h-10 w-10"
+          }`}
+          style={{ backgroundColor: "#ed1b2f" }}
+        >
+          <span
+            className={`-rotate-45 rounded-full bg-white ${
+              compact ? "h-2.5 w-2.5" : "h-4 w-4"
+            }`}
+          />
+        </span>
+        {!compact && (
+          <span className="text-[22px] font-black leading-none" style={{ color: brand.color }}>
+            Canadian Tire
+          </span>
+        )}
+      </span>
+    );
+  }
+
+  if (name === "Starbucks") {
+    return (
+      <span
+        className={`inline-flex items-center justify-center rounded-full font-black ${
+          compact ? "h-7 w-7 text-[10px]" : "h-12 w-12 text-[14px]"
+        }`}
+        style={{ color: "#ffffff", backgroundColor: brand.color }}
+      >
+        S
       </span>
     );
   }
 
   return (
-    <span className="inline-flex items-center gap-2 rounded-full border border-black/[0.08] bg-white px-2.5 py-1.5 text-[11px] font-extrabold text-slate-800 shadow-[0_1px_2px_rgba(8,18,28,0.05)]">
-      <span
-        className="flex h-6 w-6 items-center justify-center rounded-full"
-        style={{ backgroundColor: `${logo.color}1f` }}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={logoUrl(logo.domain)}
-          alt=""
-          className="h-4 w-4 rounded-[3px] object-contain"
-        />
-      </span>
-      {tag}
+    <span
+      className={`inline-flex items-center justify-center rounded-[8px] px-3 text-center font-black leading-none ${
+        compact ? "h-7 text-[12px]" : "h-12 min-w-24 text-[22px]"
+      }`}
+      style={{ color: brand.color, backgroundColor: brand.bg }}
+    >
+      {brand.text}
     </span>
+  );
+}
+
+function LogoPill({ tag }: { tag: string }) {
+  const known = brandStyles[tag];
+
+  if (!known) {
+    return <BrandMark name={tag} compact />;
+  }
+
+  return (
+    <span className="inline-flex items-center gap-2 rounded-full border border-black/[0.08] bg-white px-2.5 py-1.5 text-[11px] font-extrabold text-slate-800 shadow-[0_1px_2px_rgba(8,18,28,0.05)]">
+      <BrandMark name={tag} compact />
+      {tag === "Walmart Supercentre" ? "Walmart" : tag}
+    </span>
+  );
+}
+
+function LogoTile({ logo }: { logo: NearbyStoreLogo }) {
+  return (
+    <article className="flex min-h-[125px] flex-col items-center justify-center rounded-[8px] border border-black/[0.08] bg-white px-4 py-5 text-center shadow-[0_1px_2px_rgba(8,18,28,0.05)]">
+      <BrandMark name={logo.name} />
+      <p className="mt-3 text-[12px] font-extrabold text-zinc-950">
+        {logo.label}
+      </p>
+    </article>
   );
 }
 
@@ -280,6 +376,29 @@ export default function ShoppingHubs() {
           {shoppingHubs.map((hub) => (
             <HubCard key={hub.id} hub={hub} onSelect={setSelectedHub} />
           ))}
+        </div>
+
+        <div className="mt-20">
+          <div className="mb-8 grid gap-6 lg:grid-cols-[1fr_430px] lg:items-start">
+            <div>
+              <p className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.15em] text-[#60710f]">
+                Logo wall
+              </p>
+              <h2 className="font-heading text-[2rem] font-extrabold leading-[1.05] text-zinc-950 md:text-[3rem]">
+                Major nearby stores and services
+              </h2>
+            </div>
+            <p className="text-[14px] leading-relaxed text-zinc-600">
+              Color logo-style tiles make the local amenities easy to scan at
+              a glance.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+            {nearbyStoreLogos.map((logo) => (
+              <LogoTile key={logo.name} logo={logo} />
+            ))}
+          </div>
         </div>
       </div>
 
