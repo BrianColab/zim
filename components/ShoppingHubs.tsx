@@ -45,6 +45,7 @@ const brandImages: Record<string, string> = {
   LCBO: "/logos/lcbo.png",
   "McDonald's": "/logos/mcdonalds.svg",
   Metro: "/logos/metro.svg",
+  Movati: "/logos/movati.png",
   Popeyes: "/logos/popeyes.png",
   Rexall: "/logos/rexall.png",
   Shoppers: "/logos/shoppers-drug-mart.svg",
@@ -81,6 +82,7 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
 
   if (imageSrc) {
     const isBeerStore = name === "The Beer Store";
+    const isMovati = name === "Movati";
     const isPopeyes = name === "Popeyes";
     const isRexall = name === "Rexall";
     const isShoppers = name === "Shoppers";
@@ -120,6 +122,10 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
               ? compact
                 ? "h-8 min-w-28 px-1"
                 : "h-14 min-w-44 px-2"
+            : isMovati
+              ? compact
+                ? "h-9 min-w-24 px-1"
+                : "h-16 min-w-36 px-2"
             : compact
             ? isBeerStore
               ? "h-8 min-w-32 px-1"
@@ -160,6 +166,10 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
                 ? compact
                   ? "h-7 w-[110px]"
                   : "h-12 w-[164px]"
+              : isMovati
+                ? compact
+                  ? "h-8 w-[92px]"
+                  : "h-14 w-[136px]"
               : compact
               ? isBeerStore
                 ? "h-8 w-[126px]"
