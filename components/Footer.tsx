@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ZimLogo from "./ZimLogo";
 
 const navLinks = [
   { label: "Suites", href: "/#suites" },
@@ -14,15 +15,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2.5 mb-3">
-              <div className="w-7 h-7 bg-[#c8f535] rounded-md flex items-center justify-center flex-shrink-0">
-                <span className="text-[#0c0d10] font-black text-[12px] font-heading">
-                  Z
-                </span>
-              </div>
-              <span className="font-heading text-white font-bold text-[16px] tracking-tight">
-                zim.ca
-              </span>
+            <div className="mb-3">
+              <ZimLogo compact />
             </div>
             <p className="text-white/25 text-[12px]">
               (c) 2026 ZIM.ca. All rights reserved.
