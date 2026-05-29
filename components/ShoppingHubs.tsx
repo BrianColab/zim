@@ -42,6 +42,7 @@ const brandImages: Record<string, string> = {
   "Canadian Tire": "/logos/canadian-tire.png",
   Dollarama: "/logos/dollarama.svg",
   FreshCo: "/logos/freshco.svg",
+  LCBO: "/logos/lcbo.png",
   "McDonald's": "/logos/mcdonalds.svg",
   Metro: "/logos/metro.svg",
   Starbucks: "/logos/starbucks.jpg",
