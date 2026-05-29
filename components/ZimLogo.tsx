@@ -11,11 +11,11 @@ export default function ZimLogo({ compact = false }: ZimLogoProps) {
         }`}
       >
         <span
-          className={`font-heading font-black tracking-[-0.04em] ${
-            compact ? "text-[10px]" : "text-[13px]"
+          className={`font-heading font-black tracking-[-0.06em] ${
+            compact ? "text-[16px]" : "text-[22px]"
           }`}
         >
-          ZIM
+          Z
         </span>
       </span>
       <span className="grid leading-none">
