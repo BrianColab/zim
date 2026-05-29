@@ -40,7 +40,7 @@ const brandStyles: Record<string, { text: string; color: string; bg: string }> =
 const brandImages: Record<string, string> = {
   BMO: "/logos/bmo.svg",
   "Canadian Tire": "/logos/canadian-tire.png",
-  Dollarama: "/logos/dollarama.png",
+  Dollarama: "/logos/dollarama.svg",
   FreshCo: "/logos/freshco.svg",
   "McDonald's": "/logos/mcdonalds.svg",
   Metro: "/logos/metro.svg",
