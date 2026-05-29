@@ -21,6 +21,9 @@ const quickOptions = [
   },
 ];
 
+const managerPhone = "1 (613) 298-2875";
+const managerPhoneHref = "tel:+16132982875";
+
 export default function AvailabilityBar() {
   const [visible, setVisible] = useState(false);
 
@@ -76,6 +79,12 @@ export default function AvailabilityBar() {
             >
               Ask availability
             </ContactTrigger>
+            <a
+              href={managerPhoneHref}
+              className="rounded-[8px] border border-[#c8f535]/35 px-5 py-3 text-center text-[13px] font-extrabold text-[#c8f535] transition hover:bg-[#c8f535]/10"
+            >
+              Call manager
+            </a>
           </div>
         </div>
       </section>
@@ -104,6 +113,13 @@ export default function AvailabilityBar() {
           >
             Apply / Tour
           </ContactTrigger>
+          <a
+            href={managerPhoneHref}
+            aria-label={`Call property manager at ${managerPhone}`}
+            className="shrink-0 rounded-[8px] border border-white/12 px-3 py-2.5 text-[12.5px] font-extrabold text-white"
+          >
+            Call
+          </a>
         </div>
       </div>
     </>
