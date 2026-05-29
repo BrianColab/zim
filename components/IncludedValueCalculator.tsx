@@ -148,13 +148,13 @@ export default function IncludedValueCalculator() {
               </p>
             </div>
 
-            <div className="grid gap-4">
+            <div className="grid gap-4 md:grid-cols-2">
               {costItems.map((item) => (
                 <label
                   key={item.key}
                   className="rounded-[8px] border border-[#dbe7f3] bg-[#f8fbff] p-4"
                 >
-                  <div className="mb-3 flex items-start justify-between gap-4">
+                  <div className="mb-4 flex items-start justify-between gap-3">
                     <span>
                       <span className="block text-[14px] font-extrabold text-[#101827]">
                         {item.label}
