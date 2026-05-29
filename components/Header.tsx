@@ -33,9 +33,40 @@ export default function Header() {
         <div className="flex items-center justify-between h-[72px]">
           <Link
             href="/"
-            className="font-heading text-white font-extrabold text-[20px]"
+            className="group flex items-center gap-2.5"
+            aria-label="ZIM.ca home"
           >
-            zim.ca
+            <span className="relative flex h-10 w-10 items-center justify-center rounded-[8px] bg-[#c8f535] text-[#07111b] shadow-[0_10px_28px_rgba(200,245,53,0.18)]">
+              <svg
+                className="h-6 w-6"
+                viewBox="0 0 28 28"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M6 8.2h11.4L6.9 19.8H18"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M18.2 19.8V8.2l3.1 4.6 3.1-4.6v11.6"
+                  stroke="currentColor"
+                  strokeWidth="2.7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+            <span className="grid leading-none">
+              <span className="font-heading text-[18px] font-black tracking-[0.08em] text-white">
+                ZIM
+              </span>
+              <span className="text-[10px] font-extrabold uppercase tracking-[0.22em] text-white/45">
+                Student Living
+              </span>
+            </span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-9">
