@@ -64,7 +64,7 @@ export default function CommuteSnapshot() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 grid gap-6 lg:grid-cols-[1fr_390px] lg:items-end">
           <div>
-            <p className="section-kicker text-[#60710f]">
+            <p className="section-kicker text-[#c8f535]">
               Commute snapshot
             </p>
             <h2 className="section-heading mt-4 text-zinc-950">
@@ -91,7 +91,7 @@ export default function CommuteSnapshot() {
               <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-[8px] bg-[#e9f5ff] text-[#1d8fe8]">
                 <RouteIcon />
               </div>
-              <p className="card-kicker text-[#60710f]">
+              <p className="card-kicker text-[#c8f535]">
                 {item.context}
               </p>
               <h3 className="mt-2 text-[18px] font-extrabold leading-tight text-zinc-950">

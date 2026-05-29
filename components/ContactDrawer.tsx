@@ -139,7 +139,7 @@ export default function ContactDrawer() {
         <div className="flex h-full flex-col">
           <div className="flex items-center justify-between border-b border-black/[0.08] px-5 py-4 sm:px-6 sm:py-5">
             <div>
-              <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#60710f]">
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#c8f535]">
                 Contact ZIM.ca
               </p>
               <h2 className="mt-1 font-heading text-[1.35rem] font-extrabold leading-tight text-zinc-950 sm:text-[1.65rem]">
@@ -233,7 +233,7 @@ export default function ContactDrawer() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
-                  className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]"
+                  className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#c8f535]"
                   placeholder="Your name"
                 />
               </label>
@@ -247,7 +247,7 @@ export default function ContactDrawer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]"
+                  className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#c8f535]"
                   placeholder="you@example.com"
                 />
               </label>
@@ -260,7 +260,7 @@ export default function ContactDrawer() {
                   type="tel"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]"
+                  className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#c8f535]"
                   placeholder="Optional"
                 />
               </label>
@@ -273,7 +273,7 @@ export default function ContactDrawer() {
                   <select
                     value={interest}
                     onChange={(e) => setInterest(e.target.value)}
-                    className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]"
+                    className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#c8f535]"
                   >
                     {interestOptions.map((option) => (
                       <option key={option}>{option}</option>
@@ -290,7 +290,7 @@ export default function ContactDrawer() {
                     value={moveIn}
                     onChange={(e) => setMoveIn(e.target.value)}
                     min="2026-05-29"
-                    className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]"
+                    className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#c8f535]"
                   />
                 </label>
               </div>
@@ -303,7 +303,7 @@ export default function ContactDrawer() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   required
-                  className="min-h-32 resize-none rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[14px] font-medium leading-relaxed text-zinc-950 outline-none transition focus:border-[#8ca80d]"
+                  className="min-h-32 resize-none rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[14px] font-medium leading-relaxed text-zinc-950 outline-none transition focus:border-[#c8f535]"
                   placeholder="Tell us what you are looking for."
                 />
               </label>

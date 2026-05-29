@@ -7,7 +7,7 @@ export default function FeaturedHomes() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <div>
-            <p className="section-kicker mb-4 text-[#60710f]">
+            <p className="section-kicker mb-4 text-[#c8f535]">
               Ottawa student rentals in Nepean
             </p>
             <h2 className="section-heading-tight text-zinc-950">

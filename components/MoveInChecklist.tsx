@@ -36,7 +36,7 @@ export default function MoveInChecklist() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
-            <p className="section-kicker text-[#60710f]">
+            <p className="section-kicker text-[#c8f535]">
               Move-in ready
             </p>
             <h2 className="section-heading mt-5 text-zinc-950">
