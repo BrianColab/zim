@@ -10,8 +10,18 @@ type ContactRequest = {
   company?: string;
 };
 
-const toEmail = process.env.CONTACT_TO_EMAIL ?? "bpallister@gmail.com";
-const fromEmail = process.env.CONTACT_FROM_EMAIL ?? "ZIM.ca <onboarding@resend.dev>";
+const propertyManagerEmail = "info@homyspot.com";
+const primaryContactEmail = process.env.CONTACT_TO_EMAIL ?? "bpallister@gmail.com";
+const toEmails = Array.from(
+  new Set(
+    [primaryContactEmail, propertyManagerEmail]
+      .flatMap((email) => email.split(","))
+      .map((email) => email.trim())
+      .filter(Boolean),
+  ),
+);
+const fromEmail =
+  process.env.CONTACT_FROM_EMAIL ?? "ZIM.ca <onboarding@resend.dev>";
 
 function clean(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
@@ -87,7 +97,7 @@ export async function POST(request: Request) {
     },
     body: JSON.stringify({
       from: fromEmail,
-      to: [toEmail],
+      to: toEmails,
       reply_to: email,
       subject,
       text,

@@ -102,7 +102,7 @@ export default function ContactDrawer() {
       setStatus("error");
       setStatusMessage(
         result.error ??
-          "The message could not be sent. Please email bpallister@gmail.com directly.",
+          "The message could not be sent. Please email info@homyspot.com directly.",
       );
       return;
     }
@@ -290,8 +290,9 @@ export default function ContactDrawer() {
             ) : null}
 
             <p className="mt-4 text-[12px] leading-relaxed text-zinc-500">
-              Inquiries are delivered to bpallister@gmail.com. Include the
-              property address and a brief introduction for the fastest reply.
+              Inquiries are delivered to ZIM.ca and Homyspot property
+              management. Include the property address and a brief introduction
+              for the fastest reply.
             </p>
           </form>
         </div>
