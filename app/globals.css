@@ -20,6 +20,7 @@ body {
   letter-spacing: 0.18em;
   line-height: 1;
   text-transform: uppercase;
+  text-shadow: 0 1px 2px rgb(7 17 27 / 0.22);
 }
 
 .section-kicker::before {
@@ -70,10 +71,16 @@ body {
 
 .headline-accent {
   color: #c8f535;
+  text-shadow:
+    0 2px 0 rgb(7 17 27 / 0.18),
+    0 0 18px rgb(200 245 53 / 0.28);
 }
 
 .headline-accent-lime {
   color: #c8f535;
+  text-shadow:
+    0 2px 0 rgb(7 17 27 / 0.18),
+    0 0 18px rgb(200 245 53 / 0.28);
 }
 
 .headline-on-dark .headline-sub {
