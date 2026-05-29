@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ContactTrigger from "./ContactTrigger";
 
 const quickOptions = [
@@ -26,6 +26,8 @@ const managerPhoneHref = "tel:+16132982875";
 
 export default function AvailabilityBar() {
   const [visible, setVisible] = useState(false);
+  const [sectionInView, setSectionInView] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 620);
@@ -34,9 +36,24 @@ export default function AvailabilityBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setSectionInView(entry.isIntersecting),
+      { threshold: 0.08 }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
+  const showStickyBar = visible && !sectionInView;
+
   return (
     <>
-      <section className="bg-[#07111b] py-5">
+      <section ref={sectionRef} className="bg-[#07111b] py-5">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <div>
             <p className="section-kicker text-[#c8f535]">
@@ -93,8 +110,8 @@ export default function AvailabilityBar() {
       </section>
 
       <div
-        className={`fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#07111b]/94 px-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] pt-3 shadow-[0_-18px_50px_rgba(0,0,0,0.22)] backdrop-blur-xl transition-transform duration-300 ${
-          visible ? "translate-y-0" : "translate-y-full"
+        className={`fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#07111b]/94 px-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] pt-3 shadow-[0_-18px_50px_rgba(0,0,0,0.22)] backdrop-blur-xl transition-transform duration-300 lg:hidden ${
+          showStickyBar ? "translate-y-0" : "translate-y-full"
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3">
