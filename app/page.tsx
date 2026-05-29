@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AvailabilityBar from "@/components/AvailabilityBar";
 import FeaturedHomes from "@/components/FeaturedHomes";
+import FloatingWalkRoute from "@/components/FloatingWalkRoute";
 import GallerySlideshow from "@/components/GallerySlideshow";
 import ImportantNotes from "@/components/ImportantNotes";
 import IncludedValueCalculator from "@/components/IncludedValueCalculator";
@@ -117,6 +118,7 @@ export default function Home() {
         </ScrollReveal>
       </main>
       <Footer />
+      <FloatingWalkRoute />
       <ContactDrawer />
     </>
   );
