@@ -12,9 +12,9 @@ const interestOptions = [
   "Book a tour",
   "Availability",
   "Unit A private room",
-  "Unit A double occupancy",
+  "Unit A pair room - 2 friends",
   "Unit B single occupancy",
-  "Unit B double occupancy",
+  "Unit B pair room - 2 friends",
   "General question",
 ];
 
@@ -50,6 +50,9 @@ export default function ContactDrawer() {
             payload?.roomType ? `Room type: ${payload.roomType}` : "",
             payload?.moveIn ? `Move-in date: ${payload.moveIn}` : "",
             payload?.lease ? `Lease preference: ${payload.lease}` : "",
+            payload?.roomType?.includes("pair")
+              ? "Pair room note: we are two friends applying together."
+              : "",
           ]
             .filter(Boolean)
             .join("\n"),

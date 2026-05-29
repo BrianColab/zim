@@ -29,6 +29,11 @@ const notes = [
     desc: "Quiet, clean shared living with clear household expectations.",
     icon: "home",
   },
+  {
+    title: "Pair Rooms",
+    desc: "Only for two friends applying together. No stranger matching.",
+    icon: "pair",
+  },
 ];
 
 function Icon({ type }: { type: string }) {
@@ -80,6 +85,14 @@ function Icon({ type }: { type: string }) {
     return (
       <svg className="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
         <path d="M11.1 3.23a1.4 1.4 0 0 1 1.8 0l7.65 6.43a1.35 1.35 0 0 1-1.74 2.06l-.56-.47v7.05a2.45 2.45 0 0 1-2.45 2.45h-2.05v-5.4a1.75 1.75 0 0 0-3.5 0v5.4H8.2a2.45 2.45 0 0 1-2.45-2.45v-7.05l-.56.47a1.35 1.35 0 0 1-1.74-2.06l7.65-6.43Z" />
+      </svg>
+    );
+  }
+
+  if (type === "pair") {
+    return (
+      <svg className="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M8.2 11.15a3.45 3.45 0 1 0 0-6.9 3.45 3.45 0 0 0 0 6.9ZM15.8 11.15a3.45 3.45 0 1 0 0-6.9 3.45 3.45 0 0 0 0 6.9ZM4.4 20.75h7.1a1.15 1.15 0 0 0 1.15-1.15 4.45 4.45 0 0 0-8.9 0 1.15 1.15 0 0 0 1.15 1.15ZM12.5 20.75h7.1a1.15 1.15 0 0 0 1.15-1.15 4.45 4.45 0 0 0-6.08-4.14 6.1 6.1 0 0 1 1.14 3.54 2.9 2.9 0 0 1-.1.75h-3.2Z" />
       </svg>
     );
   }

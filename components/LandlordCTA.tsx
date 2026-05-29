@@ -61,7 +61,7 @@ export default function LandlordCTA() {
                   2 plans
                 </p>
                 <p className="text-white/42 text-[12px] mt-2">
-                  single and double occupancy options
+                  single rooms and two-friend pair rooms
                 </p>
               </div>
             </div>

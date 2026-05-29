@@ -63,7 +63,7 @@ const structuredData = {
     },
     {
       "@type": "Offer",
-      name: "Unit B single occupancy room",
+      name: "Unit B single room",
       price: "850",
       priceCurrency: "CAD",
       availability: "https://schema.org/InStock",

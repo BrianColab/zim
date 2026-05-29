@@ -15,8 +15,8 @@ const quickOptions = [
     price: "$900",
   },
   {
-    label: "Double",
-    roomType: "Unit A double occupancy",
+    label: "Pair room",
+    roomType: "Unit A pair room - 2 friends",
     price: "$1000+",
   },
 ];
@@ -42,6 +42,10 @@ export default function AvailabilityBar() {
             <h2 className="mt-1 font-heading text-[1.55rem] font-extrabold leading-tight text-white sm:text-[1.9rem]">
               Ready to check a room or book a showing?
             </h2>
+            <p className="mt-2 max-w-xl text-[12.5px] font-semibold leading-relaxed text-white/52">
+              Pair rooms are only for two friends applying together. We do not
+              add a second student to a room already booked as single.
+            </p>
           </div>
           <div className="flex flex-col gap-2 sm:flex-row">
             {quickOptions.map((option) => (

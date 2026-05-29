@@ -5,9 +5,9 @@ import { useState } from "react";
 const suiteTypes = [
   "Any room",
   "Unit A private room",
-  "Unit A double occupancy",
+  "Unit A pair room - 2 friends",
   "Unit B single occupancy",
-  "Unit B double occupancy",
+  "Unit B pair room - 2 friends",
 ];
 const leaseOptions = ["12 months", "8 months", "Flexible"];
 

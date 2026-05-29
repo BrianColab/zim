@@ -45,8 +45,8 @@ const costItems = [
 const rentOptions = [
   { label: "Unit B Single", value: 850 },
   { label: "Unit A Single", value: 900 },
-  { label: "Unit B Double", value: 1000 },
-  { label: "Unit A Double", value: 1200 },
+  { label: "Unit B Pair", value: 1000 },
+  { label: "Unit A Pair", value: 1200 },
 ];
 
 type CostKey = (typeof costItems)[number]["key"];
@@ -142,6 +142,10 @@ export default function IncludedValueCalculator() {
                   </button>
                 ))}
               </div>
+              <p className="mt-3 rounded-[8px] bg-[#fff8e6] px-4 py-3 text-[12.5px] font-semibold leading-relaxed text-[#6f5200]">
+                Pair rooms are only for two friends applying together. ZIM.ca
+                does not match strangers into shared rooms.
+              </p>
             </div>
 
             <div className="grid gap-4">

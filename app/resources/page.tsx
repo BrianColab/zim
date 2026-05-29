@@ -60,8 +60,9 @@ const guides = [
     intro:
       "Quick answers for the questions students and parents usually ask first.",
     items: [
-      "Unit A offers single and double occupancy options.",
-      "Unit B offers single and double occupancy options.",
+      "Single rooms are rented to one student only.",
+      "Pair rooms are only for two friends applying together.",
+      "ZIM.ca does not place a second student into a room already booked as single.",
       "Rooms are furnished and all-inclusive.",
       "Residents must value peaceful cohabitation and respectful shared living.",
     ],
