@@ -34,7 +34,7 @@ export const properties: Property[] = [
   },
   {
     id: 2,
-    image: "/images/gallery/photo-5.jpg",
+    image: "/images/gallery/12-1660 Baseline Ottawa Ontario _0018.jpg",
     address: "Unit B - 1658-1660 Baseline Road",
     priceLabel: "$850 single / $1000 pair",
     occupancy: "Unit B single room or two-friend pair",
