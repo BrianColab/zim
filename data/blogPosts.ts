@@ -1,3 +1,5 @@
+import monthlyBlogPostsJson from "./monthlyBlogPosts.json";
+
 export type BlogSection = {
   heading: string;
   body: string[];
@@ -23,7 +25,7 @@ export type BlogPost = {
   faqs: BlogFaq[];
 };
 
-export const blogPosts: BlogPost[] = [
+const cornerstoneBlogPosts: BlogPost[] = [
   {
     slug: "algonquin-college-housing-guide",
     title: "Algonquin College Housing Guide: Where Students Can Live in Ottawa",
@@ -355,6 +357,13 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+];
+
+const monthlyBlogPosts = monthlyBlogPostsJson as BlogPost[];
+
+export const blogPosts: BlogPost[] = [
+  ...cornerstoneBlogPosts,
+  ...monthlyBlogPosts,
 ];
 
 export function getBlogPost(slug: string) {
