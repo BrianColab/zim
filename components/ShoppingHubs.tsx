@@ -56,6 +56,7 @@ const brandImages: Record<string, string> = {
   "Toys R Us": "/logos/toys-r-us.jpg",
   Walmart: "/logos/walmart.svg",
   "Walmart Supercentre": "/logos/walmart.svg",
+  Winners: "/logos/winners.svg",
 };
 
 function directionsUrl(destination: string) {
@@ -84,6 +85,7 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
     const isShoppers = name === "Shoppers";
     const isStarbucks = name === "Starbucks";
     const isToysRUs = name === "Toys R Us";
+    const isWinners = name === "Winners";
 
     return (
       <span
@@ -108,6 +110,10 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
               ? compact
                 ? "h-8 min-w-24 px-1"
                 : "h-14 min-w-40 px-2"
+            : isWinners
+              ? compact
+                ? "h-8 min-w-24 px-1"
+                : "h-14 min-w-36 px-2"
             : compact
             ? isBeerStore
               ? "h-8 min-w-32 px-1"
@@ -140,6 +146,10 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
                 ? compact
                   ? "h-7 w-[96px]"
                   : "h-12 w-[148px]"
+              : isWinners
+                ? compact
+                  ? "h-7 w-[92px]"
+                  : "h-12 w-[136px]"
               : compact
               ? isBeerStore
                 ? "h-8 w-[126px]"
