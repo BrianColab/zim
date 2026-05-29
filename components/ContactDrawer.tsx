@@ -181,19 +181,65 @@ export default function ContactDrawer() {
             className="flex-1 overflow-y-auto px-5 py-5 pb-[calc(1.25rem+env(safe-area-inset-bottom))] sm:px-6 sm:py-6"
             onSubmit={handleSubmit}
           >
-            <div className="grid gap-4">
-              <label className="hidden">
-                Company
-                <input
-                  type="text"
-                  value={company}
-                  onChange={(e) => setCompany(e.target.value)}
-                  tabIndex={-1}
-                  autoComplete="off"
-                />
-              </label>
+            {status === "sent" ? (
+              <div className="rounded-[10px] border border-[#c8f535]/35 bg-[#c8f535]/18 p-5">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#c8f535] text-[#07111b]">
+                  <svg
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2.4}
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.5 12.75l5.25 5.25L19.5 6.75"
+                    />
+                  </svg>
+                </div>
+                <h3 className="font-heading text-[1.75rem] font-extrabold leading-tight text-zinc-950">
+                  Thank you. Your message was sent.
+                </h3>
+                <p className="mt-3 text-[13.5px] font-semibold leading-relaxed text-zinc-700">
+                  ZIM.ca and Homyspot property management received your inquiry
+                  and will follow up with availability or tour details.
+                </p>
+                <div className="mt-5 grid gap-3">
+                  <a
+                    href={managerPhoneHref}
+                    className="inline-flex justify-center rounded-[10px] bg-[#07111b] px-5 py-3 text-[13px] font-extrabold text-white transition hover:bg-[#142536]"
+                  >
+                    Call manager: {managerPhone}
+                  </a>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setStatus("idle");
+                      setStatusMessage("");
+                    }}
+                    className="rounded-[10px] border border-black/[0.1] px-5 py-3 text-[13px] font-extrabold text-zinc-700 transition hover:border-black/[0.2] hover:text-zinc-950"
+                  >
+                    Send another message
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <>
+                <div className="grid gap-4">
+                  <label className="hidden">
+                    Company
+                    <input
+                      type="text"
+                      value={company}
+                      onChange={(e) => setCompany(e.target.value)}
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </label>
 
-              <label className="grid gap-2">
+                  <label className="grid gap-2">
                 <span className="text-[12px] font-bold text-zinc-700">
                   Name
                 </span>
@@ -276,27 +322,23 @@ export default function ContactDrawer() {
                   placeholder="Tell us what you are looking for."
                 />
               </label>
-            </div>
+                </div>
 
-            <button
-              type="submit"
-              disabled={status === "sending"}
-              className="mt-6 w-full rounded-[10px] bg-[#c8f535] px-5 py-4 text-[13.5px] font-extrabold text-[#07111b] transition hover:bg-[#d6fa57] disabled:cursor-not-allowed disabled:opacity-60"
-            >
-              {status === "sending" ? "Sending..." : "Send Message"}
-            </button>
+                <button
+                  type="submit"
+                  disabled={status === "sending"}
+                  className="mt-6 w-full rounded-[10px] bg-[#c8f535] px-5 py-4 text-[13.5px] font-extrabold text-[#07111b] transition hover:bg-[#d6fa57] disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  {status === "sending" ? "Sending..." : "Send Message"}
+                </button>
 
-            {statusMessage ? (
-              <p
-                className={`mt-4 rounded-[8px] px-4 py-3 text-[12.5px] font-semibold leading-relaxed ${
-                  status === "sent"
-                    ? "bg-[#c8f535]/20 text-[#324000]"
-                    : "bg-red-50 text-red-700"
-                }`}
-              >
-                {statusMessage}
-              </p>
-            ) : null}
+                {statusMessage ? (
+                  <p className="mt-4 rounded-[8px] bg-red-50 px-4 py-3 text-[12.5px] font-semibold leading-relaxed text-red-700">
+                    {statusMessage}
+                  </p>
+                ) : null}
+              </>
+            )}
 
             <p className="mt-4 text-[12px] leading-relaxed text-zinc-500">
               Inquiries are delivered to ZIM.ca and Homyspot property
