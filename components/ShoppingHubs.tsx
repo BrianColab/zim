@@ -64,7 +64,7 @@ const brandImages: Record<string, string> = {
 function directionsUrl(destination: string) {
   const origin = encodeURIComponent(zimAddress);
   const dest = encodeURIComponent(`${destination}, Ottawa, ON`);
-  return `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}`;
+  return `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}&travelmode=walking`;
 }
 
 function BrandMark({ name, compact = false }: { name: string; compact?: boolean }) {
@@ -352,9 +352,9 @@ function MapDrawer({
   }, [hub]);
   const embedUrl = useMemo(() => {
     if (!hub) return "";
-    return `https://www.google.com/maps?q=${encodeURIComponent(
-      `${hub.address}, Ottawa, ON`
-    )}&output=embed`;
+    const origin = encodeURIComponent(zimAddress);
+    const destination = encodeURIComponent(`${hub.address}, Ottawa, ON`);
+    return `https://www.google.com/maps?output=embed&saddr=${origin}&daddr=${destination}&dirflg=w`;
   }, [hub]);
 
   return (
@@ -469,7 +469,7 @@ function MapDrawer({
                 rel="noreferrer"
                 className="mt-6 inline-flex w-full items-center justify-center rounded-[10px] bg-[#c8f535] px-5 py-4 text-[13.5px] font-extrabold text-[#07111b] transition hover:bg-[#d6fa57]"
               >
-                Open directions in Google Maps
+                Open walking directions in Google Maps
               </a>
             </div>
           </div>
