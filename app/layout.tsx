@@ -66,7 +66,39 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
+};
+
+const siteSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.zim.ca/#organization",
+      name: "ZIM.ca",
+      url: "https://www.zim.ca",
+      logo: "https://www.zim.ca/icon.svg",
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.zim.ca/#website",
+      url: "https://www.zim.ca",
+      name: "ZIM.ca Student Rentals",
+      description:
+        "All-inclusive furnished student rooms in Nepean, Ottawa near Algonquin College.",
+      publisher: {
+        "@id": "https://www.zim.ca/#organization",
+      },
+      inLanguage: "en-CA",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -77,7 +109,13 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${jakarta.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

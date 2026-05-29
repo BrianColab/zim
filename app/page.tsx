@@ -9,6 +9,7 @@ import IncludedValueCalculator from "@/components/IncludedValueCalculator";
 import MoveInChecklist from "@/components/MoveInChecklist";
 import ValueProps from "@/components/ValueProps";
 import StudentResources from "@/components/StudentResources";
+import BlogPreview from "@/components/BlogPreview";
 import CommuteSnapshot from "@/components/CommuteSnapshot";
 import ShoppingHubs from "@/components/ShoppingHubs";
 import LandlordCTA from "@/components/LandlordCTA";
@@ -106,6 +107,9 @@ export default function Home() {
         </ScrollReveal>
         <ScrollReveal>
           <StudentResources />
+        </ScrollReveal>
+        <ScrollReveal>
+          <BlogPreview />
         </ScrollReveal>
         <ScrollReveal>
           <CommuteSnapshot />

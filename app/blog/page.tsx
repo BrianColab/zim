@@ -23,8 +23,34 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "ZIM.ca Ottawa Student Housing Blog",
+    description: metadata.description,
+    url: "https://www.zim.ca/blog",
+    publisher: {
+      "@type": "Organization",
+      name: "ZIM.ca",
+      url: "https://www.zim.ca",
+    },
+    blogPost: blogPosts.map((post, index) => ({
+      "@type": "BlogPosting",
+      position: index + 1,
+      headline: post.title,
+      description: post.description,
+      url: `https://www.zim.ca/blog/${post.slug}`,
+      datePublished: post.published,
+      dateModified: post.updated,
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
       <Header />
       <main className="bg-[#f5f1e8]">
         <section className="relative overflow-hidden bg-[#07111b] pt-32 text-white">
