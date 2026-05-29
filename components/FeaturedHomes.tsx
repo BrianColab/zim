@@ -8,10 +8,10 @@ export default function FeaturedHomes() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between mb-8">
           <div>
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.15em] text-[#60710f] mb-3">
+            <p className="section-kicker mb-4 text-[#60710f]">
               Ottawa student rentals in Nepean
             </p>
-            <h2 className="font-heading font-extrabold text-zinc-950 text-[1.7rem] md:text-[2rem] leading-tight">
+            <h2 className="section-heading-tight text-zinc-950">
               Furnished rooms at 1658-1660 Baseline Road
             </h2>
           </div>

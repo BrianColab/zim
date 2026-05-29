@@ -20,7 +20,7 @@ export default function PropertyCard({ property }: { property: Property }) {
       </div>
 
       <div className="px-4 py-4">
-        <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#60710f] mb-2">
+        <p className="card-kicker mb-2 text-[#60710f]">
           ZIM.ca Residence
         </p>
         <h3 className="text-[16px] leading-snug font-extrabold text-zinc-950 mb-2">

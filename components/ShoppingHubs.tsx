@@ -487,14 +487,14 @@ export default function ShoppingHubs() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 grid gap-6 lg:grid-cols-[1fr_360px] lg:items-end">
           <div>
-            <p className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.15em] text-[#60710f]">
+            <p className="section-kicker mb-4 text-[#60710f]">
               Shopping hubs
             </p>
-            <h2 className="font-heading text-[2rem] font-extrabold leading-[1.05] text-zinc-950 md:text-[3rem]">
+            <h2 className="section-heading text-zinc-950">
               Malls and retail clusters within the local zone
             </h2>
           </div>
-          <p className="text-[14px] leading-relaxed text-zinc-600">
+          <p className="section-copy text-zinc-600">
             Distances are measured from ZIM.ca at 1660 Baseline Road and are
             intended to help students understand what is nearby.
           </p>
@@ -509,10 +509,10 @@ export default function ShoppingHubs() {
         <div className="mt-20">
           <div className="mb-8 grid gap-6 lg:grid-cols-[1fr_430px] lg:items-start">
             <div>
-              <p className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.15em] text-[#60710f]">
+              <p className="section-kicker mb-4 text-[#60710f]">
                 Logo wall
               </p>
-              <h2 className="font-heading text-[2rem] font-extrabold leading-[1.05] text-zinc-950 md:text-[3rem]">
+              <h2 className="section-heading-tight text-zinc-950">
                 Major nearby stores and services
               </h2>
             </div>

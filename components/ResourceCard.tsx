@@ -17,7 +17,7 @@ export default function ResourceCard({ resource }: { resource: Resource }) {
         />
       </div>
       <div className="px-5 py-5">
-        <span className="text-[10.5px] font-extrabold uppercase tracking-[0.12em] text-[#60710f]">
+        <span className="card-kicker text-[#60710f]">
           {resource.category}
         </span>
         <h3 className="mt-2 text-zinc-950 font-extrabold text-[16px] leading-snug">

@@ -36,13 +36,13 @@ export default function MoveInChecklist() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#60710f]">
+            <p className="section-kicker text-[#60710f]">
               Move-in ready
             </p>
-            <h2 className="mt-4 font-heading text-[2.35rem] font-extrabold leading-[1] text-zinc-950 sm:text-[3.15rem]">
+            <h2 className="section-heading mt-5 text-zinc-950">
               Bring your essentials. The big stuff is handled.
             </h2>
-            <p className="mt-5 max-w-lg text-[15px] font-medium leading-relaxed text-zinc-600">
+            <p className="section-copy mt-6 text-zinc-600">
               Especially helpful for first-year, out-of-town, and international
               students: rooms are set up so move-in feels simple.
             </p>

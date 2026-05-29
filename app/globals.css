@@ -11,6 +11,59 @@ body {
   overflow-x: hidden;
 }
 
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.section-kicker::before {
+  content: "";
+  width: 1.7rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.58;
+}
+
+.section-heading {
+  max-width: 13ch;
+  font-family: var(--font-heading);
+  font-size: clamp(2.45rem, 6vw, 4.45rem);
+  font-weight: 900;
+  letter-spacing: -0.015em;
+  line-height: 0.94;
+}
+
+.section-heading-tight {
+  max-width: 16ch;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 0.98;
+}
+
+.section-copy {
+  max-width: 35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.72;
+}
+
+.card-kicker {
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
 .scroll-reveal {
   opacity: 0;
   transform: translateY(28px);

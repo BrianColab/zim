@@ -109,15 +109,15 @@ export default function ImportantNotes() {
     <section id="amenities" className="bg-[#edf5ff] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#1d8fe8]">
+          <p className="section-kicker justify-center text-[#1d8fe8]">
             Included at ZIM.ca
           </p>
-          <h2 className="mt-4 font-heading text-[2.65rem] font-extrabold leading-[0.98] text-[#09111f] sm:text-[3.35rem]">
+          <h2 className="mx-auto mt-5 max-w-[12ch] font-heading text-[clamp(3rem,7vw,5rem)] font-black leading-[0.9] tracking-[-0.02em] text-[#09111f]">
             Everything <span className="text-[#6f7684]">included.</span>
             <br />
             No <span className="text-[#1d8fe8]">extras.</span>
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-[15px] font-medium leading-relaxed text-[#425879]">
+          <p className="section-copy mx-auto mt-6 text-[#425879]">
             Every core amenity is part of the monthly rent, with clear
             expectations for calm shared living.
           </p>

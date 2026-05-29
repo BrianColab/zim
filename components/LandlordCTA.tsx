@@ -10,16 +10,16 @@ export default function LandlordCTA() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[0.92fr_1.08fr] gap-14 items-center">
           <div>
-            <p className="text-[#c8f535] text-[11px] font-extrabold uppercase tracking-[0.16em] mb-5">
+            <p className="section-kicker mb-5 text-[#c8f535]">
               Visit ZIM.ca
             </p>
             <h2
-              className="font-heading font-extrabold text-white leading-[0.9] mb-6"
-              style={{ fontSize: "clamp(3rem, 6vw, 5.1rem)" }}
+              className="mb-6 font-heading font-black leading-[0.86] tracking-[-0.02em] text-white"
+              style={{ fontSize: "clamp(3.6rem, 8vw, 6.5rem)" }}
             >
               Book a tour.
             </h2>
-            <p className="text-white/62 text-[1.02rem] leading-[1.65] mb-9 max-w-[440px]">
+            <p className="section-copy mb-9 text-white/62">
               See Unit A and Unit B, the furnished rooms, shared kitchens, and
               study-friendly common areas before you choose your room.
             </p>

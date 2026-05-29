@@ -64,14 +64,14 @@ export default function CommuteSnapshot() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 grid gap-6 lg:grid-cols-[1fr_390px] lg:items-end">
           <div>
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#60710f]">
+            <p className="section-kicker text-[#60710f]">
               Commute snapshot
             </p>
-            <h2 className="mt-3 font-heading text-[2.25rem] font-extrabold leading-[1.02] text-zinc-950 sm:text-[3rem]">
+            <h2 className="section-heading mt-4 text-zinc-950">
               Know your everyday route before you apply.
             </h2>
           </div>
-          <p className="text-[14px] font-medium leading-relaxed text-zinc-600">
+          <p className="section-copy text-zinc-600">
             Approximate times from 1660 Baseline Road. Students should confirm
             live transit and traffic before committing to a routine.
           </p>
@@ -86,7 +86,7 @@ export default function CommuteSnapshot() {
               <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-[8px] bg-[#e9f5ff] text-[#1d8fe8]">
                 <RouteIcon />
               </div>
-              <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#60710f]">
+              <p className="card-kicker text-[#60710f]">
                 {item.context}
               </p>
               <h3 className="mt-2 text-[18px] font-extrabold leading-tight text-zinc-950">

@@ -39,10 +39,10 @@ export default function AvailabilityBar() {
       <section className="bg-[#07111b] py-5">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <div>
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#c8f535]">
+            <p className="section-kicker text-[#c8f535]">
               Rooms available
             </p>
-            <h2 className="mt-1 font-heading text-[1.55rem] font-extrabold leading-tight text-white sm:text-[1.9rem]">
+            <h2 className="section-heading-tight mt-3 max-w-[18ch] text-white">
               Ready to check a room or book a showing?
             </h2>
             <p className="mt-2 max-w-xl text-[12.5px] font-semibold leading-relaxed text-white/52">

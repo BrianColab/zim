@@ -73,13 +73,13 @@ export default function IncludedValueCalculator() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid overflow-hidden rounded-[8px] border border-[#dbe7f3] bg-white shadow-[0_26px_80px_rgba(23,60,102,0.12)] lg:grid-cols-[0.9fr_1.1fr]">
           <div className="bg-[#07111b] p-6 text-white sm:p-8 lg:p-10">
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#c8f535]">
+            <p className="section-kicker text-[#c8f535]">
               Student cost check
             </p>
-            <h2 className="mt-4 font-heading text-[2.1rem] font-extrabold leading-[1] sm:text-[2.75rem]">
+            <h2 className="section-heading-tight mt-5 text-white">
               What would this cost somewhere else?
             </h2>
-            <p className="mt-5 max-w-md text-[14px] font-medium leading-relaxed text-white/62">
+            <p className="section-copy mt-6 text-white/62">
               Adjust common student expenses and compare them with an
               all-inclusive ZIM.ca room.
             </p>

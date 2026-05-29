@@ -87,13 +87,13 @@ export default function ResourcesPage() {
           <div className="relative mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
             <div className="grid gap-10 lg:grid-cols-[1fr_420px] lg:items-end">
               <div>
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#c8f535]">
+                <p className="section-kicker text-[#c8f535]">
                   Resident resources
                 </p>
-                <h1 className="mt-5 font-heading text-[3.2rem] font-extrabold leading-[0.92] text-white md:text-[5.5rem]">
+                <h1 className="mt-6 max-w-[12ch] font-heading text-[clamp(3.5rem,9vw,6.5rem)] font-black leading-[0.86] tracking-[-0.025em] text-white">
                   Everything before move-in.
                 </h1>
-                <p className="mt-6 max-w-[560px] text-[1.05rem] font-medium leading-relaxed text-white/62">
+                <p className="section-copy mt-7 text-white/62">
                   Practical guides for living at ZIM.ca: what is included, how
                   shared living works, what is nearby, and how to ask the right
                   questions before choosing a room in Ottawa.
@@ -131,10 +131,10 @@ export default function ResourcesPage() {
                     className="scroll-mt-28 overflow-hidden rounded-[10px] border border-black/[0.08] bg-white shadow-[0_1px_2px_rgba(8,18,28,0.05)]"
                   >
                     <div className="border-b border-black/[0.06] bg-[#07111b] p-6">
-                      <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#c8f535]">
+                      <p className="section-kicker text-[#c8f535]">
                         {guide.label}
                       </p>
-                      <h2 className="mt-3 font-heading text-[2rem] font-extrabold leading-tight text-white">
+                      <h2 className="section-heading-tight mt-4 text-white">
                         {guide.title}
                       </h2>
                       <p className="mt-3 text-[14px] leading-relaxed text-white/58">
@@ -164,10 +164,10 @@ export default function ResourcesPage() {
               <div className="mt-8 overflow-hidden rounded-[10px] bg-[#07111b] p-7 shadow-[0_24px_70px_rgba(8,18,28,0.18)]">
                 <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
                   <div>
-                    <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#c8f535]">
+                    <p className="section-kicker text-[#c8f535]">
                       Still deciding?
                     </p>
-                    <h2 className="mt-3 font-heading text-[2rem] font-extrabold leading-tight text-white">
+                    <h2 className="section-heading-tight mt-4 text-white">
                       Ask about Unit A or Unit B before you apply.
                     </h2>
                     <p className="mt-3 max-w-[620px] text-[14px] leading-relaxed text-white/58">

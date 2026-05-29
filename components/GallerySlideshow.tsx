@@ -62,10 +62,10 @@ export default function GallerySlideshow() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#c8f535]">
+            <p className="section-kicker text-[#c8f535]">
               Full property gallery
             </p>
-            <h2 className="mt-3 font-heading text-[2rem] font-extrabold leading-tight sm:text-[2.65rem]">
+            <h2 className="section-heading-tight mt-4 text-white">
               See every room, angle, and shared space.
             </h2>
           </div>
