@@ -45,6 +45,7 @@ const brandImages: Record<string, string> = {
   LCBO: "/logos/lcbo.png",
   "McDonald's": "/logos/mcdonalds.svg",
   Metro: "/logos/metro.svg",
+  Rexall: "/logos/rexall.png",
   Starbucks: "/logos/starbucks.jpg",
   Subway: "/logos/subway.svg",
   TD: "/logos/td.svg",
@@ -76,6 +77,7 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
 
   if (imageSrc) {
     const isBeerStore = name === "The Beer Store";
+    const isRexall = name === "Rexall";
     const isStarbucks = name === "Starbucks";
     const isToysRUs = name === "Toys R Us";
 
@@ -87,6 +89,10 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
               ? "h-8 w-8 rounded-full p-0"
               : "h-14 w-14 rounded-full p-0"
             : isToysRUs
+              ? compact
+                ? "h-8 min-w-24 px-1"
+                : "h-14 min-w-36 px-2"
+            : isRexall
               ? compact
                 ? "h-8 min-w-24 px-1"
                 : "h-14 min-w-36 px-2"
@@ -110,6 +116,10 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
                 ? compact
                   ? "h-7 w-[88px]"
                   : "h-12 w-[132px]"
+              : isRexall
+                ? compact
+                  ? "h-7 w-[92px]"
+                  : "h-12 w-[136px]"
               : compact
               ? isBeerStore
                 ? "h-8 w-[126px]"
