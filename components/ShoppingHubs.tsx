@@ -318,7 +318,7 @@ function HubCard({
 
         <div className="mt-5 flex items-center justify-between gap-3 border-t border-zinc-100 pt-4">
           <div>
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-[#c8f535]">
+            <p className="text-[11px] font-extrabold uppercase tracking-[0.12em] text-[#60710f]">
               From ZIM.ca
             </p>
             <p className="mt-1 text-[13px] font-extrabold text-zinc-950">
@@ -376,7 +376,7 @@ function MapDrawer({
           <div className="flex h-full flex-col">
             <div className="flex items-start justify-between border-b border-black/[0.08] px-6 py-5">
               <div>
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#c8f535]">
+                <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#60710f]">
                   Nearby from ZIM.ca
                 </p>
                 <h2 className="mt-1 font-heading text-[1.65rem] font-extrabold leading-tight text-zinc-950">
@@ -487,7 +487,7 @@ export default function ShoppingHubs() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 grid gap-6 lg:grid-cols-[1fr_360px] lg:items-end">
           <div>
-            <p className="section-kicker mb-4 text-[#c8f535]">
+            <p className="section-kicker mb-4 text-[#60710f]">
               Shopping hubs
             </p>
             <h2 className="section-heading text-zinc-950">
@@ -514,7 +514,7 @@ export default function ShoppingHubs() {
         <div className="mt-20">
           <div className="mb-8 grid gap-6 lg:grid-cols-[1fr_430px] lg:items-start">
             <div>
-              <p className="section-kicker mb-4 text-[#c8f535]">
+              <p className="section-kicker mb-4 text-[#60710f]">
                 Logo wall
               </p>
               <h2 className="section-heading-tight text-zinc-950">
