@@ -49,6 +49,7 @@ const brandImages: Record<string, string> = {
   TD: "/logos/td.svg",
   "The Beer Store": "/logos/the-beer-store.png",
   "Tim Hortons": "/logos/tim-hortons.svg",
+  "Toys R Us": "/logos/toys-r-us.jpg",
   Walmart: "/logos/walmart.svg",
   "Walmart Supercentre": "/logos/walmart.svg",
 };
@@ -75,6 +76,7 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
   if (imageSrc) {
     const isBeerStore = name === "The Beer Store";
     const isStarbucks = name === "Starbucks";
+    const isToysRUs = name === "Toys R Us";
 
     return (
       <span
@@ -83,6 +85,10 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
             ? compact
               ? "h-8 w-8 rounded-full p-0"
               : "h-14 w-14 rounded-full p-0"
+            : isToysRUs
+              ? compact
+                ? "h-8 min-w-24 px-1"
+                : "h-14 min-w-36 px-2"
             : compact
             ? isBeerStore
               ? "h-8 min-w-32 px-1"
@@ -99,6 +105,10 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
           className={`object-contain ${
             isStarbucks
               ? "h-full w-full rounded-full object-cover"
+              : isToysRUs
+                ? compact
+                  ? "h-7 w-[88px]"
+                  : "h-12 w-[132px]"
               : compact
               ? isBeerStore
                 ? "h-8 w-[126px]"
