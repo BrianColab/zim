@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactDrawer from "@/components/ContactDrawer";
 import ContactTrigger from "@/components/ContactTrigger";
+import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -124,59 +125,62 @@ export default function ResourcesPage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-5 lg:grid-cols-2">
               {guides.map((guide) => (
-                <article
-                  id={guide.id}
-                  key={guide.id}
-                  className="scroll-mt-28 overflow-hidden rounded-[10px] border border-black/[0.08] bg-white shadow-[0_1px_2px_rgba(8,18,28,0.05)]"
-                >
-                  <div className="border-b border-black/[0.06] bg-[#07111b] p-6">
-                    <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#c8f535]">
-                      {guide.label}
-                    </p>
-                    <h2 className="mt-3 font-heading text-[2rem] font-extrabold leading-tight text-white">
-                      {guide.title}
-                    </h2>
-                    <p className="mt-3 text-[14px] leading-relaxed text-white/58">
-                      {guide.intro}
-                    </p>
-                  </div>
+                <ScrollReveal key={guide.id}>
+                  <article
+                    id={guide.id}
+                    className="scroll-mt-28 overflow-hidden rounded-[10px] border border-black/[0.08] bg-white shadow-[0_1px_2px_rgba(8,18,28,0.05)]"
+                  >
+                    <div className="border-b border-black/[0.06] bg-[#07111b] p-6">
+                      <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#c8f535]">
+                        {guide.label}
+                      </p>
+                      <h2 className="mt-3 font-heading text-[2rem] font-extrabold leading-tight text-white">
+                        {guide.title}
+                      </h2>
+                      <p className="mt-3 text-[14px] leading-relaxed text-white/58">
+                        {guide.intro}
+                      </p>
+                    </div>
 
-                  <div className="grid gap-3 p-5">
-                    {guide.items.map((item) => (
-                      <div
-                        key={item}
-                        className="flex gap-3 rounded-[8px] border border-zinc-100 bg-[#fbfaf7] p-4"
-                      >
-                        <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[#c8f535]" />
-                        <p className="text-[13px] font-semibold leading-relaxed text-zinc-700">
-                          {item}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </article>
+                    <div className="grid gap-3 p-5">
+                      {guide.items.map((item) => (
+                        <div
+                          key={item}
+                          className="flex gap-3 rounded-[8px] border border-zinc-100 bg-[#fbfaf7] p-4"
+                        >
+                          <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[#c8f535]" />
+                          <p className="text-[13px] font-semibold leading-relaxed text-zinc-700">
+                            {item}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </article>
+                </ScrollReveal>
               ))}
             </div>
 
-            <div className="mt-8 overflow-hidden rounded-[10px] bg-[#07111b] p-7 shadow-[0_24px_70px_rgba(8,18,28,0.18)]">
-              <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
-                <div>
-                  <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#c8f535]">
-                    Still deciding?
-                  </p>
-                  <h2 className="mt-3 font-heading text-[2rem] font-extrabold leading-tight text-white">
-                    Ask about Unit A or Unit B before you apply.
-                  </h2>
-                  <p className="mt-3 max-w-[620px] text-[14px] leading-relaxed text-white/58">
-                    Include the property address and a brief introduction so the
-                    team can respond with the right availability details.
-                  </p>
+            <ScrollReveal>
+              <div className="mt-8 overflow-hidden rounded-[10px] bg-[#07111b] p-7 shadow-[0_24px_70px_rgba(8,18,28,0.18)]">
+                <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
+                  <div>
+                    <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#c8f535]">
+                      Still deciding?
+                    </p>
+                    <h2 className="mt-3 font-heading text-[2rem] font-extrabold leading-tight text-white">
+                      Ask about Unit A or Unit B before you apply.
+                    </h2>
+                    <p className="mt-3 max-w-[620px] text-[14px] leading-relaxed text-white/58">
+                      Include the property address and a brief introduction so
+                      the team can respond with the right availability details.
+                    </p>
+                  </div>
+                  <ContactTrigger className="inline-flex items-center justify-center rounded-[10px] bg-[#c8f535] px-6 py-4 text-[13.5px] font-extrabold text-[#07111b] transition hover:bg-[#d6fa57]">
+                    Contact ZIM.ca
+                  </ContactTrigger>
                 </div>
-                <ContactTrigger className="inline-flex items-center justify-center rounded-[10px] bg-[#c8f535] px-6 py-4 text-[13.5px] font-extrabold text-[#07111b] transition hover:bg-[#d6fa57]">
-                  Contact ZIM.ca
-                </ContactTrigger>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </section>
       </main>

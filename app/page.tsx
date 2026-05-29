@@ -11,6 +11,7 @@ import StudentResources from "@/components/StudentResources";
 import CommuteSnapshot from "@/components/CommuteSnapshot";
 import ShoppingHubs from "@/components/ShoppingHubs";
 import LandlordCTA from "@/components/LandlordCTA";
+import ScrollReveal from "@/components/ScrollReveal";
 import Footer from "@/components/Footer";
 import ContactDrawer from "@/components/ContactDrawer";
 import type { Metadata } from "next";
@@ -81,17 +82,39 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <AvailabilityBar />
-        <FeaturedHomes />
-        <GallerySlideshow />
-        <ImportantNotes />
-        <IncludedValueCalculator />
-        <MoveInChecklist />
-        <ValueProps />
-        <StudentResources />
-        <CommuteSnapshot />
-        <ShoppingHubs />
-        <LandlordCTA />
+        <ScrollReveal>
+          <AvailabilityBar />
+        </ScrollReveal>
+        <ScrollReveal>
+          <FeaturedHomes />
+        </ScrollReveal>
+        <ScrollReveal>
+          <GallerySlideshow />
+        </ScrollReveal>
+        <ScrollReveal>
+          <ImportantNotes />
+        </ScrollReveal>
+        <ScrollReveal>
+          <IncludedValueCalculator />
+        </ScrollReveal>
+        <ScrollReveal>
+          <MoveInChecklist />
+        </ScrollReveal>
+        <ScrollReveal>
+          <ValueProps />
+        </ScrollReveal>
+        <ScrollReveal>
+          <StudentResources />
+        </ScrollReveal>
+        <ScrollReveal>
+          <CommuteSnapshot />
+        </ScrollReveal>
+        <ScrollReveal>
+          <ShoppingHubs />
+        </ScrollReveal>
+        <ScrollReveal>
+          <LandlordCTA />
+        </ScrollReveal>
       </main>
       <Footer />
       <ContactDrawer />
