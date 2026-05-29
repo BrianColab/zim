@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[760px] lg:min-h-[860px] flex flex-col overflow-hidden bg-[#07111b]">
+    <section className="relative flex min-h-[680px] flex-col overflow-hidden bg-[#07111b] sm:min-h-[760px] lg:min-h-[860px]">
       <div className="absolute inset-0">
         <Image
           src="/images/main.png"
@@ -18,13 +18,13 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#06101a]/44 via-transparent to-[#06101a]/72" />
       </div>
 
-      <div className="relative flex-1 flex flex-col justify-end">
-        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-32 pb-0">
-          <div className="mb-12 max-w-[760px]">
+      <div className="relative flex flex-1 flex-col justify-end">
+        <div className="mx-auto w-full max-w-7xl px-4 pb-0 pt-28 sm:px-6 sm:pt-32 lg:px-8">
+          <div className="mb-9 max-w-[760px] sm:mb-12">
             <h1
-              className="font-heading font-extrabold text-white leading-[0.86] mb-6"
+              className="mb-5 font-heading font-extrabold leading-[0.9] text-white sm:mb-6 sm:leading-[0.86]"
               style={{
-                fontSize: "clamp(4rem, 8.6vw, 8.2rem)",
+                fontSize: "clamp(3.45rem, 8.6vw, 8.2rem)",
               }}
             >
               Live Close.

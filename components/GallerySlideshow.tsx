@@ -69,7 +69,7 @@ export default function GallerySlideshow() {
               See every room, angle, and shared space.
             </h2>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="hidden items-center gap-2 md:flex">
             <button
               type="button"
               aria-label="Show previous gallery photo"
@@ -90,7 +90,7 @@ export default function GallerySlideshow() {
         </div>
 
         <div className="grid gap-5">
-          <div className="relative aspect-[16/10] overflow-hidden rounded-[8px] bg-black shadow-[0_28px_80px_rgba(0,0,0,0.38)] md:aspect-[16/9]">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[8px] bg-black shadow-[0_28px_80px_rgba(0,0,0,0.38)] sm:aspect-[16/10] md:aspect-[16/9]">
             {slides.map((slide, index) => (
               <Image
                 key={slide.src}
@@ -122,9 +122,27 @@ export default function GallerySlideshow() {
                 </div>
               </div>
             </div>
+            <div className="absolute inset-x-3 top-1/2 flex -translate-y-1/2 items-center justify-between md:hidden">
+              <button
+                type="button"
+                aria-label="Show previous gallery photo"
+                onClick={goToPrevious}
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/18 bg-black/42 text-[24px] font-bold leading-none text-white backdrop-blur transition hover:bg-black/58"
+              >
+                &lsaquo;
+              </button>
+              <button
+                type="button"
+                aria-label="Show next gallery photo"
+                onClick={goToNext}
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/18 bg-black/42 text-[24px] font-bold leading-none text-white backdrop-blur transition hover:bg-black/58"
+              >
+                &rsaquo;
+              </button>
+            </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-12">
+          <div className="grid grid-cols-3 gap-2 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-12">
             {slides.map((slide, index) => (
               <button
                 key={slide.src}

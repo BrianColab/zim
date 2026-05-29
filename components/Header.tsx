@@ -88,6 +88,7 @@ export default function Header() {
               </Link>
             ))}
             <ContactTrigger
+              onOpen={() => setOpen(false)}
               className="mt-3 py-2.5 bg-[#c8f535] text-[#07111b] text-sm font-extrabold rounded-[10px] text-center"
             >
               Book a Tour

@@ -129,17 +129,17 @@ export default function ContactDrawer() {
       />
 
       <aside
-        className={`absolute right-0 top-0 h-full w-full max-w-[480px] bg-[#f7f4ed] shadow-[0_0_80px_rgba(0,0,0,0.35)] transition-transform duration-300 ${
+        className={`absolute right-0 top-0 h-dvh w-full max-w-[480px] bg-[#f7f4ed] shadow-[0_0_80px_rgba(0,0,0,0.35)] transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex h-full flex-col">
-          <div className="flex items-center justify-between border-b border-black/[0.08] px-6 py-5">
+          <div className="flex items-center justify-between border-b border-black/[0.08] px-5 py-4 sm:px-6 sm:py-5">
             <div>
               <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#60710f]">
                 Contact ZIM.ca
               </p>
-              <h2 className="mt-1 font-heading text-[1.65rem] font-extrabold leading-tight text-zinc-950">
+              <h2 className="mt-1 font-heading text-[1.35rem] font-extrabold leading-tight text-zinc-950 sm:text-[1.65rem]">
                 Book a tour or ask a question
               </h2>
             </div>
@@ -166,7 +166,7 @@ export default function ContactDrawer() {
           </div>
 
           <form
-            className="flex-1 overflow-y-auto px-6 py-6"
+            className="flex-1 overflow-y-auto px-5 py-5 pb-[calc(1.25rem+env(safe-area-inset-bottom))] sm:px-6 sm:py-6"
             onSubmit={handleSubmit}
           >
             <div className="grid gap-4">
@@ -246,7 +246,7 @@ export default function ContactDrawer() {
                     type="date"
                     value={moveIn}
                     onChange={(e) => setMoveIn(e.target.value)}
-                    min="2026-05-28"
+                    min="2026-05-29"
                     className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]"
                   />
                 </label>

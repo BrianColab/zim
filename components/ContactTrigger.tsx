@@ -3,6 +3,7 @@
 type ContactTriggerProps = {
   children: React.ReactNode;
   className: string;
+  onOpen?: () => void;
   payload?: {
     roomType?: string;
     moveIn?: string;
@@ -13,16 +14,18 @@ type ContactTriggerProps = {
 export default function ContactTrigger({
   children,
   className,
+  onOpen,
   payload,
 }: ContactTriggerProps) {
   return (
     <button
       type="button"
-      onClick={() =>
+      onClick={() => {
+        onOpen?.();
         window.dispatchEvent(
           new CustomEvent("zim:open-contact", { detail: payload })
-        )
-      }
+        );
+      }}
       className={className}
     >
       {children}

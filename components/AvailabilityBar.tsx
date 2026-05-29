@@ -77,7 +77,7 @@ export default function AvailabilityBar() {
       </section>
 
       <div
-        className={`fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#07111b]/94 px-3 py-3 shadow-[0_-18px_50px_rgba(0,0,0,0.22)] backdrop-blur-xl transition-transform duration-300 ${
+        className={`fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#07111b]/94 px-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] pt-3 shadow-[0_-18px_50px_rgba(0,0,0,0.22)] backdrop-blur-xl transition-transform duration-300 ${
           visible ? "translate-y-0" : "translate-y-full"
         }`}
       >
