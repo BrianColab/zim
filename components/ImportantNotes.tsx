@@ -106,43 +106,47 @@ function Icon({ type }: { type: string }) {
 
 export default function ImportantNotes() {
   return (
-    <section id="amenities" className="bg-[#edf5ff] py-20">
+    <section id="amenities" className="bg-[#07111b] py-20 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="section-kicker justify-center text-[#1d8fe8]">
-            Included at ZIM.ca
-          </p>
-          <h2 className="mx-auto mt-5 max-w-[12ch] font-heading text-[clamp(3rem,7vw,5rem)] font-black leading-[0.9] tracking-[-0.02em] text-[#09111f]">
-            Everything <span className="text-[#6f7684]">included.</span>
-            <br />
-            No <span className="text-[#1d8fe8]">extras.</span>
-          </h2>
-          <p className="section-copy mx-auto mt-6 text-[#425879]">
+        <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+          <div>
+            <p className="section-kicker text-[#c8f535]">
+              Included at ZIM.ca
+            </p>
+            <h2 className="section-heading headline-on-dark mt-5 text-white">
+              <span className="headline-main">
+                Everything{" "}
+                <span className="headline-accent-lime">included.</span>
+              </span>
+              <span className="headline-sub">No surprise add-ons.</span>
+            </h2>
+          </div>
+          <p className="section-copy text-white/62 lg:pb-2">
             Every core amenity is part of the monthly rent, with clear
             expectations for calm shared living.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {notes.map((note) => (
             <div
               key={note.title}
-              className="min-h-[210px] rounded-[8px] border border-[#dbe7f3] bg-white p-7 text-center shadow-[0_18px_42px_rgba(23,60,102,0.08)] transition hover:-translate-y-0.5 hover:shadow-[0_24px_52px_rgba(23,60,102,0.12)]"
+              className="min-h-[210px] rounded-[8px] border border-white/[0.09] bg-white/[0.055] p-6 shadow-[0_18px_42px_rgba(0,0,0,0.16)] transition hover:-translate-y-0.5 hover:border-[#c8f535]/40 hover:bg-white/[0.08]"
             >
-              <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center text-[#1d8fe8]">
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-[8px] bg-[#c8f535] text-[#07111b]">
                 <Icon type={note.icon} />
               </div>
-              <h3 className="text-[15px] font-extrabold leading-tight text-[#101827]">
+              <h3 className="text-[15px] font-extrabold leading-tight text-white">
                 {note.title}
               </h3>
-              <p className="mx-auto mt-3 max-w-[230px] text-[13.5px] leading-relaxed text-[#526586]">
+              <p className="mt-3 max-w-[230px] text-[13.5px] leading-relaxed text-white/58">
                 {note.desc}
               </p>
             </div>
           ))}
         </div>
 
-        <p className="mx-auto mt-7 max-w-3xl text-center text-[13px] font-semibold leading-relaxed text-[#526586]">
+        <p className="mt-7 max-w-3xl text-[13px] font-semibold leading-relaxed text-white/48">
           ZIM.ca welcomes all gender identities, orientations, and backgrounds.
           Residents are expected to keep shared spaces clean, observe quiet
           hours, and participate in common chores.
