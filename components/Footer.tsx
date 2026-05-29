@@ -8,9 +8,6 @@ const navLinks = [
   { label: "Location", href: "/#location" },
 ];
 
-const managerPhone = "1 (613) 298-2875";
-const managerPhoneHref = "tel:+16132982875";
-
 export default function Footer() {
   return (
     <footer className="bg-[#0a0b0e] border-t border-white/[0.05]">
@@ -24,12 +21,6 @@ export default function Footer() {
             <p className="text-white/25 text-[12px]">
               (c) 2026 ZIM.ca. All rights reserved.
             </p>
-            <a
-              href={managerPhoneHref}
-              className="mt-3 inline-flex text-[13px] font-extrabold text-[#c8f535] transition hover:text-[#d6fa57]"
-            >
-              Property manager: {managerPhone}
-            </a>
           </div>
 
           {/* Nav */}

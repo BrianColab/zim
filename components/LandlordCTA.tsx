@@ -1,9 +1,6 @@
 import Image from "next/image";
 import ContactTrigger from "./ContactTrigger";
 
-const managerPhone = "1 (613) 298-2875";
-const managerPhoneHref = "tel:+16132982875";
-
 export default function LandlordCTA() {
   return (
     <section className="bg-[#07111b] py-24 overflow-hidden">
@@ -48,12 +45,6 @@ export default function LandlordCTA() {
               >
                 Ask a question -&gt;
               </ContactTrigger>
-              <a
-                href={managerPhoneHref}
-                className="text-[13.5px] font-extrabold text-[#c8f535] transition-colors hover:text-[#d6fa57]"
-              >
-                Call {managerPhone}
-              </a>
             </div>
 
             <div className="mt-10 grid grid-cols-2 gap-5 max-w-[430px]">

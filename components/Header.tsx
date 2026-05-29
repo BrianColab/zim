@@ -12,9 +12,6 @@ const navLinks = [
   { label: "Location", href: "/#location" },
 ];
 
-const managerPhone = "1 (613) 298-2875";
-const managerPhoneHref = "tel:+16132982875";
-
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -56,12 +53,6 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a
-              href={managerPhoneHref}
-              className="hidden text-[13px] font-extrabold text-white/74 transition-colors hover:text-white lg:inline-flex"
-            >
-              {managerPhone}
-            </a>
             <ContactTrigger
               className="hidden md:inline-flex items-center px-[18px] py-[9px] bg-[#c8f535] text-[#07111b] text-[13px] font-extrabold rounded-[10px] hover:bg-[#d6fa57] transition-colors"
             >
@@ -104,12 +95,6 @@ export default function Header() {
             >
               Book a Tour
             </ContactTrigger>
-            <a
-              href={managerPhoneHref}
-              className="mt-2 rounded-[10px] border border-white/[0.1] py-2.5 text-center text-sm font-extrabold text-white"
-            >
-              Call {managerPhone}
-            </a>
           </div>
         )}
       </div>

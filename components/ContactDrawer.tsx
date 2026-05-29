@@ -18,9 +18,6 @@ const interestOptions = [
   "General question",
 ];
 
-const managerPhone = "1 (613) 298-2875";
-const managerPhoneHref = "tel:+16132982875";
-
 export default function ContactDrawer() {
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
@@ -148,12 +145,6 @@ export default function ContactDrawer() {
               <h2 className="mt-1 font-heading text-[1.35rem] font-extrabold leading-tight text-zinc-950 sm:text-[1.65rem]">
                 Book a tour or ask a question
               </h2>
-              <a
-                href={managerPhoneHref}
-                className="mt-2 inline-flex text-[13px] font-extrabold text-[#60710f] transition hover:text-[#07111b]"
-              >
-                Call manager: {managerPhone}
-              </a>
             </div>
             <button
               type="button"
@@ -207,12 +198,6 @@ export default function ContactDrawer() {
                   and will follow up with availability or tour details.
                 </p>
                 <div className="mt-5 grid gap-3">
-                  <a
-                    href={managerPhoneHref}
-                    className="inline-flex justify-center rounded-[10px] bg-[#07111b] px-5 py-3 text-[13px] font-extrabold text-white transition hover:bg-[#142536]"
-                  >
-                    Call manager: {managerPhone}
-                  </a>
                   <button
                     type="button"
                     onClick={() => {
@@ -344,12 +329,6 @@ export default function ContactDrawer() {
               Inquiries are delivered to ZIM.ca and Homyspot property
               management. Include the property address and a brief introduction
               for the fastest reply.
-            </p>
-            <p className="mt-2 text-[12px] font-semibold leading-relaxed text-zinc-600">
-              Prefer to call? Property manager:{" "}
-              <a href={managerPhoneHref} className="font-extrabold text-zinc-950">
-                {managerPhone}
-              </a>
             </p>
           </form>
         </div>
