@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
+import { blogPosts } from "@/data/blogPosts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.zim.ca";
 
-  return [
+  const routes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
@@ -16,5 +17,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+  ];
+
+  return [
+    ...routes,
+    ...blogPosts.map((post) => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.updated),
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    })),
   ];
 }
