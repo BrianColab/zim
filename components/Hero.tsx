@@ -1,10 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import SearchBar from "./SearchBar";
 
-const algonquinWalkingUrl =
-  "https://www.google.com/maps/dir/?api=1&origin=1660%20Baseline%20Road%2C%20Ottawa%2C%20ON&destination=Algonquin%20College%2C%20Ottawa%2C%20ON&travelmode=walking";
-
 export default function Hero() {
+  const openWalkRoute = () => {
+    window.dispatchEvent(new CustomEvent("zim:open-walk-route"));
+  };
+
   return (
     <section className="relative flex min-h-[680px] flex-col overflow-hidden bg-[#07111b] sm:min-h-[760px] lg:min-h-[860px]">
       <div className="absolute inset-0">
@@ -42,10 +45,9 @@ export default function Hero() {
               <br />
               All students welcome. Built for focus. Made for life.
             </p>
-            <a
-              href={algonquinWalkingUrl}
-              target="_blank"
-              rel="noreferrer"
+            <button
+              type="button"
+              onClick={openWalkRoute}
               className="mt-6 inline-flex max-w-full items-center gap-3 rounded-[10px] border border-white/12 bg-white/[0.08] px-4 py-3 text-left text-white shadow-[0_18px_48px_rgba(0,0,0,0.22)] backdrop-blur-md transition hover:border-[#c8f535]/60 hover:bg-white/[0.12]"
             >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[8px] bg-[#c8f535] text-[#07111b]">
@@ -72,7 +74,7 @@ export default function Hero() {
                   See the walk to Algonquin
                 </span>
               </span>
-            </a>
+            </button>
           </div>
 
           <SearchBar />
