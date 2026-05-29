@@ -6,7 +6,6 @@ import { useEffect, useMemo, useState } from "react";
 const photos = [
   "1-main.jpg",
   "3-1660 Baseline Ottawa Ontario _0004.jpg",
-  "4-1660 Baseline Ottawa Ontario _0001.jpg",
   "6-1660 Baseline Ottawa Ontario _0009.jpg",
   "7-1660 Baseline Ottawa Ontario _0011.jpg",
   "8-1660 Baseline Ottawa Ontario _0012.jpg",
@@ -14,20 +13,12 @@ const photos = [
   "10-1660 Baseline Ottawa Ontario _0015.jpg",
   "11-1660 Baseline Ottawa Ontario _0017.jpg",
   "12-1660 Baseline Ottawa Ontario _0018.jpg",
-  "13-1660 Baseline Ottawa Ontario _0016.jpg",
   "15-1660 Baseline Ottawa Ontario _0006.jpg",
-  "photo-1.jpg",
-  "photo-2.jpg",
-  "photo-3.jpg",
   "photo-4.jpg",
   "photo-5.jpg",
-  "photo-6.jpg",
-  "photo-7.jpg",
-  "photo-8.jpg",
   "photo-9.jpg",
   "photo-10.jpg",
   "photo-11.jpg",
-  "photo-12.jpg",
 ];
 
 export default function GallerySlideshow() {
