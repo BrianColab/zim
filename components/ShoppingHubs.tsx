@@ -44,6 +44,7 @@ const brandImages: Record<string, string> = {
   FreshCo: "/logos/freshco.svg",
   "McDonald's": "/logos/mcdonalds.svg",
   Metro: "/logos/metro.svg",
+  Starbucks: "/logos/starbucks.jpg",
   Subway: "/logos/subway.svg",
   TD: "/logos/td.svg",
   "The Beer Store": "/logos/the-beer-store.png",
@@ -73,11 +74,16 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
 
   if (imageSrc) {
     const isBeerStore = name === "The Beer Store";
+    const isStarbucks = name === "Starbucks";
 
     return (
       <span
         className={`inline-flex items-center justify-center rounded-[8px] bg-white ${
-          compact
+          isStarbucks
+            ? compact
+              ? "h-8 w-8 rounded-full p-0"
+              : "h-14 w-14 rounded-full p-0"
+            : compact
             ? isBeerStore
               ? "h-8 min-w-32 px-1"
               : "h-7 min-w-9 px-1.5"
@@ -91,7 +97,9 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
           src={imageSrc}
           alt={`${name} logo`}
           className={`object-contain ${
-            compact
+            isStarbucks
+              ? "h-full w-full rounded-full object-cover"
+              : compact
               ? isBeerStore
                 ? "h-8 w-[126px]"
                 : "h-5 max-w-[76px]"
