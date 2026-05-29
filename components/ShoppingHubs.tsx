@@ -79,10 +79,10 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
         className={`inline-flex items-center justify-center rounded-[8px] bg-white ${
           compact
             ? isBeerStore
-              ? "h-8 min-w-24 px-2"
+              ? "h-8 min-w-32 px-1"
               : "h-7 min-w-9 px-1.5"
             : isBeerStore
-              ? "h-16 min-w-40 px-3"
+              ? "h-16 min-w-52 px-1"
               : "h-14 min-w-28 px-4"
         }`}
       >
@@ -93,10 +93,10 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
           className={`object-contain ${
             compact
               ? isBeerStore
-                ? "h-7 max-w-[116px]"
+                ? "h-8 w-[126px]"
                 : "h-5 max-w-[76px]"
-              : isBeerStore
-                ? "h-14 max-w-[190px]"
+            : isBeerStore
+                ? "h-16 w-[204px]"
                 : "h-10 max-w-[140px]"
           }`}
         />
