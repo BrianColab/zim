@@ -98,15 +98,15 @@ export default function GallerySlideshow() {
           </div>
         </div>
 
-        <div className="grid gap-5 lg:grid-cols-[1fr_260px]">
-          <div className="relative aspect-[16/10] overflow-hidden rounded-[8px] bg-black shadow-[0_28px_80px_rgba(0,0,0,0.38)]">
+        <div className="grid gap-5">
+          <div className="relative aspect-[16/10] overflow-hidden rounded-[8px] bg-black shadow-[0_28px_80px_rgba(0,0,0,0.38)] md:aspect-[16/9]">
             {slides.map((slide, index) => (
               <Image
                 key={slide.src}
                 src={slide.src}
                 alt={slide.alt}
                 fill
-                sizes="(min-width: 1024px) 920px, 100vw"
+                sizes="(min-width: 1280px) 1216px, 100vw"
                 priority={index === 0}
                 className={`object-cover transition duration-700 ease-out ${
                   index === active
@@ -133,26 +133,29 @@ export default function GallerySlideshow() {
             </div>
           </div>
 
-          <div className="grid max-h-[620px] grid-cols-4 gap-2 overflow-y-auto pr-1 sm:grid-cols-6 lg:grid-cols-2">
+          <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-12">
             {slides.map((slide, index) => (
               <button
                 key={slide.src}
                 type="button"
                 aria-label={`Show gallery photo ${index + 1}`}
                 onClick={() => setActive(index)}
-                className={`relative aspect-square overflow-hidden rounded-[8px] border transition ${
+                className={`group relative aspect-[4/3] overflow-hidden rounded-[8px] border transition ${
                   index === active
                     ? "border-[#c8f535] opacity-100 ring-2 ring-[#c8f535]/35"
-                    : "border-white/10 opacity-62 hover:opacity-100"
+                    : "border-white/10 opacity-70 hover:border-white/28 hover:opacity-100"
                 }`}
               >
                 <Image
                   src={slide.src}
                   alt=""
                   fill
-                  sizes="140px"
-                  className="object-cover"
+                  sizes="(min-width: 1280px) 96px, (min-width: 768px) 16vw, 33vw"
+                  className="object-cover transition duration-300 group-hover:scale-[1.04]"
                 />
+                <span className="absolute bottom-1.5 left-1.5 rounded-full bg-black/58 px-2 py-0.5 text-[10px] font-extrabold text-white/82">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
               </button>
             ))}
           </div>
