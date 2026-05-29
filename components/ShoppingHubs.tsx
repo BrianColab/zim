@@ -437,10 +437,6 @@ export default function ShoppingHubs() {
                 Major nearby stores and services
               </h2>
             </div>
-            <p className="text-[14px] leading-relaxed text-zinc-600">
-              Color logo-style tiles make the local amenities easy to scan at
-              a glance.
-            </p>
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
