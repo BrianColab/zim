@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const algonquinWalkingUrl =
   "https://www.google.com/maps/dir/?api=1&origin=1660%20Baseline%20Road%2C%20Ottawa%2C%20ON&destination=Algonquin%20College%2C%20Ottawa%2C%20ON&travelmode=walking";
 const algonquinEmbedUrl =
-  "https://www.google.com/maps?output=embed&saddr=1660%20Baseline%20Road%2C%20Ottawa%2C%20ON&daddr=Algonquin%20College%2C%20Ottawa%2C%20ON&dirflg=w";
+  "https://www.google.com/maps?q=Algonquin%20College%20from%201660%20Baseline%20Road%20Ottawa%20walking&z=15&output=embed";
 
 export default function FloatingWalkRoute() {
   const [visible, setVisible] = useState(false);
@@ -107,26 +107,26 @@ export default function FloatingWalkRoute() {
             <div className="flex-1 overflow-y-auto px-6 py-6">
               <div className="overflow-hidden rounded-[12px] border border-[#d5dde8] bg-white shadow-[0_12px_34px_rgba(8,18,28,0.08)]">
                 <iframe
-                  title="Walking directions from ZIM.ca to Algonquin College"
+                  title="Zoomed map near ZIM.ca and Algonquin College"
                   src={algonquinEmbedUrl}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="h-[360px] w-full border-0"
+                  className="h-[300px] w-full border-0"
                 />
               </div>
 
               <div className="mt-5 grid grid-cols-2 gap-3">
                 <div className="rounded-[8px] border border-black/[0.08] bg-white p-4">
                   <p className="text-[10px] font-extrabold uppercase tracking-[0.12em] text-zinc-400">
-                    Route
+                    Walk
                   </p>
                   <p className="mt-2 text-[15px] font-extrabold text-zinc-950">
-                    Walking
+                    Preview
                   </p>
                 </div>
                 <div className="rounded-[8px] border border-black/[0.08] bg-white p-4">
                   <p className="text-[10px] font-extrabold uppercase tracking-[0.12em] text-zinc-400">
-                    Campus
+                    Route
                   </p>
                   <p className="mt-2 text-[15px] font-extrabold text-zinc-950">
                     Algonquin
@@ -135,9 +135,9 @@ export default function FloatingWalkRoute() {
               </div>
 
               <p className="mt-5 text-[13px] leading-relaxed text-zinc-600">
-                Use the embedded map to preview the walking route. Open it in
-                Google Maps for live timing, closures, and turn-by-turn
-                directions.
+                This close-up map shows the area between ZIM.ca and Algonquin.
+                Use the button below for the exact walking path, live timing,
+                closures, and turn-by-turn directions.
               </p>
 
               <a
