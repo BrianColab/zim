@@ -350,6 +350,12 @@ function MapDrawer({
     if (!hub) return "#";
     return directionsUrl(hub.mapLabel);
   }, [hub]);
+  const embedUrl = useMemo(() => {
+    if (!hub) return "";
+    return `https://www.google.com/maps?q=${encodeURIComponent(
+      `${hub.address}, Ottawa, ON`
+    )}&output=embed`;
+  }, [hub]);
 
   return (
     <div
@@ -409,20 +415,14 @@ function MapDrawer({
             </div>
 
             <div className="flex-1 overflow-y-auto px-6 py-6">
-              <div className="relative overflow-hidden rounded-[12px] border border-[#d5dde8] bg-[#eaf0e4] p-5">
-                <div className="absolute inset-0 opacity-50 [background-image:linear-gradient(90deg,rgba(7,17,27,.08)_1px,transparent_1px),linear-gradient(rgba(7,17,27,.08)_1px,transparent_1px)] [background-size:34px_34px]" />
-                <div className="relative min-h-[230px]">
-                  <div className="absolute left-4 top-5 rounded-full bg-[#07111b] px-3 py-2 text-[11px] font-extrabold text-white">
-                    1660 Baseline
-                  </div>
-                  <div className="absolute bottom-5 right-4 rounded-full bg-[#c8f535] px-3 py-2 text-[11px] font-extrabold text-[#07111b]">
-                    {hub.name}
-                  </div>
-                  <div className="absolute left-[88px] top-[82px] h-[88px] w-[58%] rounded-br-[70px] rounded-tl-[70px] border-b-[5px] border-r-[5px] border-[#07111b]" />
-                  <div className="absolute left-[45%] top-[116px] rounded-full border border-black/[0.08] bg-white px-3 py-2 text-[12px] font-extrabold text-zinc-950 shadow-sm">
-                    {hub.distance}
-                  </div>
-                </div>
+              <div className="overflow-hidden rounded-[12px] border border-[#d5dde8] bg-white shadow-[0_12px_34px_rgba(8,18,28,0.08)]">
+                <iframe
+                  title={`${hub.name} map`}
+                  src={embedUrl}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="h-[270px] w-full border-0"
+                />
               </div>
 
               <div className="mt-5 grid grid-cols-3 gap-3">
