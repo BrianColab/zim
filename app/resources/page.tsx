@@ -91,7 +91,8 @@ export default function ResourcesPage() {
                   Resident resources
                 </p>
                 <h1 className="mt-6 max-w-[12ch] font-heading text-[clamp(3.5rem,9vw,6.5rem)] font-black leading-[0.86] tracking-[-0.025em] text-white">
-                  Everything before move-in.
+                  Everything before{" "}
+                  <span className="block text-[#c8f535]">move-in.</span>
                 </h1>
                 <p className="section-copy mt-7 text-white/62">
                   Practical guides for living at ZIM.ca: what is included, how
@@ -134,8 +135,9 @@ export default function ResourcesPage() {
                       <p className="section-kicker text-[#c8f535]">
                         {guide.label}
                       </p>
-                      <h2 className="section-heading-tight mt-4 text-white">
-                        {guide.title}
+                      <h2 className="section-heading-tight headline-on-dark mt-4 text-white">
+                        <span className="headline-main">{guide.title}</span>
+                        <span className="headline-sub">{guide.label}</span>
                       </h2>
                       <p className="mt-3 text-[14px] leading-relaxed text-white/58">
                         {guide.intro}
@@ -167,8 +169,11 @@ export default function ResourcesPage() {
                     <p className="section-kicker text-[#c8f535]">
                       Still deciding?
                     </p>
-                    <h2 className="section-heading-tight mt-4 text-white">
-                      Ask about Unit A or Unit B before you apply.
+                    <h2 className="section-heading-tight headline-on-dark mt-4 text-white">
+                      <span className="headline-main">Ask before</span>
+                      <span className="headline-sub">
+                        you <span className="headline-accent-lime">apply.</span>
+                      </span>
                     </h2>
                     <p className="mt-3 max-w-[620px] text-[14px] leading-relaxed text-white/58">
                       Include the property address and a brief introduction so

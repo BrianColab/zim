@@ -32,21 +32,52 @@ body {
 }
 
 .section-heading {
-  max-width: 13ch;
+  max-width: 12ch;
   font-family: var(--font-heading);
-  font-size: clamp(2.45rem, 6vw, 4.45rem);
+  font-size: clamp(2.85rem, 7vw, 5.4rem);
   font-weight: 900;
-  letter-spacing: -0.015em;
-  line-height: 0.94;
+  letter-spacing: -0.018em;
+  line-height: 0.86;
 }
 
 .section-heading-tight {
-  max-width: 16ch;
+  max-width: 14ch;
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  font-size: clamp(2.35rem, 5.2vw, 4.15rem);
   font-weight: 900;
-  letter-spacing: -0.01em;
-  line-height: 0.98;
+  letter-spacing: -0.016em;
+  line-height: 0.9;
+}
+
+.headline-main,
+.headline-sub {
+  display: block;
+}
+
+.headline-main {
+  font-size: 1em;
+  color: inherit;
+}
+
+.headline-sub {
+  margin-top: 0.2em;
+  max-width: 18ch;
+  font-size: 0.46em;
+  letter-spacing: 0;
+  line-height: 1.14;
+  color: rgb(82 82 91);
+}
+
+.headline-accent {
+  color: #60710f;
+}
+
+.headline-accent-lime {
+  color: #c8f535;
+}
+
+.headline-on-dark .headline-sub {
+  color: rgb(255 255 255 / 0.5);
 }
 
 .section-copy {

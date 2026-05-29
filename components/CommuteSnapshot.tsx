@@ -68,7 +68,12 @@ export default function CommuteSnapshot() {
               Commute snapshot
             </p>
             <h2 className="section-heading mt-4 text-zinc-950">
-              Know your everyday route before you apply.
+              <span className="headline-main">
+                Know your <span className="headline-accent">route</span>
+              </span>
+              <span className="headline-sub">
+                before <span className="headline-accent">you apply.</span>
+              </span>
             </h2>
           </div>
           <p className="section-copy text-zinc-600">

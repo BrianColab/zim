@@ -12,7 +12,12 @@ export default function StudentResources() {
               Student resources
             </p>
             <h2 className="section-heading-tight text-zinc-950">
-              Settle in with confidence
+              <span className="headline-main">
+                Settle <span className="headline-accent">in</span>
+              </span>
+              <span className="headline-sub">
+                with <span className="headline-accent">confidence</span>
+              </span>
             </h2>
           </div>
           <Link

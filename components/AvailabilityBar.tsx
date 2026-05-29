@@ -42,8 +42,11 @@ export default function AvailabilityBar() {
             <p className="section-kicker text-[#c8f535]">
               Rooms available
             </p>
-            <h2 className="section-heading-tight mt-3 max-w-[18ch] text-white">
-              Ready to check a room or book a showing?
+            <h2 className="section-heading-tight headline-on-dark mt-3 max-w-[18ch] text-white">
+              <span className="headline-main">
+                Ready to check a <span className="headline-accent-lime">room?</span>
+              </span>
+              <span className="headline-sub">Book a showing or call.</span>
             </h2>
             <p className="mt-2 max-w-xl text-[12.5px] font-semibold leading-relaxed text-white/52">
               Pair rooms are only for two friends applying together. We do not

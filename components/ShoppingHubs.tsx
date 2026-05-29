@@ -491,7 +491,12 @@ export default function ShoppingHubs() {
               Shopping hubs
             </p>
             <h2 className="section-heading text-zinc-950">
-              Malls and retail clusters within the local zone
+              <span className="headline-main">
+                Malls and <span className="headline-accent">retail</span>
+              </span>
+              <span className="headline-sub">
+                within the <span className="headline-accent">local zone</span>
+              </span>
             </h2>
           </div>
           <p className="section-copy text-zinc-600">
@@ -513,7 +518,10 @@ export default function ShoppingHubs() {
                 Logo wall
               </p>
               <h2 className="section-heading-tight text-zinc-950">
-                Major nearby stores and services
+                <span className="headline-main">
+                  Nearby <span className="headline-accent">stores</span>
+                </span>
+                <span className="headline-sub">and everyday services</span>
               </h2>
             </div>
           </div>

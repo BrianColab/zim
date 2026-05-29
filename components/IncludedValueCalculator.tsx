@@ -76,8 +76,13 @@ export default function IncludedValueCalculator() {
             <p className="section-kicker text-[#c8f535]">
               Student cost check
             </p>
-            <h2 className="section-heading-tight mt-5 text-white">
-              What would this cost somewhere else?
+            <h2 className="section-heading-tight headline-on-dark mt-5 text-white">
+              <span className="headline-main">
+                What would this <span className="headline-accent-lime">cost</span>
+              </span>
+              <span className="headline-sub">
+                <span className="headline-accent-lime">somewhere else?</span>
+              </span>
             </h2>
             <p className="section-copy mt-6 text-white/62">
               Adjust common student expenses and compare them with an

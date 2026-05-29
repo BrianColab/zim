@@ -40,7 +40,13 @@ export default function MoveInChecklist() {
               Move-in ready
             </p>
             <h2 className="section-heading mt-5 text-zinc-950">
-              Bring your essentials. The big stuff is handled.
+              <span className="headline-main">
+                Bring your <span className="headline-accent">essentials.</span>
+              </span>
+              <span className="headline-sub">
+                The <span className="headline-accent">big stuff</span> is
+                handled.
+              </span>
             </h2>
             <p className="section-copy mt-6 text-zinc-600">
               Especially helpful for first-year, out-of-town, and international

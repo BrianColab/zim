@@ -65,8 +65,13 @@ export default function GallerySlideshow() {
             <p className="section-kicker text-[#c8f535]">
               Full property gallery
             </p>
-            <h2 className="section-heading-tight mt-4 text-white">
-              See every room, angle, and shared space.
+            <h2 className="section-heading-tight headline-on-dark mt-4 text-white">
+              <span className="headline-main">
+                See every <span className="headline-accent-lime">room</span>
+              </span>
+              <span className="headline-sub">
+                angles, finishes, and shared spaces.
+              </span>
             </h2>
           </div>
           <div className="hidden items-center gap-2 md:flex">
