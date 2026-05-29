@@ -12,12 +12,12 @@ const notes = [
   {
     title: "Fully Furnished",
     desc: "Bed, mattress, desk, office chair, and essential appliances.",
-    icon: "desk",
+    icon: "chair",
   },
   {
     title: "In-Unit Laundry",
     desc: "Washer and dryer included at no additional cost.",
-    icon: "laundry",
+    icon: "shirt",
   },
   {
     title: "Parking Available",
@@ -26,89 +26,114 @@ const notes = [
   },
   {
     title: "Respectful Home",
-    desc: "No pets due to allergies. Quiet, clean shared living expected.",
+    desc: "Quiet, clean shared living with clear household expectations.",
     icon: "home",
   },
 ];
 
 function Icon({ type }: { type: string }) {
-  const path =
-    type === "bolt"
-      ? "M13 2L4 14h7l-1 8 9-12h-7l1-8z"
-      : type === "wifi"
-        ? "M3 9.5a14 14 0 0118 0M6.5 13a9 9 0 0111 0M10 16.5a4 4 0 014 0M12 20h.01"
-        : type === "laundry"
-          ? "M6 3h12v18H6V3zm3 3h.01M12 17a4 4 0 100-8 4 4 0 000 8z"
-          : type === "parking"
-            ? "M8 21V3h6a4 4 0 010 8H8m0 0h6"
-            : type === "home"
-              ? "M3 11l9-8 9 8v9a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1v-9z"
-              : "M4 20h16M7 20V8h10v12M9 8V5h6v3M9 12h6";
+  if (type === "wifi") {
+    return (
+      <svg className="h-10 w-10" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M5 10.5a10 10 0 0 1 14 0"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M8.5 14a5 5 0 0 1 7 0"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+        />
+        <circle cx="12" cy="18" r="2" fill="currentColor" />
+      </svg>
+    );
+  }
+
+  if (type === "bolt") {
+    return (
+      <svg className="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13.4 2.4 4.6 13.2a1 1 0 0 0 .78 1.63h5.05l-.9 6.04a1 1 0 0 0 1.76.76l8.2-10.85a1 1 0 0 0-.8-1.6h-4.56l1.04-5.98a1 1 0 0 0-1.77-.8Z" />
+      </svg>
+    );
+  }
+
+  if (type === "shirt") {
+    return (
+      <svg className="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M8.4 3.25a1.4 1.4 0 0 0-.83.28L3.32 6.76a1.35 1.35 0 0 0-.24 1.93l2.1 2.55a1.3 1.3 0 0 0 1.9.14l.86-.78v8.25A1.9 1.9 0 0 0 9.84 20.75h4.32a1.9 1.9 0 0 0 1.9-1.9V10.6l.86.78a1.3 1.3 0 0 0 1.9-.14l2.1-2.55a1.35 1.35 0 0 0-.24-1.93l-4.25-3.23a1.4 1.4 0 0 0-.83-.28h-1.55a2.25 2.25 0 0 1-4.1 0H8.4Z" />
+      </svg>
+    );
+  }
+
+  if (type === "parking") {
+    return (
+      <svg className="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7.25 4.5A1.25 1.25 0 0 1 8.5 3.25h5.1a5.15 5.15 0 0 1 0 10.3h-3.85v5.95a1.25 1.25 0 1 1-2.5 0v-15Zm2.5 6.55h3.85a2.65 2.65 0 0 0 0-5.3H9.75v5.3Z" />
+      </svg>
+    );
+  }
+
+  if (type === "home") {
+    return (
+      <svg className="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M11.1 3.23a1.4 1.4 0 0 1 1.8 0l7.65 6.43a1.35 1.35 0 0 1-1.74 2.06l-.56-.47v7.05a2.45 2.45 0 0 1-2.45 2.45h-2.05v-5.4a1.75 1.75 0 0 0-3.5 0v5.4H8.2a2.45 2.45 0 0 1-2.45-2.45v-7.05l-.56.47a1.35 1.35 0 0 1-1.74-2.06l7.65-6.43Z" />
+      </svg>
+    );
+  }
 
   return (
-    <svg
-      className="h-5 w-5"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={1.9}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d={path} />
+    <svg className="h-10 w-10" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M8 3.75a2 2 0 0 0-2 2v9.5a2 2 0 0 0 2 2h.75v2.5a1 1 0 1 0 2 0v-2.5h2.5v2.5a1 1 0 1 0 2 0v-2.5H16a2 2 0 0 0 2-2v-9.5a2 2 0 0 0-2-2H8Zm1.25 3.5h5.5a1 1 0 1 1 0 2h-5.5a1 1 0 0 1 0-2Zm0 3.75h5.5a1 1 0 1 1 0 2h-5.5a1 1 0 1 1 0-2Z" />
     </svg>
   );
 }
 
 export default function ImportantNotes() {
   return (
-    <section id="amenities" className="bg-[#f5f1e8] pb-20">
+    <section id="amenities" className="bg-[#edf5ff] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="overflow-hidden rounded-[10px] border border-white/[0.08] bg-[#07111b] shadow-[0_24px_70px_rgba(8,18,28,0.18)]">
-          <div className="grid lg:grid-cols-[360px_1fr]">
-            <div className="relative border-b border-white/[0.08] p-7 lg:border-b-0 lg:border-r">
-              <div className="absolute right-0 top-0 h-28 w-28 border-r-4 border-t-4 border-[#c8f535]" />
-              <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#c8f535]">
-                Included at ZIM.ca
-              </p>
-              <h2 className="mt-4 font-heading text-[2rem] font-extrabold leading-[0.98] text-white">
-                Everything students need, already handled.
-              </h2>
-              <p className="mt-5 text-[13.5px] leading-relaxed text-white/55">
-                Comfortable rooms, practical essentials, and clear shared-living
-                expectations in one calm Ottawa residence near Algonquin.
-                Students from every school are welcome.
-              </p>
-            </div>
-
-            <div className="p-5 sm:p-6">
-              <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-                {notes.map((note) => (
-                  <div
-                    key={note.title}
-                    className="rounded-[8px] border border-white/[0.08] bg-white/[0.055] p-4 transition hover:bg-white/[0.085]"
-                  >
-                    <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-[8px] bg-[#c8f535] text-[#07111b]">
-                      <Icon type={note.icon} />
-                    </div>
-                    <h3 className="text-[18px] font-extrabold leading-tight text-white">
-                      {note.title}
-                    </h3>
-                    <p className="mt-3 text-[12.5px] leading-relaxed text-white/52">
-                      {note.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-4 rounded-[8px] border border-[#c8f535]/30 bg-[#c8f535]/10 px-4 py-3">
-                <p className="text-[12.5px] font-semibold leading-relaxed text-white/72">
-                  ZIM.ca welcomes all gender identities, orientations, and
-                  backgrounds. Residents are expected to keep shared spaces
-                  clean, observe quiet hours, and participate in common chores.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#1d8fe8]">
+            Included at ZIM.ca
+          </p>
+          <h2 className="mt-4 font-heading text-[2.65rem] font-extrabold leading-[0.98] text-[#09111f] sm:text-[3.35rem]">
+            Everything <span className="text-[#6f7684]">included.</span>
+            <br />
+            No <span className="text-[#1d8fe8]">extras.</span>
+          </h2>
+          <p className="mx-auto mt-5 max-w-xl text-[15px] font-medium leading-relaxed text-[#425879]">
+            Every core amenity is part of the monthly rent, with clear
+            expectations for calm shared living.
+          </p>
         </div>
+
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {notes.map((note) => (
+            <div
+              key={note.title}
+              className="min-h-[210px] rounded-[8px] border border-[#dbe7f3] bg-white p-7 text-center shadow-[0_18px_42px_rgba(23,60,102,0.08)] transition hover:-translate-y-0.5 hover:shadow-[0_24px_52px_rgba(23,60,102,0.12)]"
+            >
+              <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center text-[#1d8fe8]">
+                <Icon type={note.icon} />
+              </div>
+              <h3 className="text-[15px] font-extrabold leading-tight text-[#101827]">
+                {note.title}
+              </h3>
+              <p className="mx-auto mt-3 max-w-[230px] text-[13.5px] leading-relaxed text-[#526586]">
+                {note.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mx-auto mt-7 max-w-3xl text-center text-[13px] font-semibold leading-relaxed text-[#526586]">
+          ZIM.ca welcomes all gender identities, orientations, and backgrounds.
+          Residents are expected to keep shared spaces clean, observe quiet
+          hours, and participate in common chores.
+        </p>
       </div>
     </section>
   );

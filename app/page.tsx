@@ -1,9 +1,14 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import AvailabilityBar from "@/components/AvailabilityBar";
 import FeaturedHomes from "@/components/FeaturedHomes";
+import GallerySlideshow from "@/components/GallerySlideshow";
 import ImportantNotes from "@/components/ImportantNotes";
+import IncludedValueCalculator from "@/components/IncludedValueCalculator";
+import MoveInChecklist from "@/components/MoveInChecklist";
 import ValueProps from "@/components/ValueProps";
 import StudentResources from "@/components/StudentResources";
+import CommuteSnapshot from "@/components/CommuteSnapshot";
 import ShoppingHubs from "@/components/ShoppingHubs";
 import LandlordCTA from "@/components/LandlordCTA";
 import Footer from "@/components/Footer";
@@ -76,10 +81,15 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <AvailabilityBar />
         <FeaturedHomes />
+        <GallerySlideshow />
         <ImportantNotes />
+        <IncludedValueCalculator />
+        <MoveInChecklist />
         <ValueProps />
         <StudentResources />
+        <CommuteSnapshot />
         <ShoppingHubs />
         <LandlordCTA />
       </main>
