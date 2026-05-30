@@ -55,6 +55,16 @@ export default function Header() {
 
           <div className="flex items-center gap-3">
             <ContactTrigger
+              payload={{
+                roomType: "Unit B single occupancy",
+                moveIn: "2026-09-01",
+                lease: "Student rental inquiry",
+              }}
+              className="hidden items-center gap-2 rounded-[10px] border border-[#c8f535]/35 bg-[#c8f535]/12 px-3.5 py-2 text-[12px] font-extrabold text-[#c8f535] transition hover:bg-[#c8f535]/18 lg:inline-flex"
+            >
+              Rooms from $850
+            </ContactTrigger>
+            <ContactTrigger
               className="hidden md:inline-flex items-center px-[18px] py-[9px] bg-[#c8f535] text-[#07111b] text-[13px] font-extrabold rounded-[10px] hover:bg-[#d6fa57] transition-colors"
             >
               Book a Tour
@@ -95,6 +105,17 @@ export default function Header() {
               className="mt-3 py-2.5 bg-[#c8f535] text-[#07111b] text-sm font-extrabold rounded-[10px] text-center"
             >
               Book a Tour
+            </ContactTrigger>
+            <ContactTrigger
+              onOpen={() => setOpen(false)}
+              payload={{
+                roomType: "Unit B single occupancy",
+                moveIn: "2026-09-01",
+                lease: "Student rental inquiry",
+              }}
+              className="py-2.5 text-center text-sm font-extrabold text-[#c8f535]"
+            >
+              Rooms from $850/month
             </ContactTrigger>
           </div>
         )}

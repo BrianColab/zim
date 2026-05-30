@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import SearchBar from "./SearchBar";
+import ContactTrigger from "./ContactTrigger";
 
 export default function Hero() {
   const openWalkRoute = () => {
@@ -45,36 +46,59 @@ export default function Hero() {
               <br />
               All students welcome. Built for focus. Made for life.
             </p>
-            <button
-              type="button"
-              onClick={openWalkRoute}
-              className="mt-6 inline-flex max-w-full items-center gap-3 rounded-[10px] border border-white/12 bg-white/[0.08] px-4 py-3 text-left text-white shadow-[0_18px_48px_rgba(0,0,0,0.22)] backdrop-blur-md transition hover:border-[#c8f535]/60 hover:bg-white/[0.12]"
-            >
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[8px] bg-[#c8f535] text-[#07111b]">
-                <svg
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2.3}
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 6.75 11.2 4.5 15 8.25l-2.5 2.5 2.75 2.75 3-1.5 1.25 2.5-4.4 2.2-4.2-4.2-1.65 1.65v5.1h-3v-6.35l3.35-3.35-1.5-1.5-2.2 2.2-2.1-2.1 3.2-3.2c.52-.52 1.46-.56 2-.2Z"
-                  />
-                </svg>
-              </span>
-              <span className="min-w-0">
-                <span className="block text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#c8f535]">
-                  Walking route
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <ContactTrigger
+                payload={{
+                  roomType: "Unit B single occupancy",
+                  moveIn: "2026-09-01",
+                  lease: "Student rental inquiry",
+                }}
+                className="inline-flex max-w-full items-center gap-3 rounded-[10px] border border-[#c8f535]/50 bg-[#c8f535] px-4 py-3 text-left text-[#07111b] shadow-[0_18px_48px_rgba(0,0,0,0.24)] transition hover:bg-[#d6fa57]"
+              >
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[8px] bg-[#07111b] text-[#c8f535]">
+                  $
                 </span>
-                <span className="mt-0.5 block text-[14px] font-extrabold leading-tight">
-                  See the walk to Algonquin
+                <span className="min-w-0">
+                  <span className="block text-[11px] font-extrabold uppercase tracking-[0.16em]">
+                    Rooms starting at
+                  </span>
+                  <span className="mt-0.5 block text-[18px] font-black leading-tight">
+                    $850/month
+                  </span>
                 </span>
-              </span>
-            </button>
+              </ContactTrigger>
+
+              <button
+                type="button"
+                onClick={openWalkRoute}
+                className="inline-flex max-w-full items-center gap-3 rounded-[10px] border border-white/12 bg-white/[0.08] px-4 py-3 text-left text-white shadow-[0_18px_48px_rgba(0,0,0,0.22)] backdrop-blur-md transition hover:border-[#c8f535]/60 hover:bg-white/[0.12]"
+              >
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[8px] bg-[#c8f535] text-[#07111b]">
+                  <svg
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2.3}
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 6.75 11.2 4.5 15 8.25l-2.5 2.5 2.75 2.75 3-1.5 1.25 2.5-4.4 2.2-4.2-4.2-1.65 1.65v5.1h-3v-6.35l3.35-3.35-1.5-1.5-2.2 2.2-2.1-2.1 3.2-3.2c.52-.52 1.46-.56 2-.2Z"
+                    />
+                  </svg>
+                </span>
+                <span className="min-w-0">
+                  <span className="block text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#c8f535]">
+                    Walking route
+                  </span>
+                  <span className="mt-0.5 block text-[14px] font-extrabold leading-tight">
+                    See the walk to Algonquin
+                  </span>
+                </span>
+              </button>
+            </div>
           </div>
 
           <SearchBar />
