@@ -19,8 +19,13 @@ function FieldLabel({ children }: { children: React.ReactNode }) {
   );
 }
 
+function todayIso() {
+  return new Date().toISOString().slice(0, 10);
+}
+
 export default function SearchBar() {
   const [moveIn, setMoveIn] = useState("2026-09-01");
+  const [minMoveIn] = useState(todayIso);
   const [suiteType, setSuiteType] = useState(suiteTypes[0]);
   const [lease, setLease] = useState(leaseOptions[0]);
 
@@ -34,7 +39,7 @@ export default function SearchBar() {
               type="date"
               value={moveIn}
               onChange={(e) => setMoveIn(e.target.value)}
-              min="2026-05-29"
+              min={minMoveIn}
               className="w-full min-w-0 bg-transparent text-white text-[14px] font-semibold outline-none cursor-pointer [color-scheme:dark]"
             />
           </div>
