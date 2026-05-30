@@ -21,8 +21,8 @@ export default function BlogPreview() {
             </h2>
           </div>
           <p className="section-copy text-zinc-600">
-            SEO-rich guides for Algonquin College housing, Ottawa student
-            budgets, furnished rooms, and life near Baseline Road in Nepean.
+            Practical tips for comparing rooms, planning your budget, and
+            settling into student life near Algonquin.
           </p>
         </div>
 
