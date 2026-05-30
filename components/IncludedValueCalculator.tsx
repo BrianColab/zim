@@ -69,7 +69,7 @@ export default function IncludedValueCalculator() {
   const yearlyIncluded = includedTotal * 12;
 
   return (
-    <section className="bg-[#edf5ff] pb-20">
+    <section className="bg-[#edf5ff] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid overflow-hidden rounded-[8px] border border-[#dbe7f3] bg-white shadow-[0_26px_80px_rgba(23,60,102,0.12)] lg:grid-cols-[0.9fr_1.1fr]">
           <div className="bg-[#07111b] p-6 text-white sm:p-8 lg:p-10">
