@@ -5,6 +5,7 @@ const commuteItems = [
     time: "8-12 min",
     mode: "bike or bus",
     note: "College Square and Baseline Station area",
+    href: "https://www.google.com/maps/dir/?api=1&origin=1660%20Baseline%20Road%2C%20Ottawa%2C%20ON&destination=Algonquin%20College%2C%20Ottawa%2C%20ON",
   },
   {
     destination: "Carleton University",
@@ -12,6 +13,7 @@ const commuteItems = [
     time: "18-28 min",
     mode: "drive or transit",
     note: "Good fit for students who want west-end housing",
+    href: "https://www.google.com/maps/dir/?api=1&origin=1660%20Baseline%20Road%2C%20Ottawa%2C%20ON&destination=Carleton%20University%2C%20Ottawa%2C%20ON",
   },
   {
     destination: "uOttawa",
@@ -19,6 +21,7 @@ const commuteItems = [
     time: "30-45 min",
     mode: "transit",
     note: "Plan around peak-hour service",
+    href: "https://www.google.com/maps/dir/?api=1&origin=1660%20Baseline%20Road%2C%20Ottawa%2C%20ON&destination=University%20of%20Ottawa%2C%20Ottawa%2C%20ON",
   },
   {
     destination: "College Square",
@@ -26,21 +29,7 @@ const commuteItems = [
     time: "4 min",
     mode: "drive",
     note: "Loblaws, LCBO, Rexall, BMO, essentials",
-  },
-];
-
-const routeLinks = [
-  {
-    label: "Algonquin",
-    href: "https://www.google.com/maps/dir/?api=1&origin=1660%20Baseline%20Road%2C%20Ottawa%2C%20ON&destination=Algonquin%20College%2C%20Ottawa%2C%20ON",
-  },
-  {
-    label: "Carleton",
-    href: "https://www.google.com/maps/dir/?api=1&origin=1660%20Baseline%20Road%2C%20Ottawa%2C%20ON&destination=Carleton%20University%2C%20Ottawa%2C%20ON",
-  },
-  {
-    label: "uOttawa",
-    href: "https://www.google.com/maps/dir/?api=1&origin=1660%20Baseline%20Road%2C%20Ottawa%2C%20ON&destination=University%20of%20Ottawa%2C%20Ottawa%2C%20ON",
+    href: "https://www.google.com/maps/dir/?api=1&origin=1660%20Baseline%20Road%2C%20Ottawa%2C%20ON&destination=College%20Square%2C%20Ottawa%2C%20ON",
   },
 ];
 
@@ -86,7 +75,7 @@ export default function CommuteSnapshot() {
           {commuteItems.map((item) => (
             <article
               key={item.destination}
-              className="rounded-[8px] border border-black/[0.08] bg-white p-5 shadow-[0_1px_2px_rgba(8,18,28,0.05)]"
+              className="flex min-h-[260px] flex-col rounded-[8px] border border-black/[0.08] bg-white p-5 shadow-[0_1px_2px_rgba(8,18,28,0.05)]"
             >
               <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-[8px] bg-[#e9f5ff] text-[#1d8fe8]">
                 <RouteIcon />
@@ -108,27 +97,16 @@ export default function CommuteSnapshot() {
               <p className="mt-4 text-[12.5px] font-medium leading-relaxed text-zinc-500">
                 {item.note}
               </p>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-5 flex flex-col gap-3 rounded-[8px] border border-black/[0.08] bg-[#07111b] p-4 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-[13px] font-semibold text-white/66">
-            Open live directions for the exact day, time, and transit option.
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {routeLinks.map((link) => (
               <a
-                key={link.label}
-                href={link.href}
+                href={item.href}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-[8px] bg-white/10 px-3 py-2 text-[12px] font-extrabold text-white transition hover:bg-white/16"
+                className="mt-auto inline-flex items-center justify-center rounded-[8px] bg-[#07111b] px-4 py-3 text-[12px] font-extrabold text-white transition hover:bg-[#142536]"
               >
-                {link.label}
+                View route
               </a>
-            ))}
-          </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
