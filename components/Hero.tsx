@@ -53,17 +53,20 @@ export default function Hero() {
                   moveIn: "2026-09-01",
                   lease: "Student rental inquiry",
                 }}
-                className="inline-flex max-w-full items-center gap-3 rounded-[10px] border border-[#c8f535]/50 bg-[#c8f535] px-4 py-3 text-left text-[#07111b] shadow-[0_18px_48px_rgba(0,0,0,0.24)] transition hover:bg-[#d6fa57]"
+                className="inline-flex max-w-full items-center gap-4 rounded-[12px] border border-[#c8f535]/70 bg-[#c8f535] px-5 py-4 text-left text-[#07111b] shadow-[0_22px_60px_rgba(0,0,0,0.3)] transition hover:bg-[#d6fa57] sm:min-w-[365px]"
               >
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[8px] bg-[#07111b] text-[#c8f535]">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[10px] bg-[#07111b] text-[24px] font-black text-[#c8f535]">
                   $
                 </span>
                 <span className="min-w-0">
-                  <span className="block text-[11px] font-extrabold uppercase tracking-[0.16em]">
-                    Rooms starting at
+                  <span className="block text-[11px] font-black uppercase tracking-[0.16em]">
+                    All-inclusive rooms from
                   </span>
-                  <span className="mt-0.5 block text-[18px] font-black leading-tight">
-                    $850/month
+                  <span className="mt-1 block font-heading text-[clamp(2rem,7vw,3.2rem)] font-black leading-none tracking-[-0.025em]">
+                    $850/mo
+                  </span>
+                  <span className="mt-1 block text-[12px] font-extrabold leading-tight">
+                    Furnished + utilities + WiFi + laundry included
                   </span>
                 </span>
               </ContactTrigger>
