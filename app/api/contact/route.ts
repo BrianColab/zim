@@ -10,7 +10,6 @@ type ContactRequest = {
   company?: string;
 };
 
-const propertyManagerEmail = "info@homyspot.com";
 const fallbackContactEmail = "bpallister@gmail.com";
 const fromEmail =
   process.env.CONTACT_FROM_EMAIL ?? "ZIM.ca <onboarding@resend.dev>";
@@ -36,7 +35,9 @@ const toEmails = Array.from(
     fallbackContactEmail,
   ]),
 );
-const ccEmails = [propertyManagerEmail];
+const ccEmails = Array.from(
+  new Set(parseRecipientEmails(process.env.CONTACT_CC_EMAIL)),
+);
 
 export async function POST(request: Request) {
   let payload: ContactRequest;
@@ -96,23 +97,31 @@ export async function POST(request: Request) {
     .filter(Boolean)
     .join("\n");
 
+  const emailPayload = {
+    from: fromEmail,
+    to: toEmails,
+    ...(ccEmails.length ? { cc: ccEmails } : {}),
+    reply_to: email,
+    subject,
+    text,
+  };
+
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      from: fromEmail,
-      to: toEmails,
-      cc: ccEmails,
-      reply_to: email,
-      subject,
-      text,
-    }),
+    body: JSON.stringify(emailPayload),
   });
 
   if (!response.ok) {
+    const errorText = await response.text().catch(() => "");
+    console.error("Resend contact email failed", {
+      status: response.status,
+      body: errorText,
+    });
+
     return NextResponse.json(
       { error: "The message could not be sent. Please try again shortly." },
       { status: 502 },
