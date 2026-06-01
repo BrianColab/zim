@@ -11,15 +11,7 @@ type ContactRequest = {
 };
 
 const propertyManagerEmail = "info@homyspot.com";
-const primaryContactEmail = process.env.CONTACT_TO_EMAIL ?? "bpallister@gmail.com";
-const toEmails = Array.from(
-  new Set(
-    [primaryContactEmail, propertyManagerEmail]
-      .flatMap((email) => email.split(","))
-      .map((email) => email.trim())
-      .filter(Boolean),
-  ),
-);
+const fallbackContactEmail = "bpallister@gmail.com";
 const fromEmail =
   process.env.CONTACT_FROM_EMAIL ?? "ZIM.ca <onboarding@resend.dev>";
 
@@ -30,6 +22,21 @@ function clean(value: unknown) {
 function isEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
+
+function parseRecipientEmails(value: string | undefined) {
+  return (value ?? "")
+    .split(",")
+    .map((email) => email.trim())
+    .filter(isEmail);
+}
+
+const toEmails = Array.from(
+  new Set([
+    ...parseRecipientEmails(process.env.CONTACT_TO_EMAIL),
+    fallbackContactEmail,
+  ]),
+);
+const ccEmails = [propertyManagerEmail];
 
 export async function POST(request: Request) {
   let payload: ContactRequest;
@@ -98,6 +105,7 @@ export async function POST(request: Request) {
     body: JSON.stringify({
       from: fromEmail,
       to: toEmails,
+      cc: ccEmails,
       reply_to: email,
       subject,
       text,
