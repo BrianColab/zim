@@ -22,6 +22,16 @@ function todayIso() {
   return new Date().toISOString().slice(0, 10);
 }
 
+function syncMessageMoveIn(message: string, moveIn: string) {
+  const moveInLine = `Move-in date: ${moveIn}`;
+
+  if (/^Move-in date: .+$/m.test(message)) {
+    return message.replace(/^Move-in date: .+$/m, moveInLine);
+  }
+
+  return message ? `${message}\n${moveInLine}` : moveInLine;
+}
+
 export default function ContactDrawer() {
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
@@ -118,6 +128,11 @@ export default function ContactDrawer() {
     setEmail("");
     setPhone("");
     setMessage("");
+  }
+
+  function handleMoveInChange(value: string) {
+    setMoveIn(value);
+    setMessage((currentMessage) => syncMessageMoveIn(currentMessage, value));
   }
 
   return (
@@ -293,7 +308,7 @@ export default function ContactDrawer() {
                   <input
                     type="date"
                     value={moveIn}
-                    onChange={(e) => setMoveIn(e.target.value)}
+                    onChange={(e) => handleMoveInChange(e.target.value)}
                     min={minMoveIn}
                     className="h-12 rounded-[8px] border border-black/[0.1] bg-white px-4 text-[14px] font-medium text-zinc-950 outline-none transition focus:border-[#8ca80d]"
                   />
