@@ -407,7 +407,14 @@ export default function InternationalStudentHousingOttawaPage() {
           </div>
         </section>
         <StudentHousingResources
-          links={["algonquin", "baseline", "parents", "costGuide", "september"]}
+          links={[
+            "resourceHub",
+            "algonquin",
+            "baseline",
+            "parents",
+            "costGuide",
+            "september",
+          ]}
           theme="dark"
         />
         <StudentHousingCta title="Moving to Ottawa for school?" />

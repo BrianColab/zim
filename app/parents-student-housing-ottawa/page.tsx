@@ -484,7 +484,14 @@ export default function ParentsStudentHousingOttawaPage() {
           </div>
         </section>
         <StudentHousingResources
-          links={["algonquin", "baseline", "international", "costGuide", "september"]}
+          links={[
+            "resourceHub",
+            "algonquin",
+            "baseline",
+            "international",
+            "costGuide",
+            "september",
+          ]}
         />
         <StudentHousingCta title="Want clear answers before booking a showing?" />
       </main>

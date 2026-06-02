@@ -16,6 +16,7 @@ const footerGroups = [
   {
     title: "Resources",
     links: [
+      { label: "Student Housing Resources", href: "/student-housing-resources-ottawa" },
       { label: "Algonquin Housing Guide", href: "/algonquin-college-off-campus-housing-guide" },
       { label: "Housing Cost Guide", href: "/ottawa-student-housing-cost-guide" },
       { label: "September Rentals", href: "/september-student-rentals-ottawa" },

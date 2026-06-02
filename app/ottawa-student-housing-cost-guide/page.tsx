@@ -521,7 +521,14 @@ export default function OttawaStudentHousingCostGuidePage() {
           </div>
         </section>
         <StudentHousingResources
-          links={["algonquin", "baseline", "september", "comparison", "parents"]}
+          links={[
+            "resourceHub",
+            "algonquin",
+            "baseline",
+            "september",
+            "comparison",
+            "parents",
+          ]}
           theme="dark"
         />
         <StudentHousingCta title="Want help confirming total monthly cost?" />

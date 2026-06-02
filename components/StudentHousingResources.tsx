@@ -2,6 +2,7 @@ import Link from "next/link";
 
 type ResourceKey =
   | "home"
+  | "resourceHub"
   | "algonquin"
   | "baseline"
   | "parents"
@@ -26,6 +27,12 @@ const resources: Record<
     label: "Ottawa Student Rentals",
     href: "/",
     description: "Start with furnished student rooms in Ottawa near Algonquin.",
+  },
+  resourceHub: {
+    label: "Ottawa Student Housing Resources",
+    href: "/student-housing-resources-ottawa",
+    description:
+      "Browse student housing guides for students and parents comparing Ottawa rentals.",
   },
   algonquin: {
     label: "Student Rentals Near Algonquin College",

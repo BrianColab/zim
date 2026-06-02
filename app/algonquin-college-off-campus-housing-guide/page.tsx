@@ -466,7 +466,14 @@ export default function AlgonquinCollegeHousingGuidePage() {
           </div>
         </section>
         <StudentHousingResources
-          links={["algonquin", "baseline", "costGuide", "parents", "comparison"]}
+          links={[
+            "resourceHub",
+            "algonquin",
+            "baseline",
+            "costGuide",
+            "parents",
+            "comparison",
+          ]}
           theme="dark"
         />
         <StudentHousingCta title="Ready to compare student rooms near Algonquin?" />

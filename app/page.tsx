@@ -186,11 +186,11 @@ export default function Home() {
         <ScrollReveal>
           <StudentHousingResources
             links={[
+              "resourceHub",
               "algonquin",
               "baseline",
               "parents",
               "international",
-              "costGuide",
             ]}
           />
         </ScrollReveal>
