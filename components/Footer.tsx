@@ -6,6 +6,7 @@ const navLinks = [
   { label: "Near Algonquin", href: "/algonquin-student-rentals-ottawa" },
   { label: "Baseline Station", href: "/student-rentals-nepean-baseline-station" },
   { label: "For Parents", href: "/parents-student-housing-ottawa" },
+  { label: "International Students", href: "/international-student-housing-ottawa" },
   { label: "Amenities", href: "/#amenities" },
   { label: "Resources", href: "/resources" },
   { label: "Blog", href: "/blog" },
