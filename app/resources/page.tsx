@@ -92,7 +92,7 @@ export default function ResourcesPage() {
                 </p>
                 <h1 className="mt-6 max-w-[12ch] font-heading text-[clamp(3.5rem,9vw,6.5rem)] font-black leading-[0.86] tracking-[-0.025em] text-white">
                   Everything before{" "}
-                  <span className="block text-[#c8f535]">move-in.</span>
+                  <span className="block text-[#60710f]">move-in.</span>
                 </h1>
                 <p className="section-copy mt-7 text-white/62">
                   Practical guides for living at ZIM.ca: what is included, how
