@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import ContactTrigger from "./ContactTrigger";
+import CostCalculatorButton from "./CostCalculatorButton";
 import ZimLogo from "./ZimLogo";
 
 const navLinks = [
@@ -61,6 +62,7 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
+            <CostCalculatorButton className="hidden items-center gap-2 rounded-[10px] border border-white/12 bg-white/[0.08] px-3.5 py-2 text-[12px] font-extrabold text-white/72 transition hover:border-[#c8f535]/45 hover:text-white lg:inline-flex" />
             <ContactTrigger
               payload={{
                 roomType: "Unit B single occupancy",
@@ -107,6 +109,10 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+            <CostCalculatorButton
+              onOpen={() => setOpen(false)}
+              className="mt-3 inline-flex items-center justify-center gap-2 rounded-[10px] border border-white/[0.1] py-2.5 text-sm font-extrabold text-white/72 transition hover:text-white"
+            />
             <ContactTrigger
               onOpen={() => setOpen(false)}
               className="mt-3 py-2.5 bg-[#c8f535] text-[#07111b] text-sm font-extrabold rounded-[10px] text-center"

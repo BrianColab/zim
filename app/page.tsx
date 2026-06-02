@@ -6,7 +6,6 @@ import FeaturedHomes from "@/components/FeaturedHomes";
 import FloatingWalkRoute from "@/components/FloatingWalkRoute";
 import GallerySlideshow from "@/components/GallerySlideshow";
 import ImportantNotes from "@/components/ImportantNotes";
-import IncludedValueCalculator from "@/components/IncludedValueCalculator";
 import MoveInChecklist from "@/components/MoveInChecklist";
 import ValueProps from "@/components/ValueProps";
 import StudentResources from "@/components/StudentResources";
@@ -158,9 +157,6 @@ export default function Home() {
         </ScrollReveal>
         <ScrollReveal>
           <ImportantNotes />
-        </ScrollReveal>
-        <ScrollReveal>
-          <IncludedValueCalculator />
         </ScrollReveal>
         <ScrollReveal>
           <MoveInChecklist />

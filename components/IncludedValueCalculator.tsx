@@ -51,7 +51,15 @@ const rentOptions = [
 
 type CostKey = (typeof costItems)[number]["key"];
 
-export default function IncludedValueCalculator() {
+type IncludedValueCalculatorProps = {
+  variant?: "section" | "panel";
+  onContactOpen?: () => void;
+};
+
+export default function IncludedValueCalculator({
+  variant = "section",
+  onContactOpen,
+}: IncludedValueCalculatorProps) {
   const [rent, setRent] = useState(850);
   const [costs, setCosts] = useState<Record<CostKey, number>>({
     utilities: 120,
@@ -68,10 +76,8 @@ export default function IncludedValueCalculator() {
   const comparableRent = rent + includedTotal;
   const yearlyIncluded = includedTotal * 12;
 
-  return (
-    <section className="bg-[#edf5ff] py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid overflow-hidden rounded-[8px] border border-[#dbe7f3] bg-white shadow-[0_26px_80px_rgba(23,60,102,0.12)] lg:grid-cols-[0.9fr_1.1fr]">
+  const calculator = (
+    <div className="grid overflow-hidden rounded-[8px] border border-[#dbe7f3] bg-white shadow-[0_26px_80px_rgba(23,60,102,0.12)] lg:grid-cols-[0.9fr_1.1fr]">
           <div className="bg-[#07111b] p-6 text-white sm:p-8 lg:p-10">
             <p className="section-kicker text-[#c8f535]">
               Student cost check
@@ -196,12 +202,25 @@ export default function IncludedValueCalculator() {
                 about <span className="font-extrabold">${comparableRent}</span>{" "}
                 elsewhere once common student costs are added.
               </p>
-              <ContactTrigger className="shrink-0 rounded-[8px] bg-[#07111b] px-5 py-3 text-[13px] font-extrabold text-white transition hover:bg-[#142536]">
+              <ContactTrigger
+                onOpen={onContactOpen}
+                className="shrink-0 rounded-[8px] bg-[#07111b] px-5 py-3 text-[13px] font-extrabold text-white transition hover:bg-[#142536]"
+              >
                 Ask about availability
               </ContactTrigger>
             </div>
           </div>
-        </div>
+    </div>
+  );
+
+  if (variant === "panel") {
+    return calculator;
+  }
+
+  return (
+    <section className="bg-[#edf5ff] py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {calculator}
       </div>
     </section>
   );
