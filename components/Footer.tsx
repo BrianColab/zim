@@ -9,6 +9,7 @@ const navLinks = [
   { label: "International Students", href: "/international-student-housing-ottawa" },
   { label: "Algonquin Housing Guide", href: "/algonquin-college-off-campus-housing-guide" },
   { label: "Student Housing Costs", href: "/ottawa-student-housing-cost-guide" },
+  { label: "September Rentals", href: "/september-student-rentals-ottawa" },
   { label: "Amenities", href: "/#amenities" },
   { label: "Resources", href: "/resources" },
   { label: "Blog", href: "/blog" },
