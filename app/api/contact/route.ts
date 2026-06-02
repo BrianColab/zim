@@ -81,7 +81,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const subject = `ZIM.ca inquiry: ${interest || "Contact form"}`;
+  const subject = "1660 Baseline Student Inquery - Zim.ca";
   const text = [
     "New ZIM.ca contact form inquiry",
     "",
