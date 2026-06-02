@@ -10,6 +10,7 @@ import StudentHousingCta from "@/components/StudentHousingCta";
 import StudentHousingResources from "@/components/StudentHousingResources";
 import { properties } from "@/data/properties";
 import { algonquinHousingGuideFaqs } from "@/data/algonquinHousingGuideFaqs";
+import { seasonalSeo } from "@/lib/seasonalSeo";
 
 const canonicalUrl =
   "https://www.zim.ca/algonquin-college-off-campus-housing-guide";
@@ -93,7 +94,7 @@ const articleSchema = {
     },
   },
   datePublished: "2026-06-02",
-  dateModified: "2026-06-02",
+  dateModified: seasonalSeo.lastContentReviewDate,
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": canonicalUrl,
@@ -159,6 +160,9 @@ export default function AlgonquinCollegeHousingGuidePage() {
                   A practical guide for students and parents comparing housing
                   options near Algonquin College, Baseline Station, College
                   Square, and Nepean.
+                </p>
+                <p className="mt-4 text-[12px] font-bold text-white/48">
+                  Last reviewed: {seasonalSeo.lastContentReviewLabel}
                 </p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <Link

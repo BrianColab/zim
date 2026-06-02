@@ -8,6 +8,7 @@ import ContactTrigger from "@/components/ContactTrigger";
 import PropertyCard from "@/components/PropertyCard";
 import StudentHousingCta from "@/components/StudentHousingCta";
 import StudentHousingResources from "@/components/StudentHousingResources";
+import SeasonalRentalCallout from "@/components/SeasonalRentalCallout";
 import { properties } from "@/data/properties";
 import { parentHousingFaqs } from "@/data/parentHousingFaqs";
 
@@ -204,6 +205,8 @@ export default function ParentsStudentHousingOttawaPage() {
             </div>
           </div>
         </section>
+
+        <SeasonalRentalCallout />
 
         <section className="bg-[#f5f1e8] py-20">
           <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">

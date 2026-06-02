@@ -8,6 +8,7 @@ import ContactTrigger from "@/components/ContactTrigger";
 import PropertyCard from "@/components/PropertyCard";
 import StudentHousingCta from "@/components/StudentHousingCta";
 import StudentHousingResources from "@/components/StudentHousingResources";
+import SeasonalRentalCallout from "@/components/SeasonalRentalCallout";
 import { properties } from "@/data/properties";
 import { algonquinRentalFaqs } from "@/data/algonquinRentalFaqs";
 
@@ -169,6 +170,8 @@ export default function AlgonquinStudentRentalsPage() {
             </div>
           </div>
         </section>
+
+        <SeasonalRentalCallout />
 
         <section className="bg-[#07111b] py-12">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

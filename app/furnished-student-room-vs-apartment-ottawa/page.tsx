@@ -10,6 +10,7 @@ import StudentHousingCta from "@/components/StudentHousingCta";
 import StudentHousingResources from "@/components/StudentHousingResources";
 import { properties } from "@/data/properties";
 import { roomVsApartmentFaqs } from "@/data/roomVsApartmentFaqs";
+import { seasonalSeo } from "@/lib/seasonalSeo";
 
 const canonicalUrl =
   "https://www.zim.ca/furnished-student-room-vs-apartment-ottawa";
@@ -124,7 +125,7 @@ const articleSchema = {
     },
   },
   datePublished: "2026-06-02",
-  dateModified: "2026-06-02",
+  dateModified: seasonalSeo.lastContentReviewDate,
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": canonicalUrl,
@@ -190,6 +191,9 @@ export default function FurnishedStudentRoomVsApartmentOttawaPage() {
                   Students and parents should compare total monthly cost,
                   furniture, utilities, internet, location, privacy, and
                   move-in needs before choosing housing.
+                </p>
+                <p className="mt-4 text-[12px] font-bold text-white/48">
+                  Last reviewed: {seasonalSeo.lastContentReviewLabel}
                 </p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <Link

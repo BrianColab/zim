@@ -10,6 +10,7 @@ import StudentHousingCta from "@/components/StudentHousingCta";
 import StudentHousingResources from "@/components/StudentHousingResources";
 import { properties } from "@/data/properties";
 import { ottawaStudentHousingCostFaqs } from "@/data/ottawaStudentHousingCostFaqs";
+import { seasonalSeo } from "@/lib/seasonalSeo";
 
 const canonicalUrl = "https://www.zim.ca/ottawa-student-housing-cost-guide";
 const pageTitle =
@@ -121,7 +122,7 @@ const articleSchema = {
     },
   },
   datePublished: "2026-06-02",
-  dateModified: "2026-06-02",
+  dateModified: seasonalSeo.lastContentReviewDate,
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": canonicalUrl,
@@ -187,6 +188,9 @@ export default function OttawaStudentHousingCostGuidePage() {
                   Student housing costs depend on location, furniture,
                   utilities, internet, lease type, and proximity to school or
                   transit.
+                </p>
+                <p className="mt-4 text-[12px] font-bold text-white/48">
+                  Last reviewed: {seasonalSeo.lastContentReviewLabel}
                 </p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <Link

@@ -8,8 +8,10 @@ import ContactTrigger from "@/components/ContactTrigger";
 import PropertyCard from "@/components/PropertyCard";
 import StudentHousingCta from "@/components/StudentHousingCta";
 import StudentHousingResources from "@/components/StudentHousingResources";
+import SeasonalRentalCallout from "@/components/SeasonalRentalCallout";
 import { properties } from "@/data/properties";
 import { septemberStudentRentalFaqs } from "@/data/septemberStudentRentalFaqs";
+import { seasonalSeo } from "@/lib/seasonalSeo";
 
 const canonicalUrl = "https://www.zim.ca/september-student-rentals-ottawa";
 const pageTitle =
@@ -82,7 +84,7 @@ const articleSchema = {
     },
   },
   datePublished: "2026-06-02",
-  dateModified: "2026-06-02",
+  dateModified: seasonalSeo.lastContentReviewDate,
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": canonicalUrl,
@@ -145,9 +147,12 @@ export default function SeptemberStudentRentalsOttawaPage() {
                   September Student Rentals in Ottawa
                 </h1>
                 <p className="max-w-[650px] text-[1.02rem] font-medium leading-[1.65] text-white/72 sm:text-[1.16rem]">
-                  Students looking for September housing should start early,
-                  compare total monthly costs, and confirm what is included
-                  before applying.
+                  Students planning for the September student rental cycle
+                  should compare options early, confirm current rooms and
+                  move-in dates, and check what is included before applying.
+                </p>
+                <p className="mt-4 text-[12px] font-bold text-white/48">
+                  Last reviewed: {seasonalSeo.lastContentReviewLabel}
                 </p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <Link
@@ -172,6 +177,8 @@ export default function SeptemberStudentRentalsOttawaPage() {
           </div>
         </section>
 
+        <SeasonalRentalCallout />
+
         <section className="bg-[#f5f1e8] py-20">
           <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
             <div>
@@ -184,15 +191,17 @@ export default function SeptemberStudentRentalsOttawaPage() {
             </div>
             <div className="grid gap-5">
               <p className="section-copy max-w-none text-zinc-600">
-                September is one of the busiest times for student rentals in
-                Ottawa. Students and parents should confirm move-in date,
-                monthly rent, what is included, furnishings, internet,
-                utilities, laundry, transit access, and how the application
-                process works.
+                Planning for the September student rental cycle starts with
+                clear details. Students and parents should confirm current
+                rooms, move-in date, monthly rent, what is included,
+                furnishings, internet, utilities, laundry, transit access, and
+                how the application process works.
               </p>
               <p className="section-copy max-w-none text-zinc-600">
                 Comparing these details early helps students understand the
                 total monthly cost and avoid focusing only on base rent.
+                Furnished rooms can simplify move-in when students are
+                preparing for a new school year.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Link
