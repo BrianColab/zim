@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Baseline Station", href: "/student-rentals-nepean-baseline-station" },
   { label: "For Parents", href: "/parents-student-housing-ottawa" },
   { label: "International Students", href: "/international-student-housing-ottawa" },
+  { label: "Algonquin Housing Guide", href: "/algonquin-college-off-campus-housing-guide" },
   { label: "Amenities", href: "/#amenities" },
   { label: "Resources", href: "/resources" },
   { label: "Blog", href: "/blog" },
