@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import ContactDrawer from "@/components/ContactDrawer";
 import ContactTrigger from "@/components/ContactTrigger";
 import PropertyCard from "@/components/PropertyCard";
+import StudentHousingCta from "@/components/StudentHousingCta";
+import StudentHousingResources from "@/components/StudentHousingResources";
 import { properties } from "@/data/properties";
 import { parentHousingFaqs } from "@/data/parentHousingFaqs";
 
@@ -477,6 +479,10 @@ export default function ParentsStudentHousingOttawaPage() {
             </div>
           </div>
         </section>
+        <StudentHousingResources
+          links={["algonquin", "baseline", "international", "costGuide", "september"]}
+        />
+        <StudentHousingCta title="Want clear answers before booking a showing?" />
       </main>
       <Footer />
       <ContactDrawer />

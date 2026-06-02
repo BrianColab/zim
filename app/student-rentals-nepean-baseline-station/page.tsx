@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import ContactDrawer from "@/components/ContactDrawer";
 import ContactTrigger from "@/components/ContactTrigger";
 import PropertyCard from "@/components/PropertyCard";
+import StudentHousingCta from "@/components/StudentHousingCta";
+import StudentHousingResources from "@/components/StudentHousingResources";
 import { properties } from "@/data/properties";
 import { baselineStationFaqs } from "@/data/baselineStationFaqs";
 
@@ -379,6 +381,11 @@ export default function BaselineStationStudentRentalsPage() {
             </div>
           </div>
         </section>
+        <StudentHousingResources
+          links={["algonquin", "parents", "international", "costGuide", "comparison"]}
+          theme="dark"
+        />
+        <StudentHousingCta title="Ready to confirm a room near Baseline Station?" />
       </main>
       <Footer />
       <ContactDrawer />

@@ -6,12 +6,10 @@ import ContactTrigger from "./ContactTrigger";
 import ZimLogo from "./ZimLogo";
 
 const navLinks = [
-  { label: "Suites", href: "/#suites" },
+  { label: "Rooms", href: "/#suites" },
   { label: "Near Algonquin", href: "/algonquin-student-rentals-ottawa" },
-  { label: "Amenities", href: "/#amenities" },
-  { label: "Resources", href: "/resources" },
-  { label: "Blog", href: "/blog" },
-  { label: "Location", href: "/#location" },
+  { label: "Baseline Station", href: "/student-rentals-nepean-baseline-station" },
+  { label: "For Parents", href: "/parents-student-housing-ottawa" },
 ];
 
 export default function Header() {
@@ -68,7 +66,7 @@ export default function Header() {
             <ContactTrigger
               className="hidden md:inline-flex items-center px-[18px] py-[9px] bg-[#c8f535] text-[#07111b] text-[13px] font-extrabold rounded-[10px] hover:bg-[#d6fa57] transition-colors"
             >
-              Book a Tour
+              Book a Showing
             </ContactTrigger>
             <button
               onClick={() => setOpen(!open)}
@@ -105,7 +103,7 @@ export default function Header() {
               onOpen={() => setOpen(false)}
               className="mt-3 py-2.5 bg-[#c8f535] text-[#07111b] text-sm font-extrabold rounded-[10px] text-center"
             >
-              Book a Tour
+              Book a Showing
             </ContactTrigger>
             <ContactTrigger
               onOpen={() => setOpen(false)}

@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import ContactDrawer from "@/components/ContactDrawer";
 import ContactTrigger from "@/components/ContactTrigger";
 import PropertyCard from "@/components/PropertyCard";
+import StudentHousingCta from "@/components/StudentHousingCta";
+import StudentHousingResources from "@/components/StudentHousingResources";
 import { properties } from "@/data/properties";
 import { ottawaStudentHousingCostFaqs } from "@/data/ottawaStudentHousingCostFaqs";
 
@@ -513,6 +515,11 @@ export default function OttawaStudentHousingCostGuidePage() {
             </div>
           </div>
         </section>
+        <StudentHousingResources
+          links={["algonquin", "baseline", "september", "comparison", "parents"]}
+          theme="dark"
+        />
+        <StudentHousingCta title="Want help confirming total monthly cost?" />
       </main>
       <Footer />
       <ContactDrawer />

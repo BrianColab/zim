@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import ContactDrawer from "@/components/ContactDrawer";
 import ContactTrigger from "@/components/ContactTrigger";
 import PropertyCard from "@/components/PropertyCard";
+import StudentHousingCta from "@/components/StudentHousingCta";
+import StudentHousingResources from "@/components/StudentHousingResources";
 import { properties } from "@/data/properties";
 import { roomVsApartmentFaqs } from "@/data/roomVsApartmentFaqs";
 
@@ -578,6 +580,11 @@ export default function FurnishedStudentRoomVsApartmentOttawaPage() {
             </div>
           </div>
         </section>
+        <StudentHousingResources
+          links={["costGuide", "algonquin", "baseline", "september", "parents"]}
+          theme="dark"
+        />
+        <StudentHousingCta title="Have questions about furnished student rooms?" />
       </main>
       <Footer />
       <ContactDrawer />

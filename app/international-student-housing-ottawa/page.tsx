@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import ContactDrawer from "@/components/ContactDrawer";
 import ContactTrigger from "@/components/ContactTrigger";
 import PropertyCard from "@/components/PropertyCard";
+import StudentHousingCta from "@/components/StudentHousingCta";
+import StudentHousingResources from "@/components/StudentHousingResources";
 import { properties } from "@/data/properties";
 import { internationalStudentFaqs } from "@/data/internationalStudentFaqs";
 
@@ -400,6 +402,11 @@ export default function InternationalStudentHousingOttawaPage() {
             </div>
           </div>
         </section>
+        <StudentHousingResources
+          links={["algonquin", "baseline", "parents", "costGuide", "september"]}
+          theme="dark"
+        />
+        <StudentHousingCta title="Moving to Ottawa for school?" />
       </main>
       <Footer />
       <ContactDrawer />

@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import ContactDrawer from "@/components/ContactDrawer";
 import ContactTrigger from "@/components/ContactTrigger";
 import PropertyCard from "@/components/PropertyCard";
+import StudentHousingCta from "@/components/StudentHousingCta";
+import StudentHousingResources from "@/components/StudentHousingResources";
 import { properties } from "@/data/properties";
 import { algonquinRentalFaqs } from "@/data/algonquinRentalFaqs";
 
@@ -368,6 +370,12 @@ export default function AlgonquinStudentRentalsPage() {
             </div>
           </div>
         </section>
+        <StudentHousingResources
+          links={["baseline", "parents", "international", "costGuide", "september"]}
+        />
+        <StudentHousingCta
+          title="Have questions about student rooms near Algonquin College?"
+        />
       </main>
       <Footer />
       <ContactDrawer />

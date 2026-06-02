@@ -14,6 +14,8 @@ import BlogPreview from "@/components/BlogPreview";
 import CommuteSnapshot from "@/components/CommuteSnapshot";
 import ShoppingHubs from "@/components/ShoppingHubs";
 import LandlordCTA from "@/components/LandlordCTA";
+import StudentHousingCta from "@/components/StudentHousingCta";
+import StudentHousingResources from "@/components/StudentHousingResources";
 import ScrollReveal from "@/components/ScrollReveal";
 import Footer from "@/components/Footer";
 import ContactDrawer from "@/components/ContactDrawer";
@@ -169,6 +171,18 @@ export default function Home() {
         <ScrollReveal>
           <LandlordCTA />
         </ScrollReveal>
+        <ScrollReveal>
+          <StudentHousingResources
+            links={[
+              "algonquin",
+              "baseline",
+              "parents",
+              "international",
+              "costGuide",
+            ]}
+          />
+        </ScrollReveal>
+        <StudentHousingCta />
       </main>
       <Footer />
       <FloatingWalkRoute />
