@@ -3,6 +3,7 @@ import ZimLogo from "./ZimLogo";
 
 const navLinks = [
   { label: "Suites", href: "/#suites" },
+  { label: "Near Algonquin", href: "/algonquin-student-rentals-ottawa" },
   { label: "Amenities", href: "/#amenities" },
   { label: "Resources", href: "/resources" },
   { label: "Blog", href: "/blog" },

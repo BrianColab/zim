@@ -18,6 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/algonquin-student-rentals-ottawa`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: "weekly",
