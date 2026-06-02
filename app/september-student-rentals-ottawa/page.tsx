@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     url: canonicalUrl,
     images: [
       {
-        url: "/images/main.png",
+        url: "/images/og-zim-student-rentals.jpg",
         width: 1200,
         height: 630,
-        alt: "September student rentals in Ottawa near Algonquin College",
+        alt: "Students entering the ZIM.ca rental at 1658-1660 Baseline Road in Ottawa",
       },
     ],
   },
@@ -120,9 +120,10 @@ export default function SeptemberStudentRentalsOttawaPage() {
           <div className="absolute inset-0">
             <Image
               src="/images/main.png"
-              alt="September student rentals in Ottawa"
+              alt="Students entering the ZIM.ca student rental at 1658-1660 Baseline Road in Ottawa"
               fill
               priority
+              sizes="100vw"
               quality={90}
               className="object-cover object-[62%_42%]"
             />

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description:
       "Helpful guides for students comparing housing near Algonquin College, Baseline Road, and Nepean.",
     url: "/blog",
-    images: ["/images/main.png"],
+    images: ["/images/og-zim-student-rentals.jpg"],
   },
 };
 
@@ -86,6 +86,7 @@ export default function BlogPage() {
                       src={post.image}
                       alt={post.title}
                       fill
+                      sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
                       className="object-cover transition duration-500 group-hover:scale-[1.04]"
                     />
                   </div>

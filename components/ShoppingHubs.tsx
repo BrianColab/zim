@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import {
   nearbyStoreLogos,
   shoppingHubs,
@@ -135,10 +136,12 @@ function BrandMark({ name, compact = false }: { name: string; compact?: boolean 
               : "h-14 min-w-28 px-4"
         }`}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={imageSrc}
-          alt={`${name} logo`}
+          alt=""
+          aria-hidden="true"
+          width={220}
+          height={80}
           className={`object-contain ${
             isStarbucks
               ? "h-full w-full rounded-full object-cover"

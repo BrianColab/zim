@@ -14,9 +14,10 @@ export default function Hero() {
       <div className="absolute inset-0">
         <Image
           src="/images/main.png"
-          alt="Students arriving at ZIM.ca"
+          alt="Students entering the ZIM.ca student rental at 1658-1660 Baseline Road in Ottawa"
           fill
           priority
+          sizes="100vw"
           quality={90}
           className="object-cover object-[62%_42%]"
         />

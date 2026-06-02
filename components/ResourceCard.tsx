@@ -13,6 +13,7 @@ export default function ResourceCard({ resource }: { resource: Resource }) {
           src={resource.image}
           alt={resource.title}
           fill
+          sizes="(min-width: 768px) 33vw, 100vw"
           className="object-cover group-hover:scale-[1.04] transition-transform duration-500 ease-out"
         />
       </div>

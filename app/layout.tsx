@@ -49,10 +49,10 @@ export const metadata: Metadata = {
       "All-inclusive furnished student rooms in Nepean, Ottawa. Minutes from Algonquin College and open to students from every school.",
     images: [
       {
-        url: "/images/main.png",
+        url: "/images/og-zim-student-rentals.jpg",
         width: 1200,
         height: 630,
-        alt: "Modern furnished student housing at ZIM.ca in Ottawa",
+        alt: "Students entering the ZIM.ca rental at 1658-1660 Baseline Road in Ottawa",
       },
     ],
   },
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "ZIM.ca | Ottawa Student Rentals Near Algonquin College",
     description:
       "Furnished, all-inclusive student rooms in Nepean, Ottawa with utilities, internet, laundry, and respectful shared living.",
-    images: ["/images/main.png"],
+    images: ["/images/og-zim-student-rentals.jpg"],
   },
   robots: {
     index: true,

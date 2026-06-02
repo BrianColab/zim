@@ -74,6 +74,7 @@ export default function LandlordCTA() {
                 src="/images/unit-dining.jpg"
                 alt="Clean shared dining and study area at ZIM.ca"
                 fill
+                sizes="(min-width: 1024px) 54vw, 100vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#07111b]/52 via-transparent to-transparent" />

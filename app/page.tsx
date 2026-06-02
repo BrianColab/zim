@@ -46,6 +46,14 @@ export const metadata: Metadata = {
     description:
       "Furnished all-inclusive student rooms in Nepean, Ottawa near Algonquin College and Baseline Station. Rooms from $850/month with utilities, internet, laundry and furniture included.",
     url: "https://www.zim.ca/",
+    images: [
+      {
+        url: "/images/og-zim-student-rentals.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Students entering the ZIM.ca rental at 1658-1660 Baseline Road in Ottawa",
+      },
+    ],
   },
 };
 
@@ -57,7 +65,7 @@ const structuredData = {
       "@id": "https://www.zim.ca/#real-estate-agent",
       name: "ZIM.ca",
       url: "https://www.zim.ca/",
-      image: "https://www.zim.ca/images/main.png",
+      image: "https://www.zim.ca/images/og-zim-student-rentals.jpg",
       address: {
         "@type": "PostalAddress",
         streetAddress: "1658-1660 Baseline Road",
@@ -84,7 +92,7 @@ const structuredData = {
       "@id": "https://www.zim.ca/#student-rentals",
       name: "ZIM.ca Student Rentals",
       url: "https://www.zim.ca/",
-      image: "https://www.zim.ca/images/main.png",
+      image: "https://www.zim.ca/images/og-zim-student-rentals.jpg",
       description:
         "All-inclusive furnished student rooms in Nepean, Ottawa near Algonquin College, Baseline Station, and College Square.",
       address: {

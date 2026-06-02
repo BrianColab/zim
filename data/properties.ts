@@ -1,6 +1,7 @@
 export interface Property {
   id: number;
   image: string;
+  imageAlt: string;
   address: string;
   priceLabel: string;
   occupancy: string;
@@ -15,6 +16,8 @@ export const properties: Property[] = [
   {
     id: 1,
     image: "/images/gallery/photo-9.jpg",
+    imageAlt:
+      "Furnished student bedroom in Unit A at 1658-1660 Baseline Road in Ottawa",
     address: "Unit A - 1658-1660 Baseline Road",
     priceLabel: "$900 single / $1200 pair",
     occupancy: "Unit A single room or two-friend pair",
@@ -35,6 +38,8 @@ export const properties: Property[] = [
   {
     id: 2,
     image: "/images/gallery/12-1660 Baseline Ottawa Ontario _0018.jpg",
+    imageAlt:
+      "Furnished student room in Unit B at 1658-1660 Baseline Road in Ottawa",
     address: "Unit B - 1658-1660 Baseline Road",
     priceLabel: "$850 single / $1000 pair",
     occupancy: "Unit B single room or two-friend pair",

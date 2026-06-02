@@ -7,8 +7,9 @@ export default function PropertyCard({ property }: { property: Property }) {
       <div className="relative h-[220px] overflow-hidden bg-zinc-100">
         <Image
           src={property.image}
-          alt={property.title}
+          alt={property.imageAlt}
           fill
+          sizes="(min-width: 768px) 50vw, 100vw"
           className="object-cover group-hover:scale-[1.04] transition-transform duration-500 ease-out"
         />
 

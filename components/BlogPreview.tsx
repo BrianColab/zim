@@ -38,6 +38,7 @@ export default function BlogPreview() {
                   src={post.image}
                   alt={post.title}
                   fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
                   className="object-cover transition duration-500 group-hover:scale-[1.04]"
                 />
               </div>

@@ -28,6 +28,11 @@ export async function generateMetadata({
     return {};
   }
 
+  const metadataImage =
+    post.image === "/images/main.png"
+      ? "/images/og-zim-student-rentals.jpg"
+      : post.image;
+
   return {
     title: post.title,
     description: post.description,
@@ -44,7 +49,7 @@ export async function generateMetadata({
       modifiedTime: post.updated,
       images: [
         {
-          url: post.image,
+          url: metadataImage,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -55,7 +60,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: [post.image],
+      images: [metadataImage],
     },
   };
 }
@@ -73,7 +78,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
-    image: `https://www.zim.ca${post.image}`,
+    image: `https://www.zim.ca${
+      post.image === "/images/main.png"
+        ? "/images/og-zim-student-rentals.jpg"
+        : post.image
+    }`,
     datePublished: post.published,
     dateModified: post.updated,
     author: {
@@ -157,6 +166,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 alt={post.title}
                 fill
                 priority
+                sizes="100vw"
                 className="object-cover opacity-28"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#07111b] via-[#07111b]/88 to-[#07111b]/42" />

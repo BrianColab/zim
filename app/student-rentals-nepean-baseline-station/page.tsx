@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     url: "https://www.zim.ca/student-rentals-nepean-baseline-station",
     images: [
       {
-        url: "/images/main.png",
+        url: "/images/og-zim-student-rentals.jpg",
         width: 1200,
         height: 630,
-        alt: "Furnished student rooms near Baseline Station in Nepean",
+        alt: "Students entering the ZIM.ca rental at 1658-1660 Baseline Road in Ottawa",
       },
     ],
   },
@@ -61,7 +61,7 @@ const localBusinessSchema = {
   "@id": "https://www.zim.ca/student-rentals-nepean-baseline-station#business",
   name: "ZIM.ca",
   url: "https://www.zim.ca/student-rentals-nepean-baseline-station",
-  image: "https://www.zim.ca/images/main.png",
+  image: "https://www.zim.ca/images/og-zim-student-rentals.jpg",
   description:
     "Furnished all-inclusive student rooms near Baseline Station in Nepean, Ottawa.",
   address: {
@@ -118,9 +118,10 @@ export default function BaselineStationStudentRentalsPage() {
           <div className="absolute inset-0">
             <Image
               src="/images/main.png"
-              alt="Furnished student rooms near Baseline Station in Nepean"
+              alt="Students entering the ZIM.ca student rental at 1658-1660 Baseline Road in Ottawa"
               fill
               priority
+              sizes="100vw"
               quality={90}
               className="object-cover object-[62%_42%]"
             />
