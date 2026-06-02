@@ -12,7 +12,9 @@ type ContactRequest = {
 
 const fallbackContactEmail = "bpallister@gmail.com";
 const fromEmail =
-  process.env.CONTACT_FROM_EMAIL ?? "ZIM.ca <onboarding@resend.dev>";
+  process.env.RESEND_FROM ??
+  process.env.CONTACT_FROM_EMAIL ??
+  "ZIM.ca <onboarding@resend.dev>";
 
 function clean(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
