@@ -27,6 +27,14 @@ export const metadata: Metadata = {
   },
   description:
     "Furnished all-inclusive student rooms in Nepean, Ottawa near Algonquin College and Baseline Station. Rooms from $850/month with utilities, internet, laundry and furniture included. Book a showing today.",
+  keywords: [
+    "Ottawa student rentals",
+    "student rentals near Algonquin College",
+    "furnished student rooms Ottawa",
+    "Nepean student rentals",
+    "student rooms near Baseline Station",
+    "student rentals near College Square",
+  ],
   alternates: {
     canonical: "https://www.zim.ca/",
   },

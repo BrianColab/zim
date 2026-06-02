@@ -16,6 +16,14 @@ export const metadata: Metadata = {
   },
   description:
     "Helping your student find furnished off-campus housing in Ottawa? ZIM.ca offers all-inclusive student rooms near Algonquin College, Baseline Station and College Square with utilities, internet, laundry and furniture included.",
+  keywords: [
+    "student housing for parents Ottawa",
+    "Ottawa student rentals for parents",
+    "student rooms near Algonquin College",
+    "furnished student rooms Ottawa",
+    "Algonquin College off-campus housing",
+    "student housing near Baseline Station",
+  ],
   alternates: {
     canonical: "https://www.zim.ca/parents-student-housing-ottawa",
   },
@@ -230,6 +238,12 @@ export default function ParentsStudentHousingOttawaPage() {
                   className="rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[12px] font-extrabold text-zinc-800 transition hover:border-[#60710f]/40"
                 >
                   student rentals near Baseline Station
+                </Link>
+                <Link
+                  href="/international-student-housing-ottawa"
+                  className="rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[12px] font-extrabold text-zinc-800 transition hover:border-[#60710f]/40"
+                >
+                  international student housing in Ottawa
                 </Link>
               </div>
             </div>

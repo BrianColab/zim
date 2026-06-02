@@ -16,6 +16,14 @@ export const metadata: Metadata = {
   },
   description:
     "Furnished all-inclusive student rooms in Nepean near Baseline Station, College Square and Algonquin College. ZIM.ca offers student rooms from $850/month with utilities, internet, laundry and furniture included.",
+  keywords: [
+    "student rentals near Baseline Station",
+    "Nepean student rentals",
+    "furnished student rooms in Nepean",
+    "student rentals near College Square",
+    "Ottawa student rentals",
+    "student rooms near Algonquin College",
+  ],
   alternates: {
     canonical: "https://www.zim.ca/student-rentals-nepean-baseline-station",
   },
@@ -300,6 +308,18 @@ export default function BaselineStationStudentRentalsPage() {
                   className="rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[12px] font-extrabold text-zinc-800 transition hover:border-[#60710f]/40"
                 >
                   furnished student rooms in Ottawa
+                </Link>
+                <Link
+                  href="/parents-student-housing-ottawa"
+                  className="rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[12px] font-extrabold text-zinc-800 transition hover:border-[#60710f]/40"
+                >
+                  student housing information for parents
+                </Link>
+                <Link
+                  href="/international-student-housing-ottawa"
+                  className="rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[12px] font-extrabold text-zinc-800 transition hover:border-[#60710f]/40"
+                >
+                  international student housing in Ottawa
                 </Link>
                 <ContactTrigger
                   payload={{

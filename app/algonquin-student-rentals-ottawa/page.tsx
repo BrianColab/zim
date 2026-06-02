@@ -16,6 +16,14 @@ export const metadata: Metadata = {
   },
   description:
     "Find furnished all-inclusive student rooms near Algonquin College in Nepean, Ottawa. ZIM.ca offers rooms from $850/month with utilities, internet, laundry and furniture included near Baseline Station and College Square.",
+  keywords: [
+    "student rentals near Algonquin College",
+    "Algonquin College off-campus housing",
+    "furnished student rooms near Algonquin College",
+    "Ottawa student rentals near Algonquin",
+    "Nepean student rentals",
+    "student rooms near Baseline Station",
+  ],
   alternates: {
     canonical: "https://www.zim.ca/algonquin-student-rentals-ottawa",
   },
@@ -204,10 +212,28 @@ export default function AlgonquinStudentRentalsPage() {
                   Ottawa student rentals
                 </Link>
                 <Link
+                  href="/student-rentals-nepean-baseline-station"
+                  className="rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[12px] font-extrabold text-zinc-800 transition hover:border-[#60710f]/40"
+                >
+                  student rooms near Baseline Station
+                </Link>
+                <Link
                   href="/#suites"
                   className="rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[12px] font-extrabold text-zinc-800 transition hover:border-[#60710f]/40"
                 >
                   furnished student rooms
+                </Link>
+                <Link
+                  href="/parents-student-housing-ottawa"
+                  className="rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[12px] font-extrabold text-zinc-800 transition hover:border-[#60710f]/40"
+                >
+                  student housing information for parents
+                </Link>
+                <Link
+                  href="/international-student-housing-ottawa"
+                  className="rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[12px] font-extrabold text-zinc-800 transition hover:border-[#60710f]/40"
+                >
+                  international student housing in Ottawa
                 </Link>
               </div>
             </div>

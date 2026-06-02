@@ -16,6 +16,14 @@ export const metadata: Metadata = {
   },
   description:
     "Moving to Ottawa for school? ZIM.ca offers furnished all-inclusive student rooms near Algonquin College, Baseline Station and College Square with utilities, internet, laundry and furniture included.",
+  keywords: [
+    "international student housing Ottawa",
+    "furnished student rooms Ottawa",
+    "Ottawa student rentals",
+    "student housing near Algonquin College",
+    "all-inclusive student rooms Ottawa",
+    "move-in ready student rooms Ottawa",
+  ],
   alternates: {
     canonical: "https://www.zim.ca/international-student-housing-ottawa",
   },
