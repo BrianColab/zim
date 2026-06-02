@@ -75,14 +75,21 @@ export default function IncludedValueCalculator({
 
   const comparableRent = rent + includedTotal;
   const yearlyIncluded = includedTotal * 12;
+  const compact = variant === "panel";
 
   const calculator = (
-    <div className="grid overflow-hidden rounded-[8px] border border-[#dbe7f3] bg-white shadow-[0_26px_80px_rgba(23,60,102,0.12)] lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="bg-[#07111b] p-6 text-white sm:p-8 lg:p-10">
+    <div className="grid overflow-hidden rounded-[8px] border border-[#dbe7f3] bg-white shadow-[0_26px_80px_rgba(23,60,102,0.12)] lg:grid-cols-[0.86fr_1.14fr]">
+          <div className={`bg-[#07111b] text-white ${compact ? "p-5 sm:p-6" : "p-6 sm:p-8 lg:p-10"}`}>
             <p className="section-kicker text-[#c8f535]">
               Student cost check
             </p>
-            <h2 className="section-heading-tight headline-on-dark mt-5 text-white">
+            <h2
+              className={`headline-on-dark mt-5 font-heading font-extrabold leading-[0.88] text-white ${
+                compact
+                  ? "text-[clamp(2.2rem,5vw,3.6rem)]"
+                  : "section-heading-tight"
+              }`}
+            >
               <span className="headline-main">
                 What would this <span className="headline-accent-lime">cost</span>
               </span>
@@ -90,16 +97,16 @@ export default function IncludedValueCalculator({
                 <span className="headline-accent-lime">somewhere else?</span>
               </span>
             </h2>
-            <p className="section-copy mt-6 text-white/62">
+            <p className={`${compact ? "mt-4 text-[13px]" : "section-copy mt-6"} text-white/62`}>
               Adjust common student expenses and compare them with an
               all-inclusive ZIM.ca room.
             </p>
 
-            <div className="mt-8 rounded-[8px] border border-white/10 bg-white/[0.06] p-5">
+            <div className={`rounded-[8px] border border-white/10 bg-white/[0.06] ${compact ? "mt-5 p-4" : "mt-8 p-5"}`}>
               <p className="text-[12px] font-extrabold uppercase tracking-[0.14em] text-white/48">
                 Included value
               </p>
-              <p className="mt-2 font-heading text-[3.2rem] font-extrabold leading-none text-[#c8f535]">
+              <p className={`mt-2 font-heading font-extrabold leading-none text-[#c8f535] ${compact ? "text-[2.35rem]" : "text-[3.2rem]"}`}>
                 ${includedTotal}
               </p>
               <p className="mt-2 text-[13px] font-semibold text-white/58">
@@ -108,27 +115,27 @@ export default function IncludedValueCalculator({
             </div>
 
             <div className="mt-4 grid grid-cols-2 gap-3">
-              <div className="rounded-[8px] border border-white/10 bg-white/[0.06] p-4">
+              <div className={`rounded-[8px] border border-white/10 bg-white/[0.06] ${compact ? "p-3" : "p-4"}`}>
                 <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-white/42">
                   Comparable
                 </p>
-                <p className="mt-2 text-[1.35rem] font-extrabold">
+                <p className={`mt-2 font-extrabold ${compact ? "text-[1.1rem]" : "text-[1.35rem]"}`}>
                   ${comparableRent}/mo
                 </p>
               </div>
-              <div className="rounded-[8px] border border-white/10 bg-white/[0.06] p-4">
+              <div className={`rounded-[8px] border border-white/10 bg-white/[0.06] ${compact ? "p-3" : "p-4"}`}>
                 <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-white/42">
                   Yearly value
                 </p>
-                <p className="mt-2 text-[1.35rem] font-extrabold">
+                <p className={`mt-2 font-extrabold ${compact ? "text-[1.1rem]" : "text-[1.35rem]"}`}>
                   ${yearlyIncluded}
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="p-5 sm:p-7 lg:p-8">
-            <div className="mb-6">
+          <div className={compact ? "p-4 sm:p-5" : "p-5 sm:p-7 lg:p-8"}>
+            <div className={compact ? "mb-4" : "mb-6"}>
               <p className="mb-3 text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#526586]">
                 Choose room type
               </p>
@@ -138,7 +145,7 @@ export default function IncludedValueCalculator({
                     key={option.label}
                     type="button"
                     onClick={() => setRent(option.value)}
-                    className={`rounded-[8px] border px-4 py-3 text-left transition ${
+                    className={`rounded-[8px] border px-4 text-left transition ${compact ? "py-2.5" : "py-3"} ${
                       rent === option.value
                         ? "border-[#1d8fe8] bg-[#e9f5ff] text-[#07111b]"
                         : "border-[#dbe7f3] bg-white text-[#526586] hover:border-[#9bc9ef]"
@@ -153,17 +160,17 @@ export default function IncludedValueCalculator({
                   </button>
                 ))}
               </div>
-              <p className="mt-3 rounded-[8px] bg-[#fff8e6] px-4 py-3 text-[12.5px] font-semibold leading-relaxed text-[#6f5200]">
+              <p className={`mt-3 rounded-[8px] bg-[#fff8e6] px-4 font-semibold leading-relaxed text-[#6f5200] ${compact ? "py-2.5 text-[12px]" : "py-3 text-[12.5px]"}`}>
                 Pair rooms are only for two friends applying together. ZIM.ca
                 does not match strangers into shared rooms.
               </p>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className={`grid md:grid-cols-2 ${compact ? "gap-3" : "gap-4"}`}>
               {costItems.map((item) => (
                 <label
                   key={item.key}
-                  className="rounded-[8px] border border-[#dbe7f3] bg-[#f8fbff] p-4"
+                  className={`rounded-[8px] border border-[#dbe7f3] bg-[#f8fbff] ${compact ? "p-3" : "p-4"}`}
                 >
                   <div className="mb-4 flex items-start justify-between gap-3">
                     <span>
@@ -196,7 +203,7 @@ export default function IncludedValueCalculator({
               ))}
             </div>
 
-            <div className="mt-6 flex flex-col gap-3 rounded-[8px] border border-[#dbe7f3] bg-[#edf5ff] p-4 sm:flex-row sm:items-center sm:justify-between">
+            <div className={`flex flex-col gap-3 rounded-[8px] border border-[#dbe7f3] bg-[#edf5ff] sm:flex-row sm:items-center sm:justify-between ${compact ? "mt-4 p-3" : "mt-6 p-4"}`}>
               <p className="text-[13px] font-semibold leading-relaxed text-[#425879]">
                 Based on your numbers, a ${rent}/month ZIM.ca room compares to
                 about <span className="font-extrabold">${comparableRent}</span>{" "}

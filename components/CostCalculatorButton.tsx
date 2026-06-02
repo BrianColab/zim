@@ -61,7 +61,7 @@ export default function CostCalculatorButton({
             role="dialog"
             aria-modal="true"
             aria-labelledby={titleId}
-            className="absolute inset-x-3 top-4 max-h-[calc(100dvh-2rem)] overflow-y-auto rounded-[12px] bg-[#edf5ff] p-3 shadow-[0_30px_90px_rgba(0,0,0,0.34)] sm:inset-x-6 sm:top-6 sm:p-4 lg:left-1/2 lg:right-auto lg:w-[min(1120px,calc(100vw-3rem))] lg:-translate-x-1/2"
+            className="absolute inset-x-3 top-4 max-h-[calc(100dvh-2rem)] overflow-y-auto rounded-[12px] bg-[#edf5ff] p-3 shadow-[0_30px_90px_rgba(0,0,0,0.34)] sm:inset-x-6 sm:top-6 sm:p-4 lg:left-1/2 lg:right-auto lg:w-[min(785px,calc(100vw-3rem))] lg:-translate-x-1/2"
           >
             <div className="mb-3 flex items-center justify-between gap-3 px-1">
               <h2
