@@ -34,11 +34,11 @@ export default function Hero() {
                 fontSize: "clamp(3.45rem, 8.6vw, 8.2rem)",
               }}
             >
-              Live Close.
+              Ottawa Student Rentals
               <br />
-              Live{" "}
+              Near{" "}
               <span className="underline decoration-[#c8f535] decoration-[6px] underline-offset-[12px]">
-                Smart.
+                Algonquin College.
               </span>
             </h1>
             <p className="text-white/72 text-[1.02rem] sm:text-[1.16rem] leading-[1.55] max-w-[380px] font-medium">
