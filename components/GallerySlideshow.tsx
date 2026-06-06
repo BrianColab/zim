@@ -14,11 +14,6 @@ const photos = [
   "11-1660 Baseline Ottawa Ontario _0017.jpg",
   "12-1660 Baseline Ottawa Ontario _0018.jpg",
   "15-1660 Baseline Ottawa Ontario _0006.jpg",
-  "photo-4.jpg",
-  "photo-5.jpg",
-  "photo-9.jpg",
-  "photo-10.jpg",
-  "photo-11.jpg",
 ];
 
 export default function GallerySlideshow() {
