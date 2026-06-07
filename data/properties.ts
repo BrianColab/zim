@@ -37,7 +37,7 @@ export const properties: Property[] = [
   },
   {
     id: 2,
-    image: "/images/gallery/12-1660 Baseline Ottawa Ontario _0018.jpg",
+    image: "/images/UnitB Single.png",
     imageAlt:
       "Furnished student room in Unit B at 1658-1660 Baseline Road in Ottawa",
     address: "Unit B - 1658-1660 Baseline Road",

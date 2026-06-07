@@ -4,16 +4,17 @@ import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 
 const photos = [
-  "1-main.jpg",
-  "3-1660 Baseline Ottawa Ontario _0004.jpg",
-  "6-1660 Baseline Ottawa Ontario _0009.jpg",
-  "7-1660 Baseline Ottawa Ontario _0011.jpg",
-  "8-1660 Baseline Ottawa Ontario _0012.jpg",
-  "9-1660 Baseline Ottawa Ontario _0014.jpg",
-  "10-1660 Baseline Ottawa Ontario _0015.jpg",
-  "11-1660 Baseline Ottawa Ontario _0017.jpg",
-  "12-1660 Baseline Ottawa Ontario _0018.jpg",
-  "15-1660 Baseline Ottawa Ontario _0006.jpg",
+  "/images/gallery/1-main.jpg",
+  "/images/gallery/3-1660 Baseline Ottawa Ontario _0004.jpg",
+  "/images/gallery/6-1660 Baseline Ottawa Ontario _0009.jpg",
+  "/images/gallery/7-1660 Baseline Ottawa Ontario _0011.jpg",
+  "/images/gallery/8-1660 Baseline Ottawa Ontario _0012.jpg",
+  "/images/gallery/9-1660 Baseline Ottawa Ontario _0014.jpg",
+  "/images/gallery/10-1660 Baseline Ottawa Ontario _0015.jpg",
+  "/images/gallery/11-1660 Baseline Ottawa Ontario _0017.jpg",
+  "/images/gallery/15-1660 Baseline Ottawa Ontario _0006.jpg",
+  "/images/UnitB Single.png",
+  "/images/Unit B Double.png",
 ];
 
 export default function GallerySlideshow() {
@@ -23,7 +24,7 @@ export default function GallerySlideshow() {
   const slides = useMemo(
     () =>
       photos.map((photo, index) => ({
-        src: `/images/gallery/${photo}`,
+        src: photo,
         alt: `ZIM.ca residence gallery photo ${index + 1}`,
       })),
     []
