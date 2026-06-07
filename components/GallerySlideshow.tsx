@@ -13,6 +13,7 @@ const photos = [
   "/images/gallery/10-1660 Baseline Ottawa Ontario _0015.jpg",
   "/images/gallery/11-1660 Baseline Ottawa Ontario _0017.jpg",
   "/images/gallery/15-1660 Baseline Ottawa Ontario _0006.jpg",
+  "/images/UnitA Double.png",
   "/images/UnitB Single.png",
   "/images/Unit B Double.png",
 ];

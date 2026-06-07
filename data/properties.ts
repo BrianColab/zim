@@ -17,6 +17,7 @@ export const properties: Property[] = [
   {
     id: 1,
     image: "/images/gallery/photo-9.jpg",
+    imageDouble: "/images/UnitA Double.png",
     imageAlt:
       "Furnished student bedroom in Unit A at 1658-1660 Baseline Road in Ottawa",
     address: "Unit A - 1658-1660 Baseline Road",
