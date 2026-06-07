@@ -3,6 +3,10 @@ import type { Property } from "@/data/properties";
 import SplitRoomImage from "./SplitRoomImage";
 
 export default function PropertyCard({ property }: { property: Property }) {
+  const [singlePart, doublePart] = property.priceLabel.split(" / ");
+  const priceSingle = singlePart?.split(" ")[0];
+  const priceDouble = doublePart?.split(" ")[0];
+
   return (
     <article className="group bg-white rounded-[8px] overflow-hidden border border-black/[0.06] shadow-[0_1px_2px_rgba(8,18,28,0.05)] hover:shadow-[0_18px_42px_rgba(8,18,28,0.13)] transition-shadow duration-300">
       {property.imageDouble ? (
@@ -11,6 +15,8 @@ export default function PropertyCard({ property }: { property: Property }) {
           doubleSrc={property.imageDouble}
           alt={property.imageAlt}
           availability={property.availability}
+          priceSingle={priceSingle}
+          priceDouble={priceDouble}
         />
       ) : (
         <div className="relative h-[220px] overflow-hidden bg-zinc-100">

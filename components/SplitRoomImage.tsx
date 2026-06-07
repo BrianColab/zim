@@ -8,9 +8,11 @@ interface Props {
   doubleSrc: string;
   alt: string;
   availability?: string;
+  priceSingle?: string;
+  priceDouble?: string;
 }
 
-export default function SplitRoomImage({ singleSrc, doubleSrc, alt, availability }: Props) {
+export default function SplitRoomImage({ singleSrc, doubleSrc, alt, availability, priceSingle, priceDouble }: Props) {
   const [lightbox, setLightbox] = useState<{ src: string; label: string } | null>(null);
 
   useEffect(() => {
@@ -39,8 +41,11 @@ export default function SplitRoomImage({ singleSrc, doubleSrc, alt, availability
             sizes="(min-width: 768px) 25vw, 50vw"
             className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.05]"
           />
-          <span className="absolute bottom-3 left-3 z-10 rounded-full bg-[#07111b]/80 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur-sm">
-            Single
+          <span className="absolute bottom-3 left-3 z-10 rounded-[8px] bg-[#07111b]/82 px-2.5 py-1.5 backdrop-blur-sm">
+            {priceSingle && (
+              <span className="block text-[13px] font-extrabold leading-tight text-[#c8f535]">{priceSingle}</span>
+            )}
+            <span className="block text-[10px] font-bold uppercase tracking-wide text-white/70">Single</span>
           </span>
           <span className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200 group-hover:opacity-100">
             <span className="rounded-full bg-black/40 p-2 text-white backdrop-blur-sm">
@@ -73,8 +78,11 @@ export default function SplitRoomImage({ singleSrc, doubleSrc, alt, availability
             sizes="(min-width: 768px) 25vw, 50vw"
             className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.05]"
           />
-          <span className="absolute bottom-3 right-3 z-10 rounded-full bg-[#07111b]/80 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur-sm">
-            Double
+          <span className="absolute bottom-3 right-3 z-10 rounded-[8px] bg-[#07111b]/82 px-2.5 py-1.5 backdrop-blur-sm text-right">
+            {priceDouble && (
+              <span className="block text-[13px] font-extrabold leading-tight text-[#c8f535]">{priceDouble}</span>
+            )}
+            <span className="block text-[10px] font-bold uppercase tracking-wide text-white/70">Double</span>
           </span>
           <span className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-200 group-hover:opacity-100">
             <span className="rounded-full bg-black/40 p-2 text-white backdrop-blur-sm">
