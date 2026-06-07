@@ -1,24 +1,34 @@
 import Image from "next/image";
 import type { Property } from "@/data/properties";
+import SplitRoomImage from "./SplitRoomImage";
 
 export default function PropertyCard({ property }: { property: Property }) {
   return (
     <article className="group bg-white rounded-[8px] overflow-hidden border border-black/[0.06] shadow-[0_1px_2px_rgba(8,18,28,0.05)] hover:shadow-[0_18px_42px_rgba(8,18,28,0.13)] transition-shadow duration-300">
-      <div className="relative h-[220px] overflow-hidden bg-zinc-100">
-        <Image
-          src={property.image}
+      {property.imageDouble ? (
+        <SplitRoomImage
+          singleSrc={property.image}
+          doubleSrc={property.imageDouble}
           alt={property.imageAlt}
-          fill
-          sizes="(min-width: 768px) 50vw, 100vw"
-          className="object-cover group-hover:scale-[1.04] transition-transform duration-500 ease-out"
+          availability={property.availability}
         />
+      ) : (
+        <div className="relative h-[220px] overflow-hidden bg-zinc-100">
+          <Image
+            src={property.image}
+            alt={property.imageAlt}
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover group-hover:scale-[1.04] transition-transform duration-500 ease-out"
+          />
 
-        <div className="absolute bottom-3 left-3">
-          <span className="inline-block px-2.5 py-[5px] bg-[#07111b]/82 backdrop-blur-sm text-white text-[11px] font-bold rounded-[7px]">
-            {property.availability}
-          </span>
+          <div className="absolute bottom-3 left-3">
+            <span className="inline-block px-2.5 py-[5px] bg-[#07111b]/82 backdrop-blur-sm text-white text-[11px] font-bold rounded-[7px]">
+              {property.availability}
+            </span>
+          </div>
         </div>
-      </div>
+      )}
 
       <div className="px-4 py-4">
         <p className="card-kicker mb-2 text-[#60710f]">

@@ -2,6 +2,7 @@ export interface Property {
   id: number;
   image: string;
   imageAlt: string;
+  imageDouble?: string;
   address: string;
   priceLabel: string;
   occupancy: string;
@@ -38,6 +39,7 @@ export const properties: Property[] = [
   {
     id: 2,
     image: "/images/UnitB Single.png",
+    imageDouble: "/images/Unit B Double.png",
     imageAlt:
       "Furnished student room in Unit B at 1658-1660 Baseline Road in Ottawa",
     address: "Unit B - 1658-1660 Baseline Road",
