@@ -1,7 +1,30 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/index.php/contact-us",
+        destination: "https://www.zim.ca/",
+        permanent: true,
+      },
+      {
+        source: "/index.php",
+        destination: "https://www.zim.ca/",
+        permanent: true,
+      },
+      {
+        source: "/contact-us",
+        destination: "https://www.zim.ca/",
+        permanent: true,
+      },
+      {
+        source: "/contact",
+        destination: "https://www.zim.ca/",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
