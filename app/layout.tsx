@@ -18,7 +18,7 @@ const jakarta = Plus_Jakarta_Sans({
 
 const googleSiteVerification =
   process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
-const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-236GG4Z62B";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.zim.ca"),
