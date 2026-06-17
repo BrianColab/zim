@@ -15,7 +15,6 @@ import ShoppingHubs from "@/components/ShoppingHubs";
 import LandlordCTA from "@/components/LandlordCTA";
 import StudentHousingCta from "@/components/StudentHousingCta";
 import StudentHousingResources from "@/components/StudentHousingResources";
-import SeasonalRentalCallout from "@/components/SeasonalRentalCallout";
 import ScrollReveal from "@/components/ScrollReveal";
 import Footer from "@/components/Footer";
 import ContactDrawer from "@/components/ContactDrawer";
@@ -140,9 +139,6 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <ScrollReveal>
-          <SeasonalRentalCallout />
-        </ScrollReveal>
         <ScrollReveal>
           <AvailabilityBar />
         </ScrollReveal>

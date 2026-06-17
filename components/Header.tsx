@@ -5,6 +5,7 @@ import Link from "next/link";
 import ContactTrigger from "./ContactTrigger";
 import CostCalculatorButton from "./CostCalculatorButton";
 import ZimLogo from "./ZimLogo";
+import { seasonalContactPayload } from "@/lib/seasonalSeo";
 
 const navLinks = [
   { label: "Rooms", href: "/#suites" },
@@ -39,6 +40,21 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
+      <div
+        className={`overflow-hidden transition-all duration-300 ${scrolled ? "max-h-0" : "max-h-12"}`}
+      >
+        <ContactTrigger
+          payload={seasonalContactPayload}
+          className="flex w-full items-center justify-center gap-2 bg-[#c8f535] py-2 text-center"
+        >
+          <span className="text-[12px] font-extrabold tracking-tight text-[#07111b]">
+            September 2026 · Looking for a room?
+          </span>
+          <span className="text-[12px] font-extrabold text-[#07111b] underline underline-offset-2">
+            Book a showing →
+          </span>
+        </ContactTrigger>
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[72px]">
           <Link
