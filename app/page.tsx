@@ -147,10 +147,10 @@ export default function Home() {
           <AvailabilityBar />
         </ScrollReveal>
         <ScrollReveal>
-          <HomepageSeoSections />
+          <FeaturedHomes />
         </ScrollReveal>
         <ScrollReveal>
-          <FeaturedHomes />
+          <HomepageSeoSections />
         </ScrollReveal>
         <ScrollReveal>
           <GallerySlideshow />
