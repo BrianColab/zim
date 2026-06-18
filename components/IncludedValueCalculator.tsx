@@ -91,10 +91,10 @@ export default function IncludedValueCalculator({
               }`}
             >
               <span className="headline-main">
-                No hydro bills.
+                No hydro. No internet.
               </span>
               <span className="headline-sub">
-                No extra <span className="headline-accent-lime">costs.</span>
+                No laundry. <span className="headline-accent-lime">No furniture.</span>
               </span>
             </h2>
             <p className={`${compact ? "mt-4 text-[13px]" : "section-copy mt-6"} text-white/62`}>
