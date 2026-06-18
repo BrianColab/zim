@@ -35,7 +35,7 @@ const cornerstoneBlogPosts: BlogPost[] = [
     published: "2026-05-29",
     updated: "2026-05-29",
     readTime: "6 min read",
-    image: "/images/main.png",
+    image: "/images/guide.png",
     keywords: [
       "Algonquin College housing",
       "student housing near Algonquin College",
