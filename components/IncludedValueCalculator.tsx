@@ -81,7 +81,7 @@ export default function IncludedValueCalculator({
     <div className="grid overflow-hidden rounded-[8px] border border-[#dbe7f3] bg-white shadow-[0_26px_80px_rgba(23,60,102,0.12)] lg:grid-cols-[0.86fr_1.14fr]">
           <div className={`bg-[#07111b] text-white ${compact ? "p-5 sm:p-6" : "p-6 sm:p-8 lg:p-10"}`}>
             <p className="section-kicker text-[#c8f535]">
-              Student cost check
+              Zero bills at ZIM
             </p>
             <h2
               className={`headline-on-dark mt-5 font-heading font-extrabold leading-[0.88] text-white ${
@@ -91,37 +91,37 @@ export default function IncludedValueCalculator({
               }`}
             >
               <span className="headline-main">
-                What would this <span className="headline-accent-lime">cost</span>
+                No hydro bills.
               </span>
               <span className="headline-sub">
-                <span className="headline-accent-lime">somewhere else?</span>
+                No extra <span className="headline-accent-lime">costs.</span>
               </span>
             </h2>
             <p className={`${compact ? "mt-4 text-[13px]" : "section-copy mt-6"} text-white/62`}>
-              Dial in what you would pay for these extras somewhere else. At
-              ZIM, every one of them is already included in your rent — you
-              pay $0 on top.
+              Utilities, internet, laundry, and furniture are all included in
+              your ZIM rent. Adjust the sliders to see what students elsewhere
+              pay for these every month — you pay none of it.
             </p>
 
-            <div className={`rounded-[8px] border border-white/10 bg-white/[0.06] ${compact ? "mt-5 p-4" : "mt-8 p-5"}`}>
-              <p className="text-[12px] font-extrabold uppercase tracking-[0.14em] text-white/48">
-                ZIM covers this for you
+            <div className={`rounded-[8px] border border-[#c8f535]/30 bg-[#c8f535]/10 ${compact ? "mt-5 p-4" : "mt-8 p-5"}`}>
+              <p className="text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#c8f535]/70">
+                You pay for all of this at ZIM
               </p>
               <p className={`mt-2 font-heading font-extrabold leading-none text-[#c8f535] ${compact ? "text-[2.35rem]" : "text-[3.2rem]"}`}>
-                ${includedTotal}
+                $0
               </p>
               <p className="mt-2 text-[13px] font-semibold text-white/58">
-                in monthly bills already included in your rent
+                every one of these bills is already in your rent
               </p>
             </div>
 
             <div className="mt-4 grid grid-cols-2 gap-3">
               <div className={`rounded-[8px] border border-white/10 bg-white/[0.06] ${compact ? "p-3" : "p-4"}`}>
                 <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-white/42">
-                  Elsewhere you&apos;d pay
+                  Others pay monthly
                 </p>
                 <p className={`mt-2 font-extrabold ${compact ? "text-[1.1rem]" : "text-[1.35rem]"}`}>
-                  ${comparableRent}/mo
+                  +${includedTotal}/mo
                 </p>
               </div>
               <div className={`rounded-[8px] border border-white/10 bg-white/[0.06] ${compact ? "p-3" : "p-4"}`}>
@@ -206,8 +206,8 @@ export default function IncludedValueCalculator({
 
             <div className={`flex flex-col gap-3 rounded-[8px] border border-[#dbe7f3] bg-[#edf5ff] sm:flex-row sm:items-center sm:justify-between ${compact ? "mt-4 p-3" : "mt-6 p-4"}`}>
               <p className="text-[13px] font-semibold leading-relaxed text-[#425879]">
-                Somewhere else: <span className="font-extrabold">${rent}/mo rent + ${includedTotal}/mo in bills = ${comparableRent}/mo.</span>{" "}
-                At ZIM: <span className="font-extrabold text-[#07111b]">${rent}/mo. Everything else is already included — you pay $0 extra.</span>
+                Somewhere else: <span className="font-extrabold">${rent}/mo rent + ${includedTotal}/mo in bills you pay yourself.</span>{" "}
+                At ZIM: <span className="font-extrabold text-[#07111b]">${rent}/mo — utilities, internet, laundry, and furniture all included. You never see those bills.</span>
               </p>
               <ContactTrigger
                 onOpen={onContactOpen}
