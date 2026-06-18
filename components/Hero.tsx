@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import SearchBar from "./SearchBar";
 import ContactTrigger from "./ContactTrigger";
 
 export default function Hero() {
@@ -105,7 +104,6 @@ export default function Hero() {
             </div>
           </div>
 
-          <SearchBar />
         </div>
       </div>
     </section>
