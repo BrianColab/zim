@@ -98,26 +98,27 @@ export default function IncludedValueCalculator({
               </span>
             </h2>
             <p className={`${compact ? "mt-4 text-[13px]" : "section-copy mt-6"} text-white/62`}>
-              Adjust common student expenses and compare them with an
-              all-inclusive ZIM.ca room.
+              Dial in what you would pay for these extras somewhere else. At
+              ZIM, every one of them is already included in your rent — you
+              pay $0 on top.
             </p>
 
             <div className={`rounded-[8px] border border-white/10 bg-white/[0.06] ${compact ? "mt-5 p-4" : "mt-8 p-5"}`}>
               <p className="text-[12px] font-extrabold uppercase tracking-[0.14em] text-white/48">
-                Included value
+                ZIM covers this for you
               </p>
               <p className={`mt-2 font-heading font-extrabold leading-none text-[#c8f535] ${compact ? "text-[2.35rem]" : "text-[3.2rem]"}`}>
                 ${includedTotal}
               </p>
               <p className="mt-2 text-[13px] font-semibold text-white/58">
-                estimated monthly extras already covered
+                in monthly bills already included in your rent
               </p>
             </div>
 
             <div className="mt-4 grid grid-cols-2 gap-3">
               <div className={`rounded-[8px] border border-white/10 bg-white/[0.06] ${compact ? "p-3" : "p-4"}`}>
                 <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-white/42">
-                  Comparable
+                  Elsewhere you&apos;d pay
                 </p>
                 <p className={`mt-2 font-extrabold ${compact ? "text-[1.1rem]" : "text-[1.35rem]"}`}>
                   ${comparableRent}/mo
@@ -125,7 +126,7 @@ export default function IncludedValueCalculator({
               </div>
               <div className={`rounded-[8px] border border-white/10 bg-white/[0.06] ${compact ? "p-3" : "p-4"}`}>
                 <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-white/42">
-                  Yearly value
+                  You save yearly
                 </p>
                 <p className={`mt-2 font-extrabold ${compact ? "text-[1.1rem]" : "text-[1.35rem]"}`}>
                   ${yearlyIncluded}
@@ -205,9 +206,8 @@ export default function IncludedValueCalculator({
 
             <div className={`flex flex-col gap-3 rounded-[8px] border border-[#dbe7f3] bg-[#edf5ff] sm:flex-row sm:items-center sm:justify-between ${compact ? "mt-4 p-3" : "mt-6 p-4"}`}>
               <p className="text-[13px] font-semibold leading-relaxed text-[#425879]">
-                Based on your numbers, a ${rent}/month ZIM.ca room compares to
-                about <span className="font-extrabold">${comparableRent}</span>{" "}
-                elsewhere once common student costs are added.
+                Somewhere else: <span className="font-extrabold">${rent}/mo rent + ${includedTotal}/mo in bills = ${comparableRent}/mo.</span>{" "}
+                At ZIM: <span className="font-extrabold text-[#07111b]">${rent}/mo. Everything else is already included — you pay $0 extra.</span>
               </p>
               <ContactTrigger
                 onOpen={onContactOpen}
