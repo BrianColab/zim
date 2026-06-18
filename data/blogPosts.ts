@@ -168,7 +168,7 @@ const cornerstoneBlogPosts: BlogPost[] = [
     published: "2026-05-29",
     updated: "2026-05-29",
     readTime: "5 min read",
-    image: "/images/Unit B Double.png",
+    image: "/images/checklist.png",
     keywords: [
       "student move-in checklist Ottawa",
       "furnished student room checklist",
