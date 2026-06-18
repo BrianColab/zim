@@ -102,7 +102,7 @@ const cornerstoneBlogPosts: BlogPost[] = [
     published: "2026-05-29",
     updated: "2026-05-29",
     readTime: "5 min read",
-    image: "/images/unit-bedroom.jpg",
+    image: "/images/budget.png",
     keywords: [
       "student housing budget Ottawa",
       "Ottawa student rent costs",
