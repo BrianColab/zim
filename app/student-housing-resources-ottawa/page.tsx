@@ -8,9 +8,9 @@ import StudentHousingCta from "@/components/StudentHousingCta";
 
 const canonicalUrl = "https://www.zim.ca/student-housing-resources-ottawa";
 const pageTitle =
-  "Ottawa Student Housing Resources | Guides for Students and Parents | ZIM.ca";
+  "Ottawa Student Rentals Guide | Rooms Near Algonquin & Baseline | ZIM.ca";
 const pageDescription =
-  "Explore ZIM.ca student housing resources for Ottawa students and parents, including guides for Algonquin College off-campus housing, student rental costs, September rentals, furnished rooms and international students.";
+  "Find furnished student rooms for rent in Ottawa near Algonquin College, Baseline Station and Nepean. Compare housing costs, September rentals, parent guides and international student housing resources.";
 
 const resourceCards = [
   {
