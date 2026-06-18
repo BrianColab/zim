@@ -8,12 +8,10 @@ import GallerySlideshow from "@/components/GallerySlideshow";
 import ImportantNotes from "@/components/ImportantNotes";
 import MoveInChecklist from "@/components/MoveInChecklist";
 import ValueProps from "@/components/ValueProps";
-import StudentResources from "@/components/StudentResources";
 import BlogPreview from "@/components/BlogPreview";
 import CommuteSnapshot from "@/components/CommuteSnapshot";
 import ShoppingHubs from "@/components/ShoppingHubs";
 import LandlordCTA from "@/components/LandlordCTA";
-import StudentHousingCta from "@/components/StudentHousingCta";
 import StudentHousingResources from "@/components/StudentHousingResources";
 import ScrollReveal from "@/components/ScrollReveal";
 import Footer from "@/components/Footer";
@@ -161,9 +159,6 @@ export default function Home() {
           <ValueProps />
         </ScrollReveal>
         <ScrollReveal>
-          <StudentResources />
-        </ScrollReveal>
-        <ScrollReveal>
           <BlogPreview />
         </ScrollReveal>
         <ScrollReveal>
@@ -186,7 +181,6 @@ export default function Home() {
             ]}
           />
         </ScrollReveal>
-        <StudentHousingCta />
       </main>
       <Footer />
       <FloatingWalkRoute />
