@@ -40,6 +40,12 @@ export default function Header() {
           : "bg-transparent"
       }`}
     >
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-[8px] focus:bg-[#c8f535] focus:px-4 focus:py-2 focus:text-[13px] focus:font-extrabold focus:text-[#07111b]"
+      >
+        Skip to main content
+      </a>
       <div
         className={`overflow-hidden transition-all duration-300 ${scrolled ? "max-h-0" : "max-h-12"}`}
       >
@@ -65,7 +71,7 @@ export default function Header() {
             <ZimLogo />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-5 lg:gap-7">
+          <nav aria-label="Primary navigation" className="hidden md:flex items-center gap-5 lg:gap-7">
             {navLinks.map((item) => (
               <Link
                 key={item.label}
@@ -98,6 +104,7 @@ export default function Header() {
               onClick={() => setOpen(!open)}
               className="md:hidden p-2 text-white/60 hover:text-white transition-colors"
               aria-label="Toggle menu"
+              aria-expanded={open}
             >
               {open ? (
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

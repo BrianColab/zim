@@ -91,10 +91,10 @@ export default function IncludedValueCalculator({
               }`}
             >
               <span className="headline-main">
-                No hydro. No internet.
+                Hydro, internet, laundry,
               </span>
               <span className="headline-sub">
-                No laundry. <span className="headline-accent-lime">No furniture.</span>
+                furniture — <span className="headline-accent-lime">all included.</span>
               </span>
             </h2>
             <p className={`${compact ? "mt-4 text-[13px]" : "section-copy mt-6"} text-white/62`}>
@@ -206,7 +206,7 @@ export default function IncludedValueCalculator({
 
             <div className={`flex flex-col gap-3 rounded-[8px] border border-[#dbe7f3] bg-[#edf5ff] sm:flex-row sm:items-center sm:justify-between ${compact ? "mt-4 p-3" : "mt-6 p-4"}`}>
               <p className="text-[13px] font-semibold leading-relaxed text-[#425879]">
-                Somewhere else: <span className="font-extrabold">${rent}/mo rent + ${includedTotal}/mo in bills you pay yourself.</span>{" "}
+                Somewhere else: <span className="font-extrabold">${comparableRent}/mo total (${rent}/mo rent + ${includedTotal}/mo in extra bills).</span>{" "}
                 At ZIM: <span className="font-extrabold text-[#07111b]">${rent}/mo — utilities, internet, laundry, and furniture all included. You never see those bills.</span>
               </p>
               <ContactTrigger

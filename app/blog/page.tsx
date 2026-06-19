@@ -42,6 +42,7 @@ export default function BlogPage() {
       url: `https://www.zim.ca/blog/${post.slug}`,
       datePublished: post.published,
       dateModified: post.updated,
+      author: { "@type": "Organization", name: "ZIM.ca" },
     })),
   };
 

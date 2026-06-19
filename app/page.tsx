@@ -135,7 +135,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
         <ScrollReveal>
           <AvailabilityBar />

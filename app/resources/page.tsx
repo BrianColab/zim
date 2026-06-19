@@ -12,6 +12,20 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/resources",
   },
+  openGraph: {
+    title: "Student Housing Resources in Ottawa | ZIM.ca",
+    description:
+      "Move-in checklist, shared living guide, neighbourhood overview, and house rules for ZIM.ca student rentals near Algonquin College in Nepean, Ottawa.",
+    url: "https://www.zim.ca/resources",
+    images: [
+      {
+        url: "/images/og-zim-student-rentals.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Students entering the ZIM.ca rental at 1658-1660 Baseline Road in Ottawa",
+      },
+    ],
+  },
 };
 
 const guides = [

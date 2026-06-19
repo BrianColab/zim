@@ -58,9 +58,9 @@ export default function Footer() {
           <div className="grid gap-8 sm:grid-cols-2">
             {footerGroups.map((group) => (
               <nav key={group.title} aria-label={group.title}>
-                <h2 className="text-[12px] font-extrabold uppercase tracking-[0.16em] text-white/70">
+                <p className="text-[12px] font-extrabold uppercase tracking-[0.16em] text-white/70">
                   {group.title}
-                </h2>
+                </p>
                 <div className="mt-4 grid gap-3">
                   {group.links.map((link) => (
                     <Link

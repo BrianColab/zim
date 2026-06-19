@@ -1,0 +1,98 @@
+project:
+  name: ZIM.ca
+  url: https://www.zim.ca
+  repo: c:\APPLICATIONS_BUILDS\zim
+  audit_date: 2026-06-19
+  auditor: Claude Sonnet 4.6
+
+business:
+  type: Residential student rental property
+  address: 1658-1660 Baseline Road, Nepean, Ottawa, ON, Canada
+  offer: Furnished all-inclusive student rooms (Unit A and Unit B)
+  pricing:
+    unit_b_single: $850/month
+    unit_a_single: $900/month
+    unit_b_pair: $1000/month
+    unit_a_pair: $1200/month
+  included: Utilities (hydro, water, heat, A/C), gigabit internet, laundry, furniture (bed, desk, chair)
+  differentiator: All-inclusive, no separate bills, near Algonquin College
+
+audience:
+  primary: Students attending Algonquin College
+  secondary: Students from other Ottawa schools (Carleton, uOttawa)
+  tertiary: Parents researching housing, international students
+  geography: Ottawa / Nepean, Ontario, Canada
+
+conversion:
+  primary: Book a showing (ContactDrawer form → Resend email)
+  secondary: Ask about availability
+
+tech_stack:
+  framework: Next.js 16.2.6
+  react: 19.2.4
+  styling: Tailwind CSS v4
+  language: TypeScript
+  rendering: Predominantly SSG (static), /api/contact is dynamic
+  fonts: Inter (body), Plus Jakarta Sans (headings)
+  analytics: Google Analytics (G-236GG4Z62B, hardcoded fallback)
+  hosting: Vercel (assumed)
+  git_branch: main
+  git_head: d8c701f
+
+baseline_git:
+  commit: d8c701f Update SEO title and meta description for student-housing-resources-ottawa
+  uncommitted_changes:
+    - components/IncludedValueCalculator.tsx (calculator headline update pending commit)
+
+pages:
+  - route: /
+    file: app/page.tsx
+    type: homepage
+  - route: /blog
+    file: app/blog/page.tsx
+    type: blog_index
+  - route: /blog/[slug]
+    file: app/blog/[slug]/page.tsx
+    type: blog_post (6 posts)
+  - route: /resources
+    file: app/resources/page.tsx
+    type: internal_resource_guide
+  - route: /student-housing-resources-ottawa
+    file: app/student-housing-resources-ottawa/page.tsx
+    type: seo_hub
+  - route: /algonquin-student-rentals-ottawa
+    file: app/algonquin-student-rentals-ottawa/page.tsx
+    type: seo_landing
+  - route: /student-rentals-nepean-baseline-station
+    file: app/student-rentals-nepean-baseline-station/page.tsx
+    type: seo_landing
+  - route: /parents-student-housing-ottawa
+    file: app/parents-student-housing-ottawa/page.tsx
+    type: audience_landing
+  - route: /international-student-housing-ottawa
+    file: app/international-student-housing-ottawa/page.tsx
+    type: audience_landing
+  - route: /algonquin-college-off-campus-housing-guide
+    file: app/algonquin-college-off-campus-housing-guide/page.tsx
+    type: guide
+  - route: /ottawa-student-housing-cost-guide
+    file: app/ottawa-student-housing-cost-guide/page.tsx
+    type: guide
+  - route: /september-student-rentals-ottawa
+    file: app/september-student-rentals-ottawa/page.tsx
+    type: seasonal_landing
+  - route: /furnished-student-room-vs-apartment-ottawa
+    file: app/furnished-student-room-vs-apartment-ottawa/page.tsx
+    type: comparison_guide
+
+data_access:
+  google_search_console: not available for this audit
+  google_analytics: not available for this audit
+  field_cwv: unknown
+  backlinks: unknown
+
+assumptions:
+  - Hosting is Vercel based on Next.js stack
+  - No Google Search Console data available; using live search observations
+  - GA measurement ID G-236GG4Z62B is hardcoded in layout.tsx as fallback
+  - metadataBase set to https://www.zim.ca so relative canonicals resolve correctly

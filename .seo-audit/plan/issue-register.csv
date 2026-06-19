@@ -1,0 +1,35 @@
+id,priority,category,title,affected_url,evidence_class,seo_impact,business_impact,effort,change_risk,gate,status,source
+OG-01,P1,OG Tags,"/resources has zero OG tags — social shares inherit homepage OG",/resources,Verified,Medium,Medium,XS,None,A,pending,technical-auditor
+SCH-08,P1,Schema,4 LocalBusiness schemas use disconnected @id fragments not linked to root #organization,"algonquin/baseline/parents/international",Verified,Medium,Medium,S,Low,B,pending,technical-auditor
+ACC-01,P1,Accessibility,No skip-to-main-content link — WCAG 2.4.1 failure,all pages,Verified,Low,Medium,S,None,A,pending,performance-auditor
+ACC-02,P1,Accessibility,Desktop nav missing aria-label — WCAG 1.3.6,all pages,Observed,Low,Low,XS,None,A,pending,performance-auditor
+ACC-03,P1,Accessibility,Mobile menu button missing aria-expanded — WCAG 4.1.2,all pages,Observed,Low,Low,XS,None,A,pending,performance-auditor
+SIT-04,P2,Sitemap,/resources missing from sitemap,/resources,Verified,Low,Low,XS,None,A,pending,technical-auditor
+LNK-01,P2,Internal Links,Blog posts have zero internal links to commercial landing pages,all blog posts,Verified,High,High,M,Low,A,pending,content-auditor
+CAN-01,P2,Cannibalization,/algonquin-student-rentals-ottawa vs /algonquin-college-off-campus-housing-guide target overlapping queries,/algonquin + /guide,Verified,High,High,L,Medium,B,pending,content-auditor
+CAN-02,P2,Cannibalization,/algonquin-student-rentals-ottawa vs /student-rentals-nepean-baseline-station are near-duplicate pages,/algonquin + /baseline,Verified,High,High,L,Medium,B,pending,content-auditor
+CAN-03,P2,Cannibalization,/resources title competes semantically with /student-housing-resources-ottawa,/resources,Observed,Low,Low,XS,Low,B,pending,content-auditor
+SCH-07,P2,Schema,Blog index blogPost array missing author on nested BlogPosting items,/blog,Verified,Low,Low,XS,None,A,pending,technical-auditor
+SCH-04,P2,Schema,Only 1 of 11 pages cross-references layout #website via isPartOf in WebPage schema,multiple,Verified,Low,Low,M,Low,B,pending,technical-auditor
+OG-02,P2,OG Tags,Relative og:url on /blog and /blog/[slug] (resolves via metadataBase but worth confirming),/blog,Observed,Low,Low,XS,None,A,pending,technical-auditor
+LCP-01,P2,Performance,Hero is use-client — delays LCP preload hint for main.png,/,Observed,Medium,Low,M,Medium,B,pending,performance-auditor
+GAL-01,P2,Performance,GallerySlideshow eagerly loads all 12 images into DOM,/,Observed,Low,Low,M,Medium,B,pending,performance-auditor
+ACC-04,P2,Accessibility,SplitRoomImage lightbox has no focus trap,/,Observed,Low,Medium,M,Low,B,pending,performance-auditor
+ACC-05,P2,Accessibility,CostCalculatorButton dialog has no focus trap,all pages,Observed,Low,Medium,M,Low,B,pending,performance-auditor
+ACC-06,P2,Accessibility,ContactDrawer aside lacks role=dialog and aria-modal,all pages,Observed,Low,Medium,M,Low,B,pending,performance-auditor
+ACC-07,P2,Accessibility,Contact form inputs use outline-none with only faint border-color focus change,all pages,Observed,Low,Medium,S,Low,B,pending,performance-auditor
+TTL-01,P2,Metadata,10 page titles exceed 60 characters (truncation risk),multiple,Verified,Medium,Medium,M,Medium,B,pending,technical-auditor
+DESC-01,P2,Metadata,10 meta descriptions over 160 characters,multiple,Verified,Low,Low,M,Low,B,pending,technical-auditor
+GAP-01,P2,Keyword Gap,No page targets furnished student rooms Ottawa — ZIM absent from that SERP,n/a,Observed,High,High,L,Medium,B,pending,search-researcher
+GAP-02,P2,Keyword Gap,No page targets all-inclusive student rooms Ottawa — ottawastudenthousing.ca owns this phrase,n/a,Observed,High,High,L,Medium,B,pending,search-researcher
+GAP-03,P2,Keyword Gap,September student rentals Ottawa — ZIM has a page but does not rank for it,/september-student-rentals-ottawa,Observed,High,High,M,Low,B,pending,search-researcher
+INT-01,P2,Content,/international-student-housing-ottawa has no Canada-specific content for international students,/international-student-housing-ottawa,Verified,Medium,Medium,L,Low,B,pending,content-auditor
+GAL-02,P2,Accessibility,GallerySlideshow main-slide alt text is generic numbering not descriptive,/,Observed,Low,Low,S,None,A,pending,performance-auditor
+LINT-01,P2,Code Quality,comparableRent assigned but never used — ESLint warning,IncludedValueCalculator.tsx,Verified,None,None,XS,None,A,pending,baseline
+LANG-01,P3,Technical,lang=en vs inLanguage: en-CA inconsistency in layout,all pages,Verified,Low,None,XS,None,A,pending,performance-auditor
+SIT-05,P3,Sitemap,lastModified: new Date() on static routes — inflates freshness signal on every deploy,app/sitemap.ts,Verified,Low,None,S,None,A,pending,technical-auditor
+SCH-09,P3,Schema,lang=en vs inLanguage: en-CA mismatch (same as LANG-01),app/layout.tsx,Verified,Low,None,XS,None,A,pending,technical-auditor
+SCH-02,P3,Schema,Organization schema missing telephone / sameAs / contactPoint,app/layout.tsx,Verified,Low,Low,S,None,A,pending,technical-auditor
+FTR-01,P3,Semantic HTML,Footer uses h2 for nav group labels — spurious headings on every page,all pages,Verified,Low,None,XS,None,A,pending,baseline
+COMP-01,P3,Technical,Unused SeasonalRentalCallout import on several landing pages (component still exists so no error),multiple,Verified,None,None,S,None,B,pending,technical-auditor
+ADDR-01,P3,Keyword Gap,ZIM does not rank for own address search (1658/1660 Baseline Road),n/a,Observed,Medium,Low,S,Low,B,pending,search-researcher
