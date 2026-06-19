@@ -15,10 +15,10 @@ import { baselineStationFaqs } from "@/data/baselineStationFaqs";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Student Rentals Near Baseline Station | Furnished Rooms in Nepean | ZIM.ca",
+      "Student Rentals Near Baseline Station, Nepean | ZIM.ca",
   },
   description:
-    "Furnished all-inclusive student rooms in Nepean near Baseline Station, College Square and Algonquin College. ZIM.ca offers student rooms from $850/month with utilities, internet, laundry and furniture included.",
+    "Furnished all-inclusive student rooms in Nepean near Baseline Station. Close to OC Transpo, Algonquin College, and College Square. From $850/month.",
   keywords: [
     "student rentals near Baseline Station",
     "Nepean student rentals",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Student Rentals Near Baseline Station | Furnished Rooms in Nepean | ZIM.ca",
+      "Student Rentals Near Baseline Station, Nepean | ZIM.ca",
     description:
       "Furnished all-inclusive student rooms in Nepean near Baseline Station, College Square and Algonquin College. Rooms from $850/month with included essentials.",
     url: "https://www.zim.ca/student-rentals-nepean-baseline-station",
@@ -61,6 +61,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": "https://www.zim.ca/student-rentals-nepean-baseline-station#business",
   name: "ZIM.ca",
+  sameAs: "https://www.zim.ca",
   url: "https://www.zim.ca/student-rentals-nepean-baseline-station",
   image: "https://www.zim.ca/images/og-zim-student-rentals.jpg",
   description:
@@ -174,40 +175,43 @@ export default function BaselineStationStudentRentalsPage() {
         <SeasonalRentalCallout />
 
         <section className="bg-[#f5f1e8] py-20">
-          <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-            <div>
-              <p className="section-kicker text-[#60710f]">Location first</p>
-              <h2 className="section-heading-tight mt-4 text-zinc-950">
-                Student rooms near Baseline Station and College Square
-              </h2>
-            </div>
-            <div className="grid gap-5">
-              <p className="section-copy max-w-none text-zinc-600">
-                Baseline Station and Nepean can be practical for students who
-                want Ottawa transit access, nearby groceries, food, shopping,
-                and daily student needs without living downtown. ZIM.ca is at
-                or near 1658-1660 Baseline Road, close to College Square and the
-                Algonquin College area.
-              </p>
-              <p className="section-copy max-w-none text-zinc-600">
-                Students comparing Ottawa student rentals or furnished student
-                rooms Ottawa-wide can use this location as a west Ottawa base
-                while checking the exact route that fits their schedule.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/"
-                  className="rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[12px] font-extrabold text-zinc-800 transition hover:border-[#60710f]/40"
-                >
-                  Ottawa student rentals
-                </Link>
-                <Link
-                  href="/algonquin-student-rentals-ottawa"
-                  className="rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[12px] font-extrabold text-zinc-800 transition hover:border-[#60710f]/40"
-                >
-                  student rentals near Algonquin College
-                </Link>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+              <div>
+                <p className="section-kicker text-[#60710f]">Transit-connected location</p>
+                <h2 className="section-heading-tight mt-4 text-zinc-950">
+                  Baseline Station: an OC Transpo hub for west Ottawa students
+                </h2>
               </div>
+              <div className="grid gap-5">
+                <p className="section-copy max-w-none text-zinc-600">
+                  Baseline Station is one of the major OC Transpo transfer
+                  points in west Ottawa. Routes 96, 97, and the BRT corridor
+                  connect Baseline to downtown Ottawa, Carleton University, and
+                  Algonquin College. For students without a car, proximity to
+                  Baseline Station means most of Ottawa is reachable without
+                  a transfer.
+                </p>
+                <p className="section-copy max-w-none text-zinc-600">
+                  In winter, the short walk from a Nepean rental to Baseline
+                  Station matters more than the distance. Students who live
+                  close to the station spend less time exposed to Ottawa winters
+                  and arrive at class without the delays that longer commutes
+                  create in snow and cold.
+                </p>
+              </div>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-3">
+              {[
+                { label: "OC Transpo hub", detail: "Routes 96, 97, and BRT corridor connect to downtown and Carleton" },
+                { label: "Winter commute", detail: "Short outdoor exposure — stay close to the station, not far from it" },
+                { label: "No car needed", detail: "Groceries, transit, College Square, and campus routes all within reach" },
+              ].map((item) => (
+                <div key={item.label} className="rounded-[8px] border border-black/[0.08] bg-white p-5">
+                  <p className="text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#60710f]">{item.label}</p>
+                  <p className="mt-2 text-[13.5px] font-medium leading-relaxed text-zinc-600">{item.detail}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

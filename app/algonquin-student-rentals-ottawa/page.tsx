@@ -15,10 +15,10 @@ import { algonquinRentalFaqs } from "@/data/algonquinRentalFaqs";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Student Rentals Near Algonquin College | Furnished Rooms in Ottawa | ZIM.ca",
+      "Student Rentals Near Algonquin College | ZIM.ca",
   },
   description:
-    "Find furnished all-inclusive student rooms near Algonquin College in Nepean, Ottawa. ZIM.ca offers rooms from $850/month with utilities, internet, laundry and furniture included near Baseline Station and College Square.",
+    "Furnished all-inclusive rooms near Algonquin College, Nepean. From $850/month — utilities, internet, laundry, and furniture included.",
   keywords: [
     "student rentals near Algonquin College",
     "Algonquin College off-campus housing",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Student Rentals Near Algonquin College | Furnished Rooms in Ottawa | ZIM.ca",
+      "Student Rentals Near Algonquin College | ZIM.ca",
     description:
-      "Find furnished all-inclusive student rooms near Algonquin College in Nepean, Ottawa. Rooms from $850/month near Baseline Station and College Square.",
+      "Furnished all-inclusive rooms near Algonquin College, Nepean. From $850/month — utilities, internet, laundry, and furniture included.",
     url: "https://www.zim.ca/algonquin-student-rentals-ottawa",
     images: [
       {
@@ -61,6 +61,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": "https://www.zim.ca/algonquin-student-rentals-ottawa#business",
   name: "ZIM.ca",
+  sameAs: "https://www.zim.ca",
   url: "https://www.zim.ca/algonquin-student-rentals-ottawa",
   image: "https://www.zim.ca/images/og-zim-student-rentals.jpg",
   description:

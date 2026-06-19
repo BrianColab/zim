@@ -15,10 +15,10 @@ import { internationalStudentFaqs } from "@/data/internationalStudentFaqs";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "International Student Housing in Ottawa | Furnished Rooms Near Algonquin | ZIM.ca",
+      "International Student Housing Ottawa | ZIM.ca",
   },
   description:
-    "Moving to Ottawa for school? ZIM.ca offers furnished all-inclusive student rooms near Algonquin College, Baseline Station and College Square with utilities, internet, laundry and furniture included.",
+    "Furnished all-inclusive student rooms in Ottawa for international students. Near Algonquin College — no credit check required. From $850/month.",
   keywords: [
     "international student housing Ottawa",
     "furnished student rooms Ottawa",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "International Student Housing in Ottawa | Furnished Rooms Near Algonquin | ZIM.ca",
+      "International Student Housing Ottawa | ZIM.ca",
     description:
       "Furnished all-inclusive student rooms in Nepean near Algonquin College, Baseline Station and College Square.",
     url: "https://www.zim.ca/international-student-housing-ottawa",
@@ -73,6 +73,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": "https://www.zim.ca/international-student-housing-ottawa#business",
   name: "ZIM.ca",
+  sameAs: "https://www.zim.ca",
   url: "https://www.zim.ca/international-student-housing-ottawa",
   image: "https://www.zim.ca/images/og-zim-student-rentals.jpg",
   description:

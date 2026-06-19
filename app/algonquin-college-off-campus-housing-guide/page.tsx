@@ -5,19 +5,17 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactDrawer from "@/components/ContactDrawer";
 import ContactTrigger from "@/components/ContactTrigger";
-import PropertyCard from "@/components/PropertyCard";
 import StudentHousingCta from "@/components/StudentHousingCta";
 import StudentHousingResources from "@/components/StudentHousingResources";
-import { properties } from "@/data/properties";
 import { algonquinHousingGuideFaqs } from "@/data/algonquinHousingGuideFaqs";
 import { seasonalSeo } from "@/lib/seasonalSeo";
 
 const canonicalUrl =
   "https://www.zim.ca/algonquin-college-off-campus-housing-guide";
 const pageTitle =
-  "Algonquin College Off-Campus Housing Guide | Student Rentals Ottawa | ZIM.ca";
+  "Algonquin College Off-Campus Housing Guide | ZIM.ca";
 const pageDescription =
-  "Looking for off-campus housing near Algonquin College? Learn what students should check before renting in Ottawa, including location, rent, utilities, furniture, transit and furnished room options near Baseline Station.";
+  "A student guide to off-campus housing near Algonquin College. Compare location, rent, utilities, furniture, and transit before renting in Ottawa.";
 
 export const metadata: Metadata = {
   title: {
@@ -166,7 +164,7 @@ export default function AlgonquinCollegeHousingGuidePage() {
                 </p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <Link
-                    href="#zimca-rooms"
+                    href="/algonquin-student-rentals-ottawa"
                     className="inline-flex items-center justify-center rounded-[10px] bg-[#c8f535] px-5 py-4 text-[13px] font-extrabold text-[#07111b] transition hover:bg-[#d6fa57]"
                   >
                     View Student Rooms
@@ -366,52 +364,41 @@ export default function AlgonquinCollegeHousingGuidePage() {
 
         <section id="zimca-rooms" className="bg-white py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mb-8 grid gap-5 lg:grid-cols-[1fr_430px] lg:items-end">
-              <div>
-                <p className="section-kicker text-[#60710f]">
-                  Why students consider ZIM.ca
-                </p>
-                <h2 className="section-heading-tight mt-4 text-zinc-950">
-                  Furnished student rooms near Algonquin College
-                </h2>
+            <div className="overflow-hidden rounded-[10px] bg-[#07111b]">
+              <div className="grid lg:grid-cols-[1fr_auto] lg:items-center lg:gap-10 p-8 sm:p-10">
+                <div>
+                  <p className="section-kicker text-[#c8f535]">
+                    Ready to see rooms?
+                  </p>
+                  <h2 className="section-heading-tight headline-on-dark mt-4 text-white">
+                    ZIM.ca furnished student rooms near Algonquin College
+                  </h2>
+                  <p className="section-copy mt-5 max-w-[620px] text-white/62">
+                    Furnished, all-inclusive rooms in Nepean with utilities,
+                    internet, laundry, and furniture included. Rooms from
+                    $850/month. See current availability and pricing on the
+                    student rentals page.
+                  </p>
+                  <div className="mt-7 flex flex-wrap gap-3">
+                    <Link
+                      href="/algonquin-student-rentals-ottawa"
+                      className="inline-flex items-center justify-center rounded-[10px] bg-[#c8f535] px-5 py-4 text-[13px] font-extrabold text-[#07111b] transition hover:bg-[#d6fa57]"
+                    >
+                      See student rooms near Algonquin
+                    </Link>
+                    <ContactTrigger
+                      payload={{
+                        roomType: "Availability",
+                        moveIn: "2026-09-01",
+                        lease: "Algonquin housing guide inquiry",
+                      }}
+                      className="inline-flex items-center justify-center rounded-[10px] border border-white/12 bg-white/[0.08] px-5 py-4 text-[13px] font-extrabold text-white transition hover:border-[#c8f535]/60 hover:bg-white/[0.12]"
+                    >
+                      Book a Showing
+                    </ContactTrigger>
+                  </div>
+                </div>
               </div>
-              <p className="section-copy text-zinc-600">
-                Availability and pricing may vary. Contact us to confirm current
-                rooms and move-in dates.
-              </p>
-            </div>
-            <div className="mb-8 grid gap-5 lg:grid-cols-2">
-              <p className="section-copy max-w-none text-zinc-600">
-                ZIM.ca offers furnished student rooms in Nepean, Ottawa near
-                Algonquin College, Baseline Station, and College Square. Current
-                room information shows utilities, internet, and laundry included
-                with rooms from $850/month depending on room and setup.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/"
-                  className="rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[12px] font-extrabold text-zinc-800 transition hover:border-[#60710f]/40"
-                >
-                  furnished student rooms in Ottawa
-                </Link>
-                <Link
-                  href="/parents-student-housing-ottawa"
-                  className="rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[12px] font-extrabold text-zinc-800 transition hover:border-[#60710f]/40"
-                >
-                  student housing information for parents
-                </Link>
-                <Link
-                  href="/international-student-housing-ottawa"
-                  className="rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[12px] font-extrabold text-zinc-800 transition hover:border-[#60710f]/40"
-                >
-                  international student housing in Ottawa
-                </Link>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-              {properties.map((property) => (
-                <PropertyCard key={property.id} property={property} />
-              ))}
             </div>
           </div>
         </section>

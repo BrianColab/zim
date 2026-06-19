@@ -72,6 +72,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/furnished-student-rooms-all-inclusive-ottawa`,
+      lastModified: new Date("2026-06-19"),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/blog`,
       lastModified: new Date("2026-06-19"),
       changeFrequency: "weekly",
