@@ -217,7 +217,21 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                             key={paragraph}
                             className="text-[15px] font-medium leading-[1.85] text-zinc-600"
                           >
-                            {paragraph}
+                            {paragraph.split(/(\[\[.*?\|.*?\]\])/).map((part, i) => {
+                              const m = part.match(/^\[\[(.*?)\|(.*?)\]\]$/);
+                              if (m) {
+                                return (
+                                  <Link
+                                    key={i}
+                                    href={m[2]}
+                                    className="font-semibold text-[#07111b] underline underline-offset-2 transition-colors hover:text-[#1d8fe8]"
+                                  >
+                                    {m[1]}
+                                  </Link>
+                                );
+                              }
+                              return part;
+                            })}
                           </p>
                         ))}
                       </div>

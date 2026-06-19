@@ -6,9 +6,9 @@ import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Student Housing Resources in Ottawa",
+  title: "ZIM.ca Resident Guides — Move-In and Shared Living",
   description:
-    "Move-in, shared living, neighbourhood, and house rule guides for ZIM.ca student rentals in Nepean, Ottawa near Algonquin College.",
+    "Move-in checklist, shared living guide, neighbourhood overview, and house rules for students renting at ZIM.ca in Nepean, Ottawa near Algonquin College.",
   alternates: {
     canonical: "/resources",
   },

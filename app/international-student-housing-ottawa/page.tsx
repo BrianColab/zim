@@ -280,6 +280,77 @@ export default function InternationalStudentHousingOttawaPage() {
           </div>
         </section>
 
+        <section className="bg-[#07111b] py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-10 grid gap-5 lg:grid-cols-[1fr_480px] lg:items-end">
+              <div>
+                <p className="section-kicker text-[#c8f535]">
+                  Practical guidance
+                </p>
+                <h2 className="section-heading-tight headline-on-dark mt-4 text-white">
+                  What international students should know about renting in Canada
+                </h2>
+              </div>
+              <p className="section-copy text-white/58">
+                Renting in Ottawa as an international student works differently
+                than in many other countries. These are the most common questions
+                new students have before arriving.
+              </p>
+            </div>
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div className="rounded-[10px] border border-white/[0.09] bg-white/[0.04] p-6">
+                <p className="text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#c8f535]">
+                  No Canadian credit history
+                </p>
+                <p className="mt-3 text-[14px] font-semibold leading-relaxed text-white/78">
+                  Most international students arrive without a Canadian credit
+                  score. Some Ottawa landlords use this to decline applications.
+                  The ZIM.ca process focuses on a brief showing and conversation —
+                  not a credit check. Students do not need an established credit
+                  history to apply.
+                </p>
+              </div>
+              <div className="rounded-[10px] border border-white/[0.09] bg-white/[0.04] p-6">
+                <p className="text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#c8f535]">
+                  Guarantors
+                </p>
+                <p className="mt-3 text-[14px] font-semibold leading-relaxed text-white/78">
+                  Some Ottawa rentals require a Canadian guarantor — a local
+                  resident who co-signs the lease. This is difficult for students
+                  whose family is abroad. ZIM.ca does not typically require a
+                  Canadian guarantor, which removes a common barrier for
+                  international students.
+                </p>
+              </div>
+              <div className="rounded-[10px] border border-white/[0.09] bg-white/[0.04] p-6">
+                <p className="text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#c8f535]">
+                  Canadian address for SIN and banking
+                </p>
+                <p className="mt-3 text-[14px] font-semibold leading-relaxed text-white/78">
+                  A confirmed Canadian address is required to apply for a Social
+                  Insurance Number (SIN) and to open a bank account. Once a room
+                  at ZIM.ca is confirmed, students can use the Baseline Road
+                  address for these applications. TD, RBC, Scotiabank, and BMO
+                  all have branches at or near College Square.
+                </p>
+              </div>
+              <div className="rounded-[10px] border border-white/[0.09] bg-white/[0.04] p-6">
+                <p className="text-[12px] font-extrabold uppercase tracking-[0.14em] text-[#c8f535]">
+                  Study permit address requirement
+                </p>
+                <p className="mt-3 text-[14px] font-semibold leading-relaxed text-white/78">
+                  IRCC requires international students to keep their address
+                  current in their MyCIC account. Having a confirmed rental
+                  address before arriving makes it easier to update permit
+                  records and avoid gaps. Students should confirm their room
+                  before travelling so they have a valid Canadian address ready
+                  on arrival.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-[#f5f1e8] py-20">
           <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
             <div>

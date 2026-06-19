@@ -56,7 +56,7 @@ const cornerstoneBlogPosts: BlogPost[] = [
       {
         heading: "Compare included costs, not only rent",
         body: [
-          "A lower rent can become more expensive if utilities, internet, laundry, furniture, and setup costs are extra. For students moving to Ottawa for the first time, an all-inclusive furnished room can make budgeting simpler.",
+          "A lower rent can become more expensive if utilities, internet, laundry, furniture, and setup costs are extra. For students moving to Ottawa for the first time, an [[all-inclusive furnished room|/algonquin-student-rentals-ottawa]] can make budgeting simpler.",
           "Ask whether hydro, water, heat, air conditioning, internet, laundry, bed, desk, and chair are included. These details matter for students and parents because they affect the real monthly cost.",
         ],
       },
@@ -70,7 +70,7 @@ const cornerstoneBlogPosts: BlogPost[] = [
       {
         heading: "Why Nepean and Baseline Road can be a strong fit",
         body: [
-          "Nepean gives students access to Algonquin College without needing to live in a busy downtown area. Baseline Road is also useful for transit and local shopping, which helps students handle errands without long trips.",
+          "Nepean gives students access to [[Algonquin College student rentals|/algonquin-student-rentals-ottawa]] without needing to live in a busy downtown area. [[Baseline Road student housing|/student-rentals-nepean-baseline-station]] is also useful for transit and local shopping, which helps students handle errands without long trips.",
           "Students who attend Algonquin, Carleton, uOttawa, or other Ottawa schools may still choose this area if they want furnished housing, predictable costs, and a calmer residential setting.",
         ],
       },
@@ -116,7 +116,7 @@ const cornerstoneBlogPosts: BlogPost[] = [
         heading: "Rent is only the starting point",
         body: [
           "When students compare rentals in Ottawa, the monthly rent is usually the first number they notice. But the real monthly cost can include utilities, internet, laundry, furniture, parking, transit, and move-in supplies.",
-          "A room that looks cheaper at first may cost more once those extras are added. That is why all-inclusive student housing can be easier to compare.",
+          "A room that looks cheaper at first may cost more once those extras are added. That is why [[all-inclusive student housing in Ottawa|/algonquin-student-rentals-ottawa]] can be easier to compare.",
         ],
       },
       {
@@ -130,13 +130,13 @@ const cornerstoneBlogPosts: BlogPost[] = [
         heading: "Budget for the location too",
         body: [
           "The right location can reduce transportation costs and save time. Living close to campus, transit, grocery stores, and services can make the student budget more predictable.",
-          "For students near Algonquin College, Nepean and Baseline Road can be practical because many daily errands are close by.",
+          "For students near [[Algonquin College|/algonquin-student-rentals-ottawa]], [[Nepean and Baseline Road|/student-rentals-nepean-baseline-station]] can be practical because many daily errands are close by.",
         ],
       },
       {
         heading: "Use a simple monthly comparison",
         body: [
-          "Add rent plus utilities, internet, laundry, furniture costs, transit, and parking if needed. Then compare that total with an all-inclusive furnished room.",
+          "Add rent plus utilities, internet, laundry, furniture costs, transit, and parking if needed. Then compare that total with an all-inclusive furnished room, or use the [[Ottawa student housing cost guide|/ottawa-student-housing-cost-guide]].",
           "The goal is not only to find the lowest price. The goal is to find a room that supports school, daily routines, and a manageable monthly budget.",
         ],
       },
@@ -181,7 +181,7 @@ const cornerstoneBlogPosts: BlogPost[] = [
       {
         heading: "Confirm what furnished means",
         body: [
-          "Not every furnished room includes the same items. Before moving in, students should confirm whether the room includes a bed, mattress, desk, chair, storage, and access to kitchen appliances.",
+          "Not every [[furnished student room in Ottawa|/algonquin-student-rentals-ottawa]] includes the same items. Before moving in, students should confirm whether the room includes a bed, mattress, desk, chair, storage, and access to kitchen appliances.",
           "It is also helpful to ask whether internet, utilities, laundry, and basic shared spaces are included in the rent.",
         ],
       },
@@ -196,7 +196,7 @@ const cornerstoneBlogPosts: BlogPost[] = [
         heading: "Documents and practical details",
         body: [
           "Before move-in, students should have photo ID, lease information, payment details, emergency contacts, and any school or work schedule details they need.",
-          "Students should also know the move-in time, parking instructions, laundry rules, WiFi access, and how to contact property management.",
+          "Students should also know the move-in time, parking instructions, laundry rules, WiFi access, and how to contact property management. The [[student housing resources page|/resources]] has first-day details for ZIM.ca residents.",
         ],
       },
       {
@@ -247,14 +247,14 @@ const cornerstoneBlogPosts: BlogPost[] = [
       {
         heading: "A practical west-end student location",
         body: [
-          "Baseline Road is one of the more practical areas for students who want access to Algonquin College, Nepean services, and transit without living downtown.",
+          "Baseline Road is one of the more practical areas for students who want [[student housing near Algonquin College|/algonquin-student-rentals-ottawa]], Nepean services, and transit without living downtown.",
           "The area works well for students who value daily convenience: groceries, pharmacies, restaurants, banking, and campus access are all important parts of student life.",
         ],
       },
       {
         heading: "Access to Algonquin College and transit",
         body: [
-          "Students near Baseline Road can plan routes to Algonquin College by walking, biking, bus, or driving depending on the exact address and schedule.",
+          "Students in [[furnished rooms near Baseline Station|/student-rentals-nepean-baseline-station]] can plan routes to Algonquin College by walking, biking, bus, or driving depending on the exact address and schedule.",
           "Before renting, students should check live maps for the commute at the time they expect to travel, especially during winter or peak hours.",
         ],
       },
@@ -328,7 +328,7 @@ const cornerstoneBlogPosts: BlogPost[] = [
         heading: "Budget and comfort both matter",
         body: [
           "Pair rooms can make sense for two friends who want to reduce individual cost and are comfortable sharing. Single rooms can make sense for students who value quiet and privacy.",
-          "The right choice depends on budget, friendship, schedules, and how much personal space each student needs.",
+          "The right choice depends on budget, friendship, schedules, and how much personal space each student needs. [[See available single and pair rooms|/algonquin-student-rentals-ottawa]] near Algonquin College.",
         ],
       },
       {
