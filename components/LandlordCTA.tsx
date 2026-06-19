@@ -17,8 +17,9 @@ export default function LandlordCTA() {
               Book a tour.
             </h2>
             <p className="section-copy mb-9 text-white/62">
-              See Unit A and Unit B, the furnished rooms, shared kitchens, and
-              study-friendly common areas before you choose your room.
+              See all four units — 1658A, 1658B, 1660A, and 1660B — the
+              furnished rooms, shared kitchens, and study-friendly common areas
+              before you choose your room.
             </p>
 
             <div className="flex items-center gap-5 flex-wrap">
@@ -50,10 +51,10 @@ export default function LandlordCTA() {
             <div className="mt-10 grid grid-cols-2 gap-5 max-w-[430px]">
               <div className="border-t border-white/[0.12] pt-4">
                 <p className="text-white font-extrabold text-[1.45rem] leading-none">
-                  2 units
+                  4 units
                 </p>
                 <p className="text-white/42 text-[12px] mt-2">
-                  Unit A and Unit B
+                  1658A, 1658B, 1660A & 1660B
                 </p>
               </div>
               <div className="border-t border-white/[0.12] pt-4">
