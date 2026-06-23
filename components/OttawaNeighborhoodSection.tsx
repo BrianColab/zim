@@ -13,10 +13,10 @@ export default function OttawaNeighborhoodSection() {
           </div>
           <div className="grid gap-5">
             <p className="section-copy max-w-none text-white/66">
-              ZIM.ca is located in Nepean, Ottawa near Algonquin College and
-              Baseline Station. The homes are clean, well-maintained, and set up
-              for students who want a comfortable, quiet place to live — not a
-              party house.
+              ZIM.ca offers student rentals in Nepean, Ottawa, near Algonquin
+              College and Baseline Station. The homes are clean,
+              well-maintained, and set up for students who want a comfortable,
+              quiet place to live — not a party house.
             </p>
             <p className="section-copy max-w-none text-white/66">
               Baseline Station and OC Transpo routes make the location practical

@@ -165,7 +165,7 @@ export default function HomepageSeoSections() {
             ))}
           </div>
 
-          <div className="mt-8">
+          <div id="book-a-showing" className="mt-8">
             <ContactTrigger
               payload={{
                 roomType: "Availability",
