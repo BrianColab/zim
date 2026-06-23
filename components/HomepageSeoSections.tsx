@@ -3,17 +3,6 @@
 import ContactTrigger from "./ContactTrigger";
 import { homepageFaqs } from "@/data/homepageFaqs";
 
-const benefits = [
-  "Furnished rooms",
-  "Utilities included",
-  "Internet included",
-  "Laundry included",
-  "Near Algonquin College",
-  "Near Baseline Station",
-  "Student-focused rental setup",
-  "Rooms from $850/month",
-];
-
 export default function HomepageSeoSections() {
   return (
     <>
@@ -47,7 +36,7 @@ export default function HomepageSeoSections() {
                 student rentals near Algonquin College
               </a>
               <a
-                href="#why-students-choose"
+                href="#location-advantage"
                 className="rounded-[8px] border border-black/[0.1] bg-white px-4 py-3 text-[12px] font-extrabold text-zinc-800 transition hover:border-[#60710f]/40"
               >
                 furnished student rooms in Ottawa
@@ -59,35 +48,6 @@ export default function HomepageSeoSections() {
                 book a showing
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="why-students-choose" className="bg-[#07111b] py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-8 grid gap-5 lg:grid-cols-[1fr_410px] lg:items-end">
-            <div>
-              <p className="section-kicker text-[#c8f535]">Why students choose ZIM.ca</p>
-              <h2 className="section-heading-tight headline-on-dark mt-4 text-white">
-                Utilities, Internet and Laundry Included
-              </h2>
-            </div>
-            <p className="section-copy text-white/58">
-              Nepean student rentals can be easier to compare when key monthly
-              costs are included. ZIM.ca keeps the setup clear for students
-              looking for all-inclusive student rooms near Ottawa transit and
-              campus routes.
-            </p>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {benefits.map((benefit) => (
-              <div
-                key={benefit}
-                className="rounded-[8px] border border-white/[0.08] bg-white/[0.04] px-4 py-4 text-[13px] font-extrabold text-white"
-              >
-                {benefit}
-              </div>
-            ))}
           </div>
         </div>
       </section>
