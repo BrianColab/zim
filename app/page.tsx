@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AvailabilityBar from "@/components/AvailabilityBar";
 import HomepageSeoSections from "@/components/HomepageSeoSections";
+import OttawaNeighborhoodSection from "@/components/OttawaNeighborhoodSection";
 import FeaturedHomes from "@/components/FeaturedHomes";
 import FloatingWalkRoute from "@/components/FloatingWalkRoute";
 import GallerySlideshow from "@/components/GallerySlideshow";
@@ -145,6 +146,9 @@ export default function Home() {
         </ScrollReveal>
         <ScrollReveal>
           <HomepageSeoSections />
+        </ScrollReveal>
+        <ScrollReveal>
+          <OttawaNeighborhoodSection />
         </ScrollReveal>
         <ScrollReveal>
           <GallerySlideshow />

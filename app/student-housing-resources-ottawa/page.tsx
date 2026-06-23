@@ -291,6 +291,12 @@ export default function StudentHousingResourcesOttawaPage() {
                   >
                     Student housing cost guide
                   </Link>
+                  <Link
+                    href="/"
+                    className="inline-flex items-center justify-center rounded-[10px] border border-white/12 bg-white/[0.08] px-5 py-4 text-[13px] font-extrabold text-white transition hover:border-[#c8f535]/60 hover:bg-white/[0.12]"
+                  >
+                    Ottawa student rentals
+                  </Link>
                 </div>
               </div>
             </div>
